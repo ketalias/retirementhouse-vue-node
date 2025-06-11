@@ -1,27 +1,26 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div>
+    <NavBar />
+    <v-app>
+      <v-app-bar app color="primary" dark>
+        <v-toolbar-title>Vuetify is Working!</v-toolbar-title>
+      </v-app-bar>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+      <v-main>
+        <v-container>
+          <v-btn color="secondary">Test Button</v-btn>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -81,5 +80,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
