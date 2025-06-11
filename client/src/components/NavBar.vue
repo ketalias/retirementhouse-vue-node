@@ -1,12 +1,18 @@
 <template>
-  <v-app-bar app>
-    <v-toolbar-title>My App</v-toolbar-title>
+  <div class="navbar bg-base-200 px-4">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="#">MyApp</a>
+    </div>
 
-    <v-spacer></v-spacer>
-
-    <v-btn text :to="{ name: 'Home' }" router>Home</v-btn>
-    <v-btn text :to="{ name: 'About' }" router>About</v-btn>
-  </v-app-bar>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal p-0">
+        <li><router-link to="/" class="btn btn-ghost">Головна</router-link></li>
+        <li><router-link to="/about" class="btn btn-ghost">Про нас</router-link></li>
+        <li><router-link to="/contact" class="btn btn-ghost">Контакти</router-link></li>
+      </ul>
+    </div>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
