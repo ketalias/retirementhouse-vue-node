@@ -70,9 +70,9 @@ const rooms = [
     description: 'Світла кімната з видом на сад.',
     features: ['2 ліжка', 'Санвузол у номері', 'ТВ'],
     images: [
-      '../../public/img/hero-background.jpg',
-      '../../public/img/galleryitem1.jpg',
-      '../../public/img/granny1.jpeg',
+      '/img/hero-background.jpg',
+      '/img/galleryitem1.jpg',
+      '/img/granny1.jpeg',
     ],
   },
   {
@@ -80,7 +80,7 @@ const rooms = [
     title: 'Кімната №2',
     description: 'Комфортна кімната для однієї особи.',
     features: ['1 ліжко', 'Вікно на південь', 'Wi-Fi'],
-    images: ['../../public/img/galleryitem1.jpg', '../../public/img/granny1.jpeg'],
+    images: ['/img/galleryitem1.jpg', '/img/granny1.jpeg'],
   },
   {
     id: 3,
@@ -88,9 +88,9 @@ const rooms = [
     description: 'Простора кімната з індивідуальним дизайном.',
     features: ['3 ліжка', 'Окрема тераса'],
     images: [
-      '../../public/img/hero-background.jpg',
-      '../../public/img/galleryitem1.jpg',
-      '../../public/img/granny1.jpeg',
+      '/img/hero-background.jpg',
+      '/img/galleryitem1.jpg',
+      '/img/granny1.jpeg',
     ],
   },
 ]
