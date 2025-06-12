@@ -3,14 +3,14 @@ import FooterComp from '@/components/FooterComp.vue'
 import { ref } from 'vue'
 
 const images = [
-  { src: 'https://placekitten.com/400/300', height: 260 },
-  { src: 'https://placekitten.com/400/400', height: 330 },
-  { src: 'https://placekitten.com/400/350', height: 280 },
-  { src: 'https://placekitten.com/400/450', height: 370 },
-  { src: 'https://placekitten.com/400/280', height: 200 },
-  { src: 'https://placekitten.com/400/380', height: 320 },
-  { src: 'https://placekitten.com/400/260', height: 240 },
-  { src: 'https://placekitten.com/400/360', height: 290 },
+  { src: '../../public/img/galleryitem1.jpg', height: 260 },
+  { src: '../../public/img/galleryitem1.jpg', height: 330 },
+  { src: '../../public/img/galleryitem1.jpg', height: 280 },
+  { src: '../../public/img/galleryitem1.jpg', height: 370 },
+  { src: '../../public/img/galleryitem1.jpg', height: 200 },
+  { src: '../../public/img/galleryitem1.jpg', height: 320 },
+  { src: '../../public/img/galleryitem1.jpg', height: 240 },
+  { src: '../../public/img/galleryitem1.jpg', height: 290 },
 ]
 
 const faqs = [
@@ -191,7 +191,7 @@ function toggle(index) {
         </div>
       </div>
     </section>
-    <section aria-label="Часті питання (FAQ)" class="max-w-8xl mx-auto p-6 my-5.5 bg-white">
+    <section aria-label="Часті питання (FAQ)" class="max-w-8xl mx-auto p-6 mt-5.5 bg-white">
       <div class="max-w-6xl mx-auto p-6 my-5.5">
         <h2 class="text-3xl font-bold mb-8 text-center">Часті питання</h2>
         <ul>
