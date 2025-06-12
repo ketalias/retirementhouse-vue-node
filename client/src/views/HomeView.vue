@@ -2,6 +2,17 @@
 import FooterComp from '@/components/FooterComp.vue'
 import { ref } from 'vue'
 
+const images = [
+  { src: 'https://placekitten.com/400/300', height: 260 },
+  { src: 'https://placekitten.com/400/400', height: 330 },
+  { src: 'https://placekitten.com/400/350', height: 280 },
+  { src: 'https://placekitten.com/400/450', height: 370 },
+  { src: 'https://placekitten.com/400/280', height: 200 },
+  { src: 'https://placekitten.com/400/380', height: 320 },
+  { src: 'https://placekitten.com/400/260', height: 240 },
+  { src: 'https://placekitten.com/400/360', height: 290 },
+]
+
 const faqs = [
   {
     question: 'Які умови бронювання?',
@@ -31,7 +42,7 @@ function toggle(index) {
     <section
       id="hero"
       aria-label="Головна секція"
-      class="h-[65vh] relative bg-[url('/img/hero-background.jpg')] bg-cover bg-center py-20 text-center text-white"
+      class="h-[100vh] md:h-[70vh] relative bg-[url('/img/hero-background.jpg')] bg-cover bg-center py-20 text-center text-white"
     >
       <div class="absolute inset-0 bg-black/60"></div>
 
@@ -45,13 +56,13 @@ function toggle(index) {
           від міської метушні та насолодитися спокоєм.
         </p>
         <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto">
-          <button class="btn btn-primary w-full md:w-auto">Почати</button>
+          <button class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
           <button class="btn btn-secondary w-full md:w-auto">Зателефонувати</button>
         </div>
       </div>
     </section>
 
-    <section aria-label="Переваги" class="py-16 px-4 max-w-7xl mx-auto">
+    <section aria-label="Переваги" class="py-19 px-4 max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row gap-8 text-center">
         <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
           <svg
@@ -115,42 +126,73 @@ function toggle(index) {
       <div class="max-w-5xl mx-auto text-center">
         <h2 class="text-4xl font-bold mb-12">Що кажуть наші гості</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <blockquote class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
-            <p class="text-gray-700 mb-4">
-              "Чудове місце для відпочинку! Комфортні номери та неймовірна природа. Обов’язково
-              повернуся!"
+          <blockquote
+            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+          >
+            <img
+              src="/img/granny1.jpeg"
+              class="rounded-xl h-[200px] w-full object-cover"
+              alt="Фото користувача Оксана К."
+            />
+            <p class="text-gray-800 text-lg leading-relaxed">
+              “Чудове місце для відпочинку! Комфортні номери та неймовірна природа. Обов’язково
+              повернуся!”
             </p>
-            <footer class="text-sm text-gray-500 font-semibold">— Оксана К.</footer>
+            <footer class="text-sm text-gray-600 font-semibold">— Оксана К.</footer>
           </blockquote>
 
-          <blockquote class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
-            <p class="text-gray-700 mb-4">
-              "Прекрасна українська гостинність та спокійна атмосфера. Відпочив на всі 100%!"
+          <blockquote
+            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+          >
+            <img
+              src="/img/granny3.jpg"
+              class="rounded-xl h-[200px] w-full object-cover"
+              alt="Фото користувачки Марія П."
+            />
+            <p class="text-gray-800 text-lg leading-relaxed">
+              “Неймовірне місце! Дуже сподобалась атмосфера спокою та затишку. Ідеально для
+              відновлення сил.”
             </p>
-            <footer class="text-sm text-gray-500 font-semibold">— Андрій П.</footer>
+            <footer class="text-sm text-gray-600 font-semibold">— Марія П.</footer>
           </blockquote>
 
-          <blockquote class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-between">
-            <p class="text-gray-700 mb-4">
-              "Сімейний відпочинок пройшов чудово! Діти були в захваті, дякуємо персоналу."
+          <blockquote
+            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+          >
+            <img
+              src="/img/granny2.jpg"
+              class="rounded-xl h-[200px] w-full object-cover"
+              alt="Фото користувачки Галина С."
+            />
+            <p class="text-gray-800 text-lg leading-relaxed">
+              “Персонал дуже привітний, а навколишня природа — просто казка. Рекомендую всім, хто
+              хоче відпочити душею.”
             </p>
-            <footer class="text-sm text-gray-500 font-semibold">— Марія С.</footer>
+            <footer class="text-sm text-gray-600 font-semibold">— Галина С.</footer>
           </blockquote>
         </div>
       </div>
     </section>
-    <section class="max-w-7xl mx-auto p-4">
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-        style="grid-auto-flow: dense"
-      >
-        <div class="bg-gray-500 p-4 rounded h-100"></div>
-        <div class="bg-gray-300 p-4 rounded h-60"></div>
-        <div class="bg-gray-400 p-4 rounded h-78"></div>
+    <section class="py-10 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div
+            v-for="(item, index) in images"
+            :key="index"
+            class="break-inside-avoid overflow-hidden rounded-xl hover:scale-[1.02] transition-transform duration-300"
+          >
+            <img
+              :src="item.src"
+              :style="{ height: item.height + 'px' }"
+              class="w-full object-cover rounded-xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
-    <section aria-label="Часті питання (FAQ)" class="max-w-8xl mx-auto p-6 my-5.5 bg-gray-100">
-      <div class="max-w-6xl mx-auto p-6 my-5.5 bg-gray-200">
+    <section aria-label="Часті питання (FAQ)" class="max-w-8xl mx-auto p-6 my-5.5 bg-white">
+      <div class="max-w-6xl mx-auto p-6 my-5.5">
         <h2 class="text-3xl font-bold mb-8 text-center">Часті питання</h2>
         <ul>
           <li v-for="(faq, index) in faqs" :key="index" class="mb-4 border-b border-gray-300">

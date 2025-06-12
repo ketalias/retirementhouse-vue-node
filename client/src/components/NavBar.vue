@@ -44,24 +44,42 @@
             <router-link to="/" :class="linkClass('/')">Головна</router-link>
           </li>
           <li>
-            <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
+            <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
+          </li>
+          <li>
+            <router-link to="/gallery" :class="linkClass('/gallery')">Галерея</router-link>
+          </li>
+          <li>
+            <router-link to="/map" :class="linkClass('/map')">Карта</router-link>
           </li>
           <li>
             <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
+          </li>
+          <li>
+            <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
           </li>
         </ul>
       </details>
     </div>
     <div class="hidden lg:flex">
-      <ul class="menu menu-horizontal p-0">
+      <ul class="menu menu-horizontal p-0 gap-2">
         <li>
           <router-link to="/" :class="linkClass('/')">Головна</router-link>
         </li>
         <li>
-          <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
+          <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
+        </li>
+        <li>
+          <router-link to="/gallery" :class="linkClass('/gallery')">Галерея</router-link>
+        </li>
+        <li>
+          <router-link to="/map" :class="linkClass('/map')">Карта</router-link>
         </li>
         <li>
           <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
+        </li>
+        <li>
+          <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
         </li>
       </ul>
     </div>
