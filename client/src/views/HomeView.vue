@@ -3,14 +3,14 @@ import FooterComp from '@/components/FooterComp.vue'
 import { ref } from 'vue'
 
 const images = [
-  { src: '../../public/img/galleryitem1.jpg', height: 260 },
-  { src: '../../public/img/galleryitem1.jpg', height: 330 },
-  { src: '../../public/img/galleryitem1.jpg', height: 280 },
-  { src: '../../public/img/galleryitem1.jpg', height: 370 },
-  { src: '../../public/img/galleryitem1.jpg', height: 200 },
-  { src: '../../public/img/galleryitem1.jpg', height: 320 },
-  { src: '../../public/img/galleryitem1.jpg', height: 240 },
-  { src: '../../public/img/galleryitem1.jpg', height: 290 },
+  { src: '/img/galleryitem1.jpg', height: 260 },
+  { src: '/img/galleryitem1.jpg', height: 330 },
+  { src: '/img/galleryitem1.jpg', height: 280 },
+  { src: '/img/galleryitem1.jpg', height: 370 },
+  { src: '/img/galleryitem1.jpg', height: 200 },
+  { src: '/img/galleryitem1.jpg', height: 320 },
+  { src: '/img/galleryitem1.jpg', height: 240 },
+  { src: '/img/galleryitem1.jpg', height: 290 },
 ]
 
 const faqs = [

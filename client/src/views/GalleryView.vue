@@ -48,37 +48,37 @@ const activeCategory = ref('Всі')
 
 const images = [
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Хол',
     category: 'Кімнати',
     slug: 'room-1',
   },
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Сад',
     category: 'Зовнішній вигляд',
     slug: 'garden-view',
   },
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Медперсонал',
     category: 'Догляд',
     slug: 'medical-care',
   },
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Їдальня',
     category: 'Кімнати',
     slug: 'dining-room',
   },
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Їдальня',
     category: 'Кімнати',
     slug: 'dining-room',
   },
   {
-    src: '../../public/img/hero-background.jpg',
+    src: '/img/hero-background.jpg',
     alt: 'Їдальня',
     category: 'Кімнати',
     slug: 'dining-room',
