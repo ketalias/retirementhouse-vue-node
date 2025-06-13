@@ -47,12 +47,6 @@
             <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
           </li>
           <li>
-            <router-link to="/gallery" :class="linkClass('/gallery')">Галерея</router-link>
-          </li>
-          <li>
-            <router-link to="/map" :class="linkClass('/map')">Карта</router-link>
-          </li>
-          <li>
             <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
           </li>
           <li>
@@ -68,12 +62,6 @@
         </li>
         <li>
           <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
-        </li>
-        <li>
-          <router-link to="/gallery" :class="linkClass('/gallery')">Галерея</router-link>
-        </li>
-        <li>
-          <router-link to="/map" :class="linkClass('/map')">Карта</router-link>
         </li>
         <li>
           <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
