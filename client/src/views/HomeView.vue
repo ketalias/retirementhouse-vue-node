@@ -35,6 +35,25 @@ const faqs = [
 function toggle(index) {
   faqs[index].open.value = !faqs[index].open.value
 }
+
+const phoneNumber = '+380961234567'
+
+function handleCall() {
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent)
+
+  if (isMobile) {
+    window.location.href = `tel:${phoneNumber}`
+  } else {
+    navigator.clipboard
+      .writeText(phoneNumber)
+      .then(() => {
+        alert(`Номер ${phoneNumber} скопійовано в буфер обміну`)
+      })
+      .catch(() => {
+        alert(`Скопіюйте номер вручну: ${phoneNumber}`)
+      })
+  }
+}
 </script>
 
 <template>
@@ -57,7 +76,14 @@ function toggle(index) {
         </p>
         <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto">
           <button class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
-          <button class="btn btn-secondary w-full md:w-auto">Зателефонувати</button>
+          <button
+            @click="handleCall"
+            class="btn btn-secondary w-full md:w-auto"
+            type="button"
+            title="Натисніть, щоб зателефонувати або скопіювати номер"
+          >
+            Зателефонувати
+          </button>
         </div>
       </div>
     </section>

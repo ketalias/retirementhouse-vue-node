@@ -1,9 +1,15 @@
 <template>
   <div>
-    <section class="py-10 min-h-screen bg-white">
-      <div class="container mx-auto px-4">
-        <h1 class="text-6xl font-bold mb-8 text-center">Наші кімнати</h1>
-
+    <div class="min-h-screen bg-white">
+      <div class="relative hero h-[40vh] bg-[url('/img/rooms-bg.jpg')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-4xl">
+            <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white">Номери</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 my-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             v-for="(room, index) in rooms"
@@ -20,7 +26,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <vue-easy-lightbox
       :visible="visible"
@@ -69,11 +75,7 @@ const rooms = [
     title: 'Кімната №1',
     description: 'Світла кімната з видом на сад.',
     features: ['2 ліжка', 'Санвузол у номері', 'ТВ'],
-    images: [
-      '/img/hero-background.jpg',
-      '/img/galleryitem1.jpg',
-      '/img/granny1.jpeg',
-    ],
+    images: ['/img/hero-background.jpg', '/img/galleryitem1.jpg', '/img/granny1.jpeg'],
   },
   {
     id: 2,
@@ -87,11 +89,28 @@ const rooms = [
     title: 'Кімната №3',
     description: 'Простора кімната з індивідуальним дизайном.',
     features: ['3 ліжка', 'Окрема тераса'],
-    images: [
-      '/img/hero-background.jpg',
-      '/img/galleryitem1.jpg',
-      '/img/granny1.jpeg',
-    ],
+    images: ['/img/hero-background.jpg', '/img/galleryitem1.jpg', '/img/granny1.jpeg'],
+  },
+  {
+    id: 1,
+    title: 'Кімната №1',
+    description: 'Світла кімната з видом на сад.',
+    features: ['2 ліжка', 'Санвузол у номері', 'ТВ'],
+    images: ['/img/hero-background.jpg', '/img/galleryitem1.jpg', '/img/granny1.jpeg'],
+  },
+  {
+    id: 1,
+    title: 'Кімната №1',
+    description: 'Світла кімната з видом на сад.',
+    features: ['2 ліжка', 'Санвузол у номері', 'ТВ'],
+    images: ['/img/hero-background.jpg', '/img/galleryitem1.jpg', '/img/granny1.jpeg'],
+  },
+  {
+    id: 1,
+    title: 'Кімната №1',
+    description: 'Світла кімната з видом на сад.',
+    features: ['2 ліжка', 'Санвузол у номері', 'ТВ'],
+    images: ['/img/hero-background.jpg', '/img/galleryitem1.jpg', '/img/granny1.jpeg'],
   },
 ]
 </script>
