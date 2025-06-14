@@ -20,16 +20,6 @@ const router = createRouter({
       component: () => import('../views/RoomsCatalog.vue'),
     },
     {
-      path: '/map',
-      name: 'map',
-      component: () => import('../views/MapView.vue'),
-    },
-    {
-      path: '/gallery',
-      name: 'gallery',
-      component: () => import('../views/GalleryView.vue'),
-    },
-    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
