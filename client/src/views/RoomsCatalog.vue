@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <div class="min-h-screen bg-white">
       <div class="relative hero h-[40vh] bg-[url('/img/rooms-bg.jpg')] bg-cover bg-center">
         <div class="absolute inset-0 bg-black/60"></div>

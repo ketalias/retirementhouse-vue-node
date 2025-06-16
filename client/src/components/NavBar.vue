@@ -1,30 +1,32 @@
 <template>
-  <nav class="navbar bg-white px-4 sticky top-0 z-50 shadow">
-    <div class="flex-1">
-      <router-link to="/" class="btn btn-ghost normal-case text-xl italic"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-          />
-        </svg>
-        Панська Втіха</router-link
-      >
+  <nav class="navbar bg-white px-4 sticky top-0 z-50 shadow flex items-center justify-between">
+    <!-- Дії зліва -->
+    <div class="actions flex items-center gap-4">
+      <img
+        src="/icons/language-ico.svg"
+        alt="Змінити мову"
+        title="Змінити мову"
+        class="h-8 w-8 cursor-pointer"
+      />
     </div>
+
+    <!-- Лого по центру -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <router-link
+        to="/home"
+        class="btn btn-ghost normal-case text-xl italic flex items-center gap-2 hover:bg-transparent hover:text-inherit"
+      >
+        <span class="text-primary">Панська Втіха</span>
+      </router-link>
+    </div>
+
+    <!-- Мобільне меню -->
     <div class="lg:hidden">
-      <details class="dropdown relative">
-        <summary class="btn btn-ghost">
+      <details class="dropdown relative" role="menu" aria-label="Навігаційне меню" ref="dropdown">
+        <summary class="btn btn-ghost" aria-label="Відкрити або закрити меню" aria-expanded="false">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -38,47 +40,74 @@
           </svg>
         </summary>
         <ul
-          class="menu menu-sm fixed mt-[60px] top-0 left-0 w-full z-50 shadow bg-base-100 rounded-none"
+          class="menu menu-sm fixed mt-[60px] top-0 left-0 w-full z-50 shadow bg-base-100 rounded-none transition-transform duration-300"
+          role="menu"
         >
-          <li>
-            <router-link to="/" :class="linkClass('/')">Головна</router-link>
+          <li role="menuitem">
+            <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown">Головна</router-link>
           </li>
-          <li>
-            <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
+          <li role="menuitem">
+            <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown"
+              >Номера</router-link
+            >
           </li>
-          <li>
-            <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
+          <li role="menuitem">
+            <router-link to="/contact" :class="linkClass('/contact')" @click="closeDropdown"
+              >Контакти</router-link
+            >
           </li>
-          <!-- <li>
-            <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
-          </li> -->
+          <li role="menuitem">
+            <router-link to="/about" :class="linkClass('/about')" @click="closeDropdown"
+              >Про нас</router-link
+            >
+          </li>
         </ul>
       </details>
     </div>
+
+    <!-- Десктопне меню -->
     <div class="hidden lg:flex">
-      <ul class="menu menu-horizontal p-0 gap-2">
-        <li>
-          <router-link to="/" :class="linkClass('/')">Головна</router-link>
-        </li>
-        <li>
-          <router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link>
-        </li>
-        <li>
-          <router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link>
-        </li>
-        <!-- <li>
-          <router-link to="/about" :class="linkClass('/about')">Про нас</router-link>
-        </li> -->
+      <ul class="menu menu-horizontal p-0 gap-4">
+        <li><router-link to="/home" :class="linkClass('/home')">Головна</router-link></li>
+        <li><router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link></li>
+        <li><router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link></li>
+        <li><router-link to="/about" :class="linkClass('/about')">Про нас</router-link></li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 const route = useRoute()
+const router = useRouter()
+const dropdown = ref(null)
 
 const linkClass = (path) =>
-  route.path === path ? 'btn btn-ghost border-b-2 border-primary text-primary' : 'btn btn-ghost'
+  route.path.startsWith(path)
+    ? 'btn btn-ghost border-b-2 border-primary text-primary'
+    : 'btn btn-ghost hover:border-b-2 hover:bg-gray-100'
+
+function closeDropdown() {
+  if (dropdown.value) {
+    dropdown.value.open = false
+  }
+}
+
+router.afterEach(() => {
+  if (dropdown.value) {
+    dropdown.value.querySelector('summary').setAttribute('aria-expanded', dropdown.value.open)
+  }
+})
 </script>
+
+<style scoped>
+.btn-ghost {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-bottom 0.3s ease;
+}
+</style>
