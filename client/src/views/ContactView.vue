@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <div class="relative hero h-[60vh] bg-[url('/img/contact-bg.jpg')]">
+    <div class="relative hero h-[40vh] bg-[url('/img/contact-bg.jpg')] bg-cover bg-center">
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="hero-content text-center text-neutral-content">
         <div class="max-w-4xl">
@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div class="card shadow-xl overflow-hidden">
+      <div class="shadow-xl overflow-hidden">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">Наше місцезнаходження</h2>
         </div>
@@ -57,63 +57,40 @@
         ></iframe>
       </div>
       <div class="grid md:grid-cols-3 gap-6 text-center">
-        <div class="p-6 shadow rounded-xl space-y-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="mx-auto h-12 w-12 text-primary transition-transform duration-300 hover:scale-110"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"
-            />
-          </svg>
+        <div class="card p-6 shadow rounded-xl space-y-3">
+          <img
+            src="/icons/medic-ico.svg"
+            alt=""
+            class="mx-auto h-15 w-15 text-primary transition-transform duration-500 hover:scale-110"
+          />
           <h3 class="text-xl font-semibold mb-2">Жива підтримка</h3>
           <p>Ми відповідаємо на дзвінки та повідомлення без затримок.</p>
         </div>
 
-        <div class="p-6 shadow rounded-xl space-y-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="mx-auto h-12 w-12 text-primary transition-transform duration-300 hover:scale-110"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-          </svg>
+        <div class="card p-6 shadow rounded-xl space-y-3">
+          <img
+            src="/icons/friends-ico.svg"
+            alt=""
+            class="mx-auto h-15 w-15 text-primary transition-transform duration-500 hover:scale-110"
+          />
           <h3 class="text-xl font-semibold mb-2">Комфорт та турбота</h3>
           <p>Наш пансіонат — затишне місце, де дбають про кожного.</p>
         </div>
 
-        <div class="p-6 shadow rounded-xl space-y-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="mx-auto h-12 w-12 text-primary transition-transform duration-300 hover:scale-110"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 20.25V13.5H6.75a.75.75 0 01-.75-.75v-3A.75.75 0 016.75 9H9V5.25a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V9h2.25a.75.75 0 01.75.75v3a.75.75 0 01-.75.75H13.5v6.75"
-            />
-          </svg>
+        <div class="card p-6 shadow rounded-xl space-y-3">
+          <img
+            src="/icons/food-ico.svg"
+            alt=""
+            class="mx-auto h-15 w-15 text-primary transition-transform duration-500 hover:scale-110"
+          />
           <h3 class="text-xl font-semibold mb-2">Зручне розташування</h3>
           <p>Ми в самому серці Ужгорода з легкою доступністю.</p>
         </div>
       </div>
-      <div class="card shadow-xl">
+      <div class="shadow-xl">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-center">Напишіть нам</h2>
-          <form class="form-control flex flex-col space-y-4 max-w-xl mx-auto px-4">
+          <form class="form-control flex flex-col space-y-4 w-full mx-auto px-4">
             <input
               type="text"
               placeholder="Ваше ім’я"
@@ -138,13 +115,76 @@
         <img src="../../public/img/hero-background.jpg" class="rounded-xl shadow" />
         <img src="../../public/img/hero-background.jpg" class="rounded-xl shadow" />
       </div>
-      <div class="collapse collapse-arrow border border-base-300 bg-base-100">
-        <input type="checkbox" />
-        <div class="collapse-title text-xl font-medium">Чи можна завітати без запису?</div>
-        <div class="collapse-content">Так, ми приймаємо відвідувачів у робочі години.</div>
+      <div class="faq-container max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center">Поширені запитання</h2>
+        <ul class="space-y-4">
+          <li>
+            <div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-lg">
+              <input type="checkbox" :id="'faq-1'" class="peer" />
+              <label
+                for="faq-1"
+                class="collapse-title text-xl font-medium flex items-center cursor-pointer peer-checked:text-primary"
+              >
+                Чи можна завітати без запису?
+              </label>
+              <div class="collapse-content peer-checked:block" aria-labelledby="faq-1">
+                <p>
+                  Так, ми приймаємо відвідувачів у робочі години. Рекомендуємо попередньо
+                  зателефонувати для уточнення.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-lg">
+              <input type="checkbox" :id="'faq-2'" class="peer" />
+              <label
+                for="faq-2"
+                class="collapse-title text-xl font-medium flex items-center cursor-pointer peer-checked:text-primary"
+              >
+                Які години роботи пансіонату?
+              </label>
+              <div class="collapse-content peer-checked:block" aria-labelledby="faq-2">
+                <p>Пн-Пт: 9:00–18:00, Сб-Нд: 10:00–16:00</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-lg">
+              <input type="checkbox" :id="'faq-3'" class="peer" />
+              <label
+                for="faq-3"
+                class="collapse-title text-xl font-medium flex items-center cursor-pointer peer-checked:text-primary"
+              >
+                Чи є у вас безкоштовний Wi-Fi?
+              </label>
+              <div class="collapse-content peer-checked:block" aria-labelledby="faq-3">
+                <p>Так, у всіх зонах пансіонату доступний безкоштовний Wi-Fi.</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-lg">
+              <input type="checkbox" :id="'faq-4'" class="peer" />
+              <label
+                for="faq-4"
+                class="collapse-title text-xl font-medium flex items-center cursor-pointer peer-checked:text-primary"
+              >
+                Чи можна забронювати номер онлайн?
+              </label>
+              <div class="collapse-content peer-checked:block" aria-labelledby="faq-4">
+                <p>
+                  Так, ви можете забронювати номер через наш сайт.
+                  <router-link to="/booking" class="text-primary hover:underline"
+                    >Забронювати зараз</router-link
+                  >.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-
     <FooterComp />
   </div>
 </template>
@@ -153,4 +193,11 @@
 import FooterComp from '../components/FooterComp.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+  transition: transform 0.5s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+</style>

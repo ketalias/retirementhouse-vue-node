@@ -61,13 +61,13 @@ function handleCall() {
     <section
       id="hero"
       aria-label="Головна секція"
-      class="h-[100vh] md:h-[70vh] relative bg-[url('/img/hero-background.jpg')] bg-cover bg-center py-20 text-center text-white"
+      class="h-[60svh] md:h-[70svh] relative bg-[url('/img/hero-background.jpg')] bg-cover bg-center py-20 text-center text-white"
     >
       <div class="absolute inset-0 bg-black/60"></div>
 
       <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         <h1 class="text-5xl md:text-8xl font-bold mb-4">Пансіонат Панська Втіха</h1>
-        <p class="block md:hidden text-base mb-6">Комфорт. Природа. Відпочинок.</p>
+        <h2 class="text-2xl md:text-4xl mb-6">Відпочинок у серці природи</h2>
         <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw]">
           Пансіонат "Панська Втіха" — це ідеальне місце для відпочинку, де поєднуються комфорт,
           природа та українська гостинність. Розташований у мальовничому куточку, оточеному зеленими
@@ -90,7 +90,7 @@ function handleCall() {
 
     <section aria-label="Переваги" class="py-19 px-4 max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row gap-8 text-center">
-        <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <div class="card flex-1 p-6 bg-white rounded-lg shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -109,7 +109,7 @@ function handleCall() {
           <p>Затишні кімнати з усіма зручностями для вашого відпочинку.</p>
         </div>
 
-        <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <div class="card flex-1 p-6 bg-white rounded-lg shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -128,7 +128,7 @@ function handleCall() {
           <p>Свіже повітря, ліси та водойми створюють ідеальну атмосферу.</p>
         </div>
 
-        <div class="flex-1 p-6 bg-white rounded-lg shadow-md">
+        <div class="card flex-1 p-6 bg-white rounded-lg shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -153,7 +153,7 @@ function handleCall() {
         <h2 class="text-4xl font-bold mb-12">Що кажуть наші гості</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <blockquote
-            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+            class="card bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
           >
             <img
               src="/img/granny1.jpeg"
@@ -168,7 +168,7 @@ function handleCall() {
           </blockquote>
 
           <blockquote
-            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+            class="card bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
           >
             <img
               src="/img/granny3.jpg"
@@ -183,7 +183,7 @@ function handleCall() {
           </blockquote>
 
           <blockquote
-            class="bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
+            class="card bg-gray-100 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
           >
             <img
               src="/img/granny2.jpg"
@@ -217,37 +217,14 @@ function handleCall() {
         </div>
       </div>
     </section>
-    <section aria-label="Часті питання (FAQ)" class="max-w-8xl mx-auto p-6 mt-5.5 bg-white">
-      <div class="max-w-6xl mx-auto p-6 my-5.5">
-        <h2 class="text-3xl font-bold mb-8 text-center">Часті питання</h2>
-        <ul>
-          <li v-for="(faq, index) in faqs" :key="index" class="mb-4 border-b border-gray-300">
-            <button
-              @click="toggle(index)"
-              class="w-full text-left py-4 flex justify-between items-center focus:outline-none"
-              :aria-expanded="faq.open.value.toString()"
-            >
-              <span class="text-lg font-medium">{{ faq.question }}</span>
-              <svg
-                :class="{ 'transform rotate-180': faq.open.value }"
-                class="w-6 h-6 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div v-show="faq.open.value" class="pb-4 text-gray-700">
-              {{ faq.answer }}
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <FooterComp />
   </main>
 </template>
+<style>
+.card {
+  transition: transform 0.5s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+</style>
