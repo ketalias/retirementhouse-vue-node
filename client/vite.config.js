@@ -1,13 +1,23 @@
 import { fileURLToPath, URL } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { cpSync } from 'fs'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueDevTools(), tailwindcss()],
+  base: '/',
+  plugins: [
+    vue(),
+    vueDevTools(),
+    tailwindcss(),
+    {
+      name: 'copy-redirects',
+      writeBundle() {
+        cpSync('_redirects', 'dist/_redirects')
+      },
+    },
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
