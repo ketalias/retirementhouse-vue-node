@@ -1,12 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
+      name: 'root',
+      redirect: '/home',
+      meta: {
+        title: 'Home',
+      },
+    },
+    {
+      path: '/home',
       name: 'home',
       component: () => import('../views/HomeView.vue'),
     },
@@ -30,12 +36,8 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition
     }
-    return { top: 0 }
+    return { top: 0, behavior: 'smooth' }
   },
 })
-router.afterEach(() => {
-  setTimeout(() => {
-    AOS.refresh()
-  }, 0)
-})
+
 export default router
