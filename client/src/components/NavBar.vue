@@ -60,9 +60,9 @@
     <!-- Десктопне меню -->
     <div class="hidden lg:flex">
       <ul class="menu menu-horizontal p-0 gap-4">
-        <li><router-link to="/" :class="linkClass('/home')">Главная</router-link></li>
+        <li><router-link to="/" :class="linkClass('/')">Головна</router-link></li>
         <li><router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link></li>
-        <li><router-link to="/contact" :class="linkClass('/contact')">Контакты</router-link></li>
+        <li><router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link></li>
         <li><router-link to="/about" :class="linkClass('/about')">Про нас</router-link></li>
       </ul>
     </div>

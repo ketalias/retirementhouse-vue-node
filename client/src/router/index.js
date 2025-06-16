@@ -1,17 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: '/home',
-    },
-    {
-      path: '/home',
       name: 'home',
-      component: HomeView,
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/about',
@@ -29,6 +26,16 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue'),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0 }
+  },
 })
-
+router.afterEach(() => {
+  setTimeout(() => {
+    AOS.refresh()
+  }, 0)
+})
 export default router
