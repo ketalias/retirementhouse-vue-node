@@ -1,11 +1,16 @@
 <template>
   <div class="min-h-screen">
-    <div class="relative hero h-[40vh] bg-[url('/img/contact-bg.jpg')] bg-cover bg-center">
+    <div
+      class="relative hero h-[40vh] bg-[url('/img/contact-bg.jpg')] bg-cover bg-center"
+      data-aos="fade-in"
+    >
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="hero-content text-center text-neutral-content">
         <div class="max-w-4xl">
-          <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white">Наші контакти</h1>
-          <p class="mb-5 text-2xl">
+          <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white" data-aos="fade-up">
+            Наші контакти
+          </h1>
+          <p class="mb-5 text-2xl" data-aos="fade-up" data-aos-delay="200">
             Зв’яжіться з нами для отримання додаткової інформації чи запису
           </p>
         </div>
@@ -13,7 +18,7 @@
     </div>
 
     <div class="max-w-6xl mx-auto py-16 px-4 space-y-12 text-lg">
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
         <div class="card shadow-xl">
           <div class="card-body text-center items-center">
             <h2 class="card-title text-2xl mb-2">Адреса</h2>
@@ -42,7 +47,7 @@
         </div>
       </div>
 
-      <div class="shadow-xl overflow-hidden">
+      <div class="shadow-xl overflow-hidden" data-aos="fade-up">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-4">Наше місцезнаходження</h2>
         </div>
@@ -56,7 +61,7 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="grid md:grid-cols-3 gap-6 text-center" data-aos="fade-up">
         <div class="card p-6 shadow rounded-xl space-y-3">
           <img
             src="/icons/medic-ico.svg"
@@ -87,7 +92,7 @@
           <p>Ми в самому серці Ужгорода з легкою доступністю.</p>
         </div>
       </div>
-      <div class="shadow-xl">
+      <div class="shadow-xl" data-aos="fade-up">
         <div class="card-body">
           <h2 class="card-title text-2xl mb-6 text-center">Напишіть нам</h2>
           <form class="form-control flex flex-col space-y-4 w-full mx-auto px-4">
@@ -110,14 +115,14 @@
           </form>
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
         <img src="../../public/img/hero-background.jpg" class="rounded-xl shadow" />
         <img src="../../public/img/hero-background.jpg" class="rounded-xl shadow" />
         <img src="../../public/img/hero-background.jpg" class="rounded-xl shadow" />
       </div>
-      <div class="faq-container max-w-6xl mx-auto">
-        <h2 class="text-2xl font-bold mb-6 text-center">Поширені запитання</h2>
-        <ul class="space-y-4">
+      <div class="faq-container max-w-6xl mx-auto" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-6 text-center" data-aos="fade-up">Поширені запитання</h2>
+        <ul class="space-y-4" data-aos="fade-up">
           <li>
             <div class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-lg">
               <input type="checkbox" :id="'faq-1'" class="peer" />
@@ -191,6 +196,18 @@
 
 <script setup>
 import FooterComp from '../components/FooterComp.vue'
+import { onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    offset: 100,
+    easing: 'ease-in-out',
+    delay: 50,
+    once: true,
+  })
+})
 </script>
 
 <style scoped>
