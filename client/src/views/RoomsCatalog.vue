@@ -1,51 +1,11 @@
-<template>
-  <div class="flex flex-col min-h-screen">
-    <div class="min-h-screen bg-white">
-      <div class="relative hero h-[40vh] bg-[url('/img/rooms-bg.jpg')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="hero-content text-center text-neutral-content">
-          <div class="max-w-4xl">
-            <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white">Номери</h1>
-          </div>
-        </div>
-      </div>
-      <div class="container mx-auto px-4 my-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            v-for="(room, index) in rooms"
-            :key="room.id"
-            @click="openLightbox(index)"
-            class="cursor-pointer"
-          >
-            <RoomCard
-              :image="room.images[0]"
-              :title="room.title"
-              :description="room.description"
-              :features="room.features"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <vue-easy-lightbox
-      :visible="visible"
-      :imgs="rooms[activeIndex]?.images || []"
-      :index="lightboxImageIndex"
-      @hide="visible = false"
-      @on-prev="prevImage"
-      @on-next="nextImage"
-    />
-
-    <FooterComp />
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 import RoomCard from '@/components/RoomCard.vue'
 import FooterComp from '@/components/FooterComp.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { onMounted } from 'vue'
 
 const visible = ref(false)
 const activeIndex = ref(0)
@@ -68,6 +28,15 @@ function nextImage() {
     lightboxImageIndex.value++
   }
 }
+
+onMounted(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out',
+    once: true,
+    offset: 100,
+  })
+})
 
 const rooms = [
   {
@@ -114,3 +83,51 @@ const rooms = [
   },
 ]
 </script>
+
+<template>
+  <div class="flex flex-col min-h-screen">
+    <div class="min-h-screen bg-white">
+      <div
+        class="relative hero h-[40vh] bg-[url('/img/rooms-bg.jpg')] bg-cover bg-center"
+        data-aos="fade-in"
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-4xl">
+            <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white" data-aos="fade-up">Номери</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto px-4 my-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            v-for="(room, index) in rooms"
+            :key="room.id"
+            @click="openLightbox(index)"
+            class="cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <RoomCard
+              :image="room.images[0]"
+              :title="room.title"
+              :description="room.description"
+              :features="room.features"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <vue-easy-lightbox
+      :visible="visible"
+      :imgs="rooms[activeIndex]?.images || []"
+      :index="lightboxImageIndex"
+      @hide="visible = false"
+      @on-prev="prevImage"
+      @on-next="nextImage"
+    />
+
+    <FooterComp />
+  </div>
+</template>
