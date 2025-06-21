@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { cpSync } from 'fs'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
   base: '/',
@@ -11,6 +12,12 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tailwindcss(),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    }),
     {
       name: 'copy-redirects',
       writeBundle() {

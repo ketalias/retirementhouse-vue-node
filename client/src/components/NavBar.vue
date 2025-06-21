@@ -44,7 +44,9 @@
           role="menu"
         >
           <li role="menuitem">
-            <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown">Головна</router-link>
+            <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown"
+              >Головна</router-link
+            >
           </li>
           <li role="menuitem">
             <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown"
@@ -56,11 +58,11 @@
               >Контакти</router-link
             >
           </li>
-          <li role="menuitem">
+          <!-- <li role="menuitem">
             <router-link to="/about" :class="linkClass('/about')" @click="closeDropdown"
               >Про нас</router-link
             >
-          </li>
+          </li> -->
         </ul>
       </details>
     </div>
