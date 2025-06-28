@@ -3,9 +3,9 @@ import FooterComp from '@/components/FooterComp.vue'
 import { ref, onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import i18next from 'i18next'
+import { useTranslation } from 'i18next-vue'
 
-const t = i18next.t.bind(i18next)
+const { t } = useTranslation()
 
 const images = [
   { src: '/img/galleryitem1.jpg', height: 260 },

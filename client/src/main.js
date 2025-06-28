@@ -6,13 +6,13 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'
-import i18n from './config/i18n'
+import installI18n from './config/i18n'
 
 
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-app.use(i18n)
+installI18n(app)
 
 app.mount('#app')

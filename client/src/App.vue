@@ -1,15 +1,26 @@
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { i18next } from './config/i18n' 
 import NavBar from './components/NavBar.vue'
-import { onMounted } from 'vue'
 import LoaderComp from './components/LoaderComp.vue'
 import { RouterView } from 'vue-router'
-import { ref } from 'vue'
 
-const loading = ref(false)
+const loading = ref(true)
+const currentLang = ref(i18next.language)
+
+function handleLangChange(lang) {
+  currentLang.value = lang
+}
+
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
   }, 500)
+  i18next.on('languageChanged', handleLangChange)
+})
+
+onBeforeUnmount(() => {
+  i18next.off('languageChanged', handleLangChange)
 })
 </script>
 

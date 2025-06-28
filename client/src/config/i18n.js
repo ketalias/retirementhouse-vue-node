@@ -114,7 +114,9 @@ i18next.use(LanguageDetector).init({
   },
 })
 
-export default function (app) {
+
+export { i18next }
+
+export default function installI18n(app) {
   app.use(I18NextVue, { i18next })
-  return app
 }
