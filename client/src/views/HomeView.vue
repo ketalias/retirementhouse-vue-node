@@ -1,8 +1,10 @@
 <script setup>
 import FooterComp from '@/components/FooterComp.vue'
+import FloatingContactForm from '@/components/FloatingContactForm.vue'
 import { ref, onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { submitForm } from '@/api'
 
 const images = [
   { src: '/img/galleryitem1.jpg', height: 260 },
@@ -38,6 +40,18 @@ function toggle(index) {
   faqs[index].open.value = !faqs[index].open.value
 }
 
+const handleFormSubmission = (formData) => {
+  console.log('Received form data:', formData)
+submitForm(formData)
+    .then(() => {
+      alert('Форма успішно надіслана!')
+    })
+    .catch((error) => {
+      console.error('Помилка при надсиланні форми:', error)
+      alert('Сталася помилка. Спробуйте ще раз.')
+    })
+}
+
 const phoneNumber = '+380961234567'
 
 function handleCall() {
@@ -69,6 +83,8 @@ onMounted(() => {
 
 <template>
   <main>
+    <FloatingContactForm @formSubmitted="handleFormSubmission" />
+
     <!-- Секція герой -->
     <section
       id="hero"
