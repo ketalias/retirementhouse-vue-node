@@ -1,10 +1,11 @@
 <script setup>
 import FooterComp from '@/components/FooterComp.vue'
-import FloatingContactForm from '@/components/FloatingContactForm.vue'
+import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
+import PriceCalcForm from '@/components/PriceCalcForm.vue'
 import { ref, onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { submitForm } from '@/api'
+import { sendUserData } from '@/api'
 
 const images = [
   { src: '/img/galleryitem1.jpg', height: 260 },
@@ -40,14 +41,16 @@ function toggle(index) {
   faqs[index].open.value = !faqs[index].open.value
 }
 
-const handleFormSubmission = (formData) => {
-  console.log('Received form data:', formData)
-submitForm(formData)
+const isFormOpen = ref(false)
+
+const handleFormSubmit = (formData) => {
+  sendUserData(formData)
     .then(() => {
-      alert('Форма успішно надіслана!')
+      alert('Дані успішно надіслані!')
+      isFormOpen.value = false
     })
     .catch((error) => {
-      console.error('Помилка при надсиланні форми:', error)
+      console.error('Помилка при надсиланні даних:', error)
       alert('Сталася помилка. Спробуйте ще раз.')
     })
 }
@@ -83,7 +86,8 @@ onMounted(() => {
 
 <template>
   <main>
-    <FloatingContactForm @formSubmitted="handleFormSubmission" />
+    <FloatingFormButton @open="isFormOpen = true" />
+    <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Секція герой -->
     <section id="hero" aria-label="Головна секція"
@@ -188,6 +192,10 @@ onMounted(() => {
           </blockquote>
         </div>
       </div>
+    </section>
+
+    <section id="form-block">
+      <PriceCalcForm mode="inline" @submitted="handleSubmit" />
     </section>
 
     <!-- Секція галерея -->

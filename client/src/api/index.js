@@ -5,7 +5,7 @@ const api = axios.create({
     baseURL: API_BASE_URL,
 })
 
-export async function submitForm(data) {
+export async function sendUserData(data) {
     try {
         const response = await api.post('/api/form', data)
         return response.data
