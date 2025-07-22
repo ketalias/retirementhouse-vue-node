@@ -184,6 +184,7 @@ const submitForm = () => {
         emit('submitted', formData.value)
         if (props.mode === 'modal') emit('close')
     }
+    resetForm()
 }
 
 const resetForm = () => {

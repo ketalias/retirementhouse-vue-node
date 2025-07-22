@@ -73,7 +73,13 @@ function handleCall() {
   }
 }
 
-// Ініціалізація AOS
+function handleCalculatePrice() {
+  const element = document.querySelector('#form-block');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 onMounted(() => {
   AOS.init({
     duration: 800,
@@ -108,7 +114,7 @@ onMounted(() => {
           від міської метушні та насолодитися спокоєм.
         </p>
         <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
-          <button class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
+          <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
           <button @click="handleCall" class="btn btn-secondary w-full md:w-auto" type="button"
             title="Натисніть, щоб зателефонувати або скопіювати номер">
             Зателефонувати
@@ -194,9 +200,27 @@ onMounted(() => {
       </div>
     </section>
 
-    <section id="form-block">
-      <PriceCalcForm mode="inline" @submitted="handleSubmit" />
+    <!-- Form section-->
+    <section id="form-block" class="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-center"
+      style="background-image: url('/img/form-background.jpg');">
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-white max-w-xl hidden md:block" data-aos="fade-right">
+          <h2 class="text-4xl font-bold mb-4">Залиште заявку прямо зараз</h2>
+          <p class="text-lg leading-relaxed">
+            Ми підберемо найкращі умови розміщення для ваших близьких — з турботою, комфортом і
+            увагою до кожної деталі.
+          </p>
+        </div>
+
+        <div class="p-0 rounded-xl  w-full md:w-[auto] max-w-full" data-aos="fade-left">
+          <PriceCalcForm mode="inline" @submitted="handleFormSubmit" />
+        </div>
+      </div>
     </section>
+
 
     <!-- Секція галерея -->
     <section class="py-10 bg-base-100">
