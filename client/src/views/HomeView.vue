@@ -1,8 +1,6 @@
 <script setup>
 import FooterComp from '@/components/FooterComp.vue'
-import { ref, onMounted } from 'vue'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { ref } from 'vue'
 
 const images = [
   { src: '/img/galleryitem1.jpg', height: 260 },
@@ -55,16 +53,6 @@ function handleCall() {
       })
   }
 }
-
-// Ініціалізація AOS
-onMounted(() => {
-  AOS.init({
-    duration: 800,
-    easing: 'ease-out',
-    once: true,
-    offset: 100,
-  })
-})
 </script>
 
 <template>
