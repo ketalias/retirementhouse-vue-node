@@ -215,7 +215,7 @@ onMounted(() => {
           </p>
         </div>
 
-        <div class="p-0 rounded-xl  w-full md:w-[auto] max-w-full" data-aos="fade-left">
+        <div class="p-0 rounded-xl  w-full md:w-[auto] max-w-full" data-aos="fade-up">
           <PriceCalcForm mode="inline" @submitted="handleFormSubmit" />
         </div>
       </div>
