@@ -1,4 +1,4 @@
-export const cardsList = [
+export const cardsListInfo = [
   {
     title: 'Жива підтримка',
     description: 'Ми відповідаємо на дзвінки та повідомлення без затримок.',
@@ -17,7 +17,7 @@ export const cardsList = [
   },
 ]
 
-export const cardsList2 = [
+export const cardsListBenefits = [
   {
     title: 'Професійна команда',
     description: 'Наші фахівці мають великий досвід у догляді за людьми похилого віку.',
