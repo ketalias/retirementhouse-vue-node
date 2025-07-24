@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import MenuCard from '@/components/MenuCard.vue';
+import MenuCard from '@/components/cards/MenuCard.vue';
 import { defineProps } from 'vue';
 defineProps({
   title: {

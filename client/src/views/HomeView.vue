@@ -1,5 +1,5 @@
 <script setup>
-import FooterComp from '@/components/FooterComp.vue'
+import FooterComp from '@/components/layout/FooterComp.vue'
 import { ref } from 'vue'
 
 const images = [

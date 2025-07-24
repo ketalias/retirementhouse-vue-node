@@ -1,10 +1,10 @@
 <script setup>
-import HeroSection from '@/components/HeroSection.vue';
-import DailyMenuSection from '@/components/DailyMenuSection.vue';
-import DailySchedule from '@/components/DailySchedule.vue';
-import ImageTextCard from '@/components/ImageTextCard.vue';
-import FormComp from '@/components/FormComp.vue';
-import FooterComp from '@/components/FooterComp.vue';
+import HeroSection from '@/components/sections/HeroSection.vue';
+import DailyMenuSection from '@/components/sections/DailyMenuSection.vue';
+import DailySchedule from '@/components/grids/DailySchedule.vue';
+import ImageTextCard from '@/components/cards/ImageTextCard.vue';
+import FormComp from '@/components/forms/FormComp.vue';
+import FooterComp from '@/components/layout/FooterComp.vue';
 import { dailyMenuItems, dailySchedule } from '@/data/menuData.js'
 </script>
 <template>

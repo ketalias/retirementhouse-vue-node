@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
-import HeroSection from '@/components/HeroSection.vue'
-import RoomsGrid from '@/components/RoomsGrid.vue'
-import FormComp from '@/components/FormComp.vue'
-import FooterComp from '@/components/FooterComp.vue'
+import HeroSection from '@/components/sections/HeroSection.vue'
+import RoomsGrid from '@/components/grids/RoomsGrid.vue'
+import FormComp from '@/components/forms/FormComp.vue'
+import FooterComp from '@/components/layout/FooterComp.vue'
 import { roomItems as roomsList } from '@/data/roomsData.js'
 
 const visible = ref(false)

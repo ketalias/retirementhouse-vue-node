@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import InfoCard from './InfoCard.vue'
+import InfoCard from './cards/InfoCard.vue'
 
 defineProps({
   cards: {
