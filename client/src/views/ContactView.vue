@@ -4,7 +4,7 @@ import FormComp from '../components/FormComp.vue'
 import FooterComp from '../components/FooterComp.vue'
 import LocationMap from '@/components/LocationMap.vue';
 import InfoCardsGrid from '@/components/InfoCardsGrid.vue';
-import { cardsListOInfo, cardsListBenefits } from '@/data/cardsData.js'
+import { cardsListInfo, cardsListBenefits } from '@/data/cardsData.js'
 import FaqAccordion from '@/components/FaqAccordion.vue';
 import { faqsContactItems } from '@/data/faqsData';
 import { ref } from 'vue'
@@ -14,7 +14,7 @@ import { ref } from 'vue'
     <HeroSection title="Контакти" subtitle="Зв'яжіться з нами для отримання додаткової інформації"
       background="/img/contact-bg.jpg" />
     <div class="max-w-6xl mx-auto py-16 px-4 space-y-12 text-lg">
-      <InfoCardsGrid :cards="cardsListOInfo" />
+      <InfoCardsGrid :cards="cardsListInfo" />
       <LocationMap />
       <InfoCardsGrid :cards="cardsListBenefits" />
       <FormComp />
