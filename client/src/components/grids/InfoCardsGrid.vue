@@ -3,7 +3,7 @@
     <InfoCard
       v-for="(card, index) in cards"
       :key="index"
-      :title="card.title"
+      :title="card.title"xyй
       :description="card.description"
       :icon="card.icon"
     />
