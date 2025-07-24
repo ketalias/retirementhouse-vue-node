@@ -3,7 +3,7 @@ import HeroSection from '@/components/sections/HeroSection.vue'
 import FormComp from '../components/forms/FormComp.vue'
 import FooterComp from '../components/layout/FooterComp.vue'
 import LocationMap from '@/components/layout/LocationMap.vue';
-import InfoCardsGrid from '@/components/InfoCardsGrid.vue';
+import InfoCardsGrid from '@/components/grids/InfoCardsGrid.vue';
 import { cardsListInfo, cardsListBenefits } from '@/data/cardsData.js'
 import FaqAccordion from '@/components/sections/FaqAccordion.vue';
 import { faqsContactItems } from '@/data/faqsData';

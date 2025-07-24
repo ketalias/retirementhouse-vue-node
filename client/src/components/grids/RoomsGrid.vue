@@ -1,5 +1,5 @@
 <script setup>
-import RoomCard from './cards/RoomCard.vue'
+import RoomCard from '../cards/RoomCard.vue'
 import { defineProps, defineEmits } from 'vue'
 import { roomItems as rooms } from '@/data/roomsData.js'
 
