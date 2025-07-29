@@ -1,11 +1,11 @@
 <template>
   <div
-    class="relative hero h-[40vh] bg-cover bg-center"
+    class="relative hero h-[50vh] md:h-[50svh] bg-cover bg-center"
     :style="{ backgroundImage: `url('${background}')` }"
     data-aos="fade-in"
   >
     <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative z-10 text-center px-4">
+    <div class="relative z-10 text-center px-4 h-full flex flex-col justify-center items-center">
       <h1
         class="mb-5 text-5xl md:text-8xl font-bold text-white"
         data-aos="fade-up"
@@ -20,9 +20,13 @@
       >
         {{ subtitle }}
       </p>
+
+      <slot />
     </div>
   </div>
 </template>
+
+      
 
 <script setup>
 defineProps({
@@ -36,7 +40,7 @@ defineProps({
   },
   background: {
     type: String,
-    default: '/img/oldmen-eat-bg.jpg'
+    default: 'https://example.com/default-background.jpg'
   }
 });
 </script>
