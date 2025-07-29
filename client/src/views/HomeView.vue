@@ -21,6 +21,7 @@ import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
 import InfoSection from '@/components/sections/InfoSection.vue'
 import CareFeaturesGrid from '@/components/grids/CareFeaturesGrid.vue'
 import DailyScheduleSection from '@/components/sections/DailyScheduleSection.vue'
+import FormComp from '@/components/forms/FormComp.vue'
 
 
 /* --- Data --- */
@@ -100,6 +101,9 @@ function handleCalculatePrice() {
 
     <!-- Gallery Section -->
     <GalleryMasonry />
+
+    <!-- Contact Form Section -->
+    <FormComp @formSubmitted="handleFormSubmit" />
 
     <!-- Footer -->
     <FooterComp />

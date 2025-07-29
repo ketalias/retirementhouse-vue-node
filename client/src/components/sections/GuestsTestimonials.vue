@@ -1,5 +1,5 @@
 <template>
-    <section aria-label="Відгуки гостей" class="py-16 px-4 bg-white" data-aos="fade-up">
+    <section aria-label="Відгуки гостей" class="pb-25 px-4 bg-white" data-aos="fade-up">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12" data-aos="fade-up" data-aos-delay="100">
                 Що кажуть наші гості

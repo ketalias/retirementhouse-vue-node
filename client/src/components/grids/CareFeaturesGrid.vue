@@ -38,5 +38,35 @@ const items = [
     title: 'Живе спілкування',
     caption: 'нові друзі',
   },
+  {
+    image: '/img/granny1.jpeg',
+    title: 'Медичний догляд',
+    caption: '24/7 супровід',
+  },
+  {
+    image: '/img/granny2.jpg',
+    title: 'Затишок і турбота',
+    caption: 'домашня атмосфера',
+  },
+  {
+    image: '/img/granny3.jpg',
+    title: 'Живе спілкування',
+    caption: 'нові друзі',
+  },
+  {
+    image: '/img/granny1.jpeg',
+    title: 'Медичний догляд',
+    caption: '24/7 супровід',
+  },
+  {
+    image: '/img/granny2.jpg',
+    title: 'Затишок і турбота',
+    caption: 'домашня атмосфера',
+  },
+  {
+    image: '/img/granny3.jpg',
+    title: 'Живе спілкування',
+    caption: 'нові друзі',
+  },
 ]
 </script>
