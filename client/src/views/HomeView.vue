@@ -1,5 +1,5 @@
 <script setup>
-import FooterComp from '@/components/FooterComp.vue'
+import FooterComp from '@/components/layout/FooterComp.vue'
 import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
 import PriceCalcForm from '@/components/PriceCalcForm.vue'
 import { ref, onMounted } from 'vue'
