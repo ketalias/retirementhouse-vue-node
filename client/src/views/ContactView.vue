@@ -19,9 +19,9 @@ import { ref } from 'vue'
       <InfoCardsGrid :cards="cardsListBenefits" />
       <FormComp />
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
-        <img src="../../img/hero-background.jpg" class="rounded-xl shadow" />
-        <img src="../../img/hero-background.jpg" class="rounded-xl shadow" />
-        <img src="../../img/hero-background.jpg" class="rounded-xl shadow" />
+        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
+        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
+        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
       </div>
       <FaqAccordion :faqs="faqsContactItems" />
     </div>
