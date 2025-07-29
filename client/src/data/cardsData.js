@@ -8,7 +8,6 @@ export const cardsListInfo = [
     title: 'Швидка допомога',
     description: 'Наші спеціалісти завжди готові допомогти.',
     icon: '/icons/food-ico.svg',
-
   },
   {
     title: 'Безпека 24/7',
@@ -27,6 +26,24 @@ export const cardsListBenefits = [
     description: 'Ми розробляємо персоналізовані плани догляду для кожного клієнта.',
   },
   {
+    title: 'Комфорт і затишок',
+    description: 'Створюємо умови, де кожен почувається як вдома.',
+  },
+]
+
+export const cardsListHome = [
+  {
+    icon: '/icons/medic-ico.svg',
+    title: 'Професійна команда',
+    description: 'Наші фахівці мають великий досвід у догляді за людьми похилого віку.',
+  },
+  {
+    icon: '/icons/food-ico.svg',
+    title: 'Індивідуальний підхід',
+    description: 'Ми розробляємо персоналізовані плани догляду для кожного клієнта.',
+  },
+  {
+    icon: '/icons/home-ico.svg',
     title: 'Комфорт і затишок',
     description: 'Створюємо умови, де кожен почувається як вдома.',
   },
