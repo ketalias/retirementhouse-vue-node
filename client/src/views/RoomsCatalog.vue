@@ -40,7 +40,7 @@ function nextImage() {
       </div>
     </div>
     <VueEasyLightbox :visible="visible" :imgs="roomsList[activeIndex]?.images || []" :index="lightboxImageIndex"
-      @hide="visible = false" @on-prev="prevImage" @on-next="nextImage" />
+      @hide="visible = false" @on-prev="prevImage" @on-next="nextImage" :moveDisabled="true" />
     <FormComp />
     <FooterComp />
   </div>
