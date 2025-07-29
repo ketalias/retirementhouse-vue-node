@@ -19,6 +19,9 @@ import FooterComp from '@/components/layout/FooterComp.vue'
 import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
 import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
 import InfoSection from '@/components/sections/InfoSection.vue'
+import CareFeaturesGrid from '@/components/grids/CareFeaturesGrid.vue'
+import DailyScheduleSection from '@/components/sections/DailyScheduleSection.vue'
+
 
 /* --- Data --- */
 const { cardsListHome } = useHomeData()
@@ -85,6 +88,12 @@ function handleCalculatePrice() {
 
     <!-- Form Section -->
     <FormSection @formSubmitted="handleFormSubmit" />
+
+    <!-- Care Features Grid -->
+    <CareFeaturesGrid />
+
+    <!-- Daily Schedule Section -->
+    <DailyScheduleSection />
 
     <!-- Info Section -->
     <InfoSection />

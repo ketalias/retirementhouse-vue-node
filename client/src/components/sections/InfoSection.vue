@@ -3,7 +3,7 @@
         <div class="max-w-5xl mx-auto flex flex-col items-center text-center space-y-12">
             <!-- Заголовок -->
             <header>
-                <h2 class="text-4xl font-bold text-primary mb-4">
+                <h2 class="text-4xl font-bold text-black mb-4">
                     Приватний пансіонат «Панська Втіха» в Ужгороді
                 </h2>
                 <p class="text-lg text-base-content max-w-2xl mx-auto">
