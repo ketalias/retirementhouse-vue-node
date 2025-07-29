@@ -26,7 +26,6 @@
 
 <script setup>
 import MenuCard from '@/components/cards/MenuCard.vue';
-import { defineProps } from 'vue';
 defineProps({
   title: {
     type: String,
