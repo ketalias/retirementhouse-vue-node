@@ -1,6 +1,11 @@
 <script setup>
 import FooterComp from '@/components/layout/FooterComp.vue'
-import { ref } from 'vue'
+import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
+import PriceCalcForm from '@/components/PriceCalcForm.vue'
+import { ref, onMounted } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { sendUserData } from '@/api'
 
 const images = [
   { src: '/img/galleryitem1.jpg', height: 260 },
@@ -36,6 +41,20 @@ function toggle(index) {
   faqs[index].open.value = !faqs[index].open.value
 }
 
+const isFormOpen = ref(false)
+
+const handleFormSubmit = (formData) => {
+  sendUserData(formData)
+    .then(() => {
+      alert('Дані успішно надіслані!')
+      isFormOpen.value = false
+    })
+    .catch((error) => {
+      console.error('Помилка при надсиланні даних:', error)
+      alert('Сталася помилка. Спробуйте ще раз.')
+    })
+}
+
 const phoneNumber = '+380961234567'
 
 function handleCall() {
@@ -53,10 +72,29 @@ function handleCall() {
       })
   }
 }
+
+function handleCalculatePrice() {
+  const element = document.querySelector('#form-block');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+onMounted(() => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out',
+    once: true,
+    offset: 100,
+  })
+})
 </script>
 
 <template>
   <main>
+    <FloatingFormButton @open="isFormOpen = true" />
+    <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
+
     <!-- Секція герой -->
     <section id="hero" aria-label="Головна секція"
       class="h-[60svh] md:h-[70svh] relative bg-[url('/img/hero-background.jpg')] bg-cover bg-center py-20 text-center text-white"
@@ -76,7 +114,7 @@ function handleCall() {
           від міської метушні та насолодитися спокоєм.
         </p>
         <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
-          <button class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
+          <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">Розрахувати вартість</button>
           <button @click="handleCall" class="btn btn-secondary w-full md:w-auto" type="button"
             title="Натисніть, щоб зателефонувати або скопіювати номер">
             Зателефонувати
@@ -161,6 +199,28 @@ function handleCall() {
         </div>
       </div>
     </section>
+
+    <!-- Form section-->
+    <section id="form-block" class="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-center"
+      style="background-image: url('/img/form-background.jpg');">
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-white max-w-xl hidden md:block" data-aos="fade-right">
+          <h2 class="text-4xl font-bold mb-4">Залиште заявку прямо зараз</h2>
+          <p class="text-lg leading-relaxed">
+            Ми підберемо найкращі умови розміщення для ваших близьких — з турботою, комфортом і
+            увагою до кожної деталі.
+          </p>
+        </div>
+
+        <div class="p-0 rounded-xl  w-full md:w-[auto] max-w-full" data-aos="fade-up">
+          <PriceCalcForm mode="inline" @submitted="handleFormSubmit" />
+        </div>
+      </div>
+    </section>
+
 
     <!-- Секція галерея -->
     <section class="py-10 bg-base-100">
