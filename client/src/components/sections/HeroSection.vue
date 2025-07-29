@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative hero h-[40vh] md:h-[70svh] bg-cover bg-center"
+    class="relative hero h-[50vh] md:h-[70svh] bg-cover bg-center"
     :style="{ backgroundImage: `url('${background}')` }"
     data-aos="fade-in"
   >

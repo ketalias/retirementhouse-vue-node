@@ -18,6 +18,7 @@ import FormSection from '@/components/sections/FormSection.vue'
 import FooterComp from '@/components/layout/FooterComp.vue'
 import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
 import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
+import InfoSection from '@/components/sections/InfoSection.vue'
 
 /* --- Data --- */
 const { cardsListHome } = useHomeData()
@@ -84,6 +85,9 @@ function handleCalculatePrice() {
 
     <!-- Form Section -->
     <FormSection @formSubmitted="handleFormSubmit" />
+
+    <!-- Info Section -->
+    <InfoSection />
 
     <!-- Gallery Section -->
     <GalleryMasonry />
