@@ -102,9 +102,6 @@ function handleCalculatePrice() {
     <!-- Gallery Section -->
     <GalleryMasonry />
 
-    <!-- Contact Form Section -->
-    <FormComp @formSubmitted="handleFormSubmit" />
-
     <!-- Footer -->
     <FooterComp />
   </main>
