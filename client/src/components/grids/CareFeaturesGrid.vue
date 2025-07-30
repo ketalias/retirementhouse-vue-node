@@ -1,21 +1,32 @@
 <template>
   <section class="py-16 px-4 md:px-10 bg-white text-center">
-    <h2 class="text-3xl font-bold mb-12 text-primary">
+    <h2 class="text-4xl font-bold mb-12 text-ДФСЛ">
       Будьте спокійні за своїх родичів
     </h2>
-    <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+    <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 max-w-8xl mx-auto">
       <div
         v-for="(item, index) in items"
         :key="index"
-        class="card bg-base-100 shadow-md p-6 items-center"
+        class="card bg-base-100 shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[280px]"
       >
-        <div class="avatar mb-4">
-          <div class="w-24 h-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-5 overflow-hidden">
-            <img :src="item.image" :alt="item.title" class="object-cover w-full h-full" />
-          </div>
+        <div class="w-full md:w-1/2 h-48 md:h-auto">
+          <img
+            :src="item.image"
+            :alt="item.title"
+            class="w-full h-full object-cover object-center"
+          />
         </div>
-        <h3 class="text-xl font-semibold text-primary">{{ item.title }}</h3>
-        <p class="text-md font-semibold text-black mt-1">{{ item.caption }}</p>
+
+        <div
+          class="flex-1 flex flex-col justify-center p-6 text-center md:text-left"
+        >
+          <h3 class="text-2xl font-semibold text-primary mb-2">
+            {{ item.title }}
+          </h3>
+          <p class="text-md font-medium text-gray-700">
+            {{ item.caption }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -24,49 +35,24 @@
 <script setup>
 const items = [
   {
-    image: '/img/granny1.jpeg',
+    image: '/img/cards/blood-card.jpg',
     title: 'Медичний догляд',
     caption: '24/7 супровід',
   },
   {
-    image: '/img/granny2.jpg',
+    image: '/img/cards/wheel-card.png',
     title: 'Затишок і турбота',
     caption: 'домашня атмосфера',
   },
   {
-    image: '/img/granny3.jpg',
+    image: '/img/cards/friends-card.jpg',
     title: 'Живе спілкування',
     caption: 'нові друзі',
   },
   {
-    image: '/img/granny1.jpeg',
-    title: 'Медичний догляд',
-    caption: '24/7 супровід',
-  },
-  {
-    image: '/img/granny2.jpg',
-    title: 'Затишок і турбота',
-    caption: 'домашня атмосфера',
-  },
-  {
-    image: '/img/granny3.jpg',
-    title: 'Живе спілкування',
-    caption: 'нові друзі',
-  },
-  {
-    image: '/img/granny1.jpeg',
-    title: 'Медичний догляд',
-    caption: '24/7 супровід',
-  },
-  {
-    image: '/img/granny2.jpg',
-    title: 'Затишок і турбота',
-    caption: 'домашня атмосфера',
-  },
-  {
-    image: '/img/granny3.jpg',
-    title: 'Живе спілкування',
-    caption: 'нові друзі',
+    image: '/img/cards/love-card.jpg',
+    title: 'Нові враження',
+    caption: 'святкування та заходи',
   },
 ]
 </script>

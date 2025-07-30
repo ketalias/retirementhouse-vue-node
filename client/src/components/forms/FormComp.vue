@@ -1,8 +1,7 @@
 <template>
-    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-cover bg-center bg-fixed"
-        style="background-image: url('https://www.investopedia.com/thmb/8Zg__jrglwwdMmGzYSs4BojSfuA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1643300523-e1cabe045e93478d95429a80e1754946.jpg');"
+    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-cover bg-center bg-fixed items-center"
         data-aos="fade-up">
-        <div class="card w-full max-w-2xl bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-10">
+        <div class="card w-[90vw] max-w-2xl bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-10">
             <div class="card-body">
                 <h2 class="card-title text-3xl md:text-4xl mb-8 text-center text-primary-600 font-bold">Напишіть нам</h2>
                 <form class="form-control flex flex-col space-y-6 w-full">

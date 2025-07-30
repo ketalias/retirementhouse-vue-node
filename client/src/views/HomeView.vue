@@ -58,14 +58,15 @@ function handleCalculatePrice() {
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection id="hero" title="Пансіонат Панська Втіха" subtitle="Відпочинок у серці природи"
+    <HeroSection id="hero" title="Пансіонат «Панська Втіха»" subtitle="Тепла опіка серед природи"
       background="/img/hero-background.jpg">
       <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw] text-white" data-aos="fade-up"
         data-aos-delay="300">
-        Пансіонат "Панська Втіха" — це ідеальне місце для відпочинку, де поєднуються комфорт,
-        природа та українська гостинність. Розташований у мальовничому куточку, оточеному зеленими
-        лісами та кришталево чистими водоймами, наш пансіонат створений для тих, хто прагне втекти
-        від міської метушні та насолодитися спокоєм.
+        «Панська Втіха» — це сучасний дім для людей поважного віку, де професійна
+        цілодобова опіка поєднується з домашнім теплом і мальовничими краєвидами.
+        Комфортні кімнати, збалансоване харчування, індивідуальний медичний догляд
+        та цікаве дозвілля допоможуть вашим близьким почуватися в безпеці, серед
+        друзів і турботи.
       </p>
 
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
@@ -79,22 +80,14 @@ function handleCalculatePrice() {
       </div>
     </HeroSection>
 
-    <!-- Advantages Section -->
-    <div aria-label="Переваги" class="py-19 px-4 max-w-7xl mx-auto" data-aos="fade-up">
-      <InfoCardsGrid :cards="cardsListHome" />
-    </div>
-
-    <!-- Guests Section -->
-    <GuestsTestimonials />
+    <!-- Care Features Grid -->
+    <CareFeaturesGrid />
 
     <!-- Form Section -->
     <FormSection @formSubmitted="handleFormSubmit" />
 
-    <!-- Care Features Grid -->
-    <CareFeaturesGrid />
-
-    <!-- Daily Schedule Section -->
-    <DailyScheduleSection />
+    <!-- Guests Section -->
+    <GuestsTestimonials />
 
     <!-- Info Section -->
     <InfoSection />
