@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-white rounded-xl shadow-md p-6 md:p-10 max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center"
+    class="bg-white rounded-xl shadow-md p-6 md:p-10 max-w-8xl mx-auto flex flex-col md:flex-row gap-8 items-center"
     data-aos="fade-up"
   >
     <img

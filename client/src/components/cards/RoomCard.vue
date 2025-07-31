@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card bg-base-50 shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden"
+    class="card bg-white shadow-md hover:shadow-lg transition-shadow duration-300 rounded-xl overflow-hidden"
   >
     <figure>
       <img :src="image" alt="Room photo" class="w-full h-48 object-cover" />

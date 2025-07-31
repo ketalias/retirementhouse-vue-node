@@ -1,18 +1,18 @@
 export const cardsListInfo = [
   {
-    title: 'Жива підтримка',
-    description: 'Ми відповідаємо на дзвінки та повідомлення без затримок.',
-    icon: '/icons/medic-ico.svg',
+    title: 'Адреса',
+    description: 'с. Холмок, вул. Свободи, 50 Б',
+    icon: 'MapPin',
   },
   {
-    title: 'Швидка допомога',
-    description: 'Наші спеціалісти завжди готові допомогти.',
-    icon: '/icons/food-ico.svg',
+    title: 'Телефон',
+    description: '+38(095) 243 53 58',
+    icon: 'Phone',
   },
   {
-    title: 'Безпека 24/7',
-    description: 'Цілодобовий контроль і нагляд.',
-    icon: '/icons/home-ico.svg',
+    title: 'Email',
+    description: 'resthill@pansionat.com',
+    icon: 'Mail',
   },
 ]
 

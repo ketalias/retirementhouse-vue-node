@@ -8,7 +8,7 @@ import FooterComp from '@/components/layout/FooterComp.vue';
 import { dailyMenuItems, dailySchedule } from '@/data/menuData.js'
 </script>
 <template>
-    <div class="min-h-screen bg-white text-base-content">
+    <div class="min-h-screen bg-base-100 text-base-content">
         <HeroSection title="Меню та Розпорядок Дня" subtitle="З турботою про здоров’я та комфорт наших мешканців"
             background="/img/oldmen-eat-bg.jpg" />
         <div class="container mx-auto px-4 py-12 space-y-20">
