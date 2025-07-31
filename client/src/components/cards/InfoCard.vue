@@ -1,34 +1,21 @@
 <script setup>
-defineProps({
-    title: {
-        type: String,
-        required: true
-    },
-    description: {
-        type: String,
-        required: true
-    },
-    icon: {
-        type: String,
-        required: false,
-        default: null
-    }
+import { defineProps } from 'vue'
+import * as icons from 'lucide-vue-next'
+
+const props = defineProps({
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    icon: { type: String, required: false, default: null }
 })
+
+const IconComponent = props.icon && icons[props.icon] ? icons[props.icon] : null
 </script>
+
 <template>
-    <div class="card p-6 shadow rounded-xl space-y-3" data-aos="fade-up">
-        <img v-if="icon" :src="icon" alt=""
-            class="mx-auto h-15 w-15 text-primary transition-transform duration-500 hover:scale-110" />
-        <h3 class="text-xl font-semibold mb-2">{{ title }}</h3>
-        <p>{{ description }}</p>
+    <div class="card p-6 shadow rounded-xl space-y-3 transition-transform duration-300 hover:-translate-y-1 bg-white text-center"
+        data-aos="fade-up">
+        <component :is="IconComponent" v-if="IconComponent" class="mx-auto h-10 w-10 text-primary" />
+        <h3 class="text-xl font-semibold">{{ title }}</h3>
+        <p class="text-base-content/80">{{ description }}</p>
     </div>
 </template>
-<style scoped>
-.card {
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-</style>

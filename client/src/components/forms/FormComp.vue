@@ -1,9 +1,17 @@
 <template>
-    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-cover bg-center bg-fixed items-center"
+    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-base-100 bg-cover bg-center bg-fixed items-center"
         data-aos="fade-up">
-        <div class="card w-[90vw] max-w-2xl bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-10">
-            <div class="card-body">
-                <h2 class="card-title text-3xl md:text-4xl mb-8 text-center text-primary-600 font-bold">Напишіть нам</h2>
+        <div
+            class="card w-[90vw] max-w-7xl bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-10 flex flex-col md:flex-row overflow-hidden">
+            <div class="hidden md:block md:w-1/2"
+                style="background-image: url('/img/hero-background.jpg'); background-size: cover; background-position: center;">
+                <div class="h-full w-full rounded-l-2xl" style="clip-path: inset(0 round 1rem 0 0 1rem);"></div>
+            </div>
+
+            <div class="card-body md:w-1/2 flex flex-col justify-center">
+                <h2 class="card-title text-3xl md:text-4xl mb-8 text-center md:text-left text-primary-600 font-bold">
+                    Зв'яжіться з нами
+                </h2>
                 <form class="form-control flex flex-col space-y-6 w-full">
                     <div class="relative">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -47,7 +55,9 @@
                             placeholder="Ваше повідомлення" rows="5"></textarea>
                     </div>
                     <button
-                        class="btn btn-primary text-lg w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 rounded-lg transition duration-300">Надіслати</button>
+                        class="btn btn-primary text-lg w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 rounded-lg transition duration-300">
+                        Надіслати
+                    </button>
                 </form>
             </div>
         </div>

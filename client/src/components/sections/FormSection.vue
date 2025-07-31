@@ -1,5 +1,10 @@
 <script setup>
+import { ref } from 'vue'
 import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
+import { sendUserData } from '@/api'
+
+const isFormOpen = ref(true)
+
 const handleFormSubmit = (formData) => {
     sendUserData(formData)
         .then(() => {
@@ -28,8 +33,11 @@ const handleFormSubmit = (formData) => {
                 </p>
             </div>
 
-            <div class="p-0 rounded-xl  w-full md:w-[auto] max-w-full" data-aos="fade-up">
-                <PriceCalcForm mode="inline" @submitted="handleFormSubmit" />
+            <div class="p-0 rounded-xl w-full md:w-[auto] max-w-full" data-aos="fade-up">
+                <PriceCalcForm v-if="isFormOpen" mode="inline" @submitted="handleFormSubmit" />
+                <p v-else class="text-white text-center text-xl font-semibold">
+                    Дякуємо! Ваша заявка прийнята.
+                </p>
             </div>
         </div>
     </section>

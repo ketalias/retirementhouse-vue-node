@@ -1,15 +1,18 @@
 <template>
-  <nav class="navbar bg-white px-4 sticky top-0 z-50 shadow flex items-center justify-between">
+  <nav class="navbar bg-base-100 p-4 sticky top-0 z-50 shadow flex items-center justify-between">
     <!-- Дії зліва -->
     <div class="actions flex items-center gap-4">
-      <img src="/icons/language-ico.svg" alt="Змінити мову" title="Змінити мову" class="h-8 w-8 cursor-pointer" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="h-8 w-8 cursor-pointer text-primary" title="Змінити мову" aria-label="Змінити мову">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25zm0 0v19.5m-8.25-9.75h16.5M7.5 4.875c2.79 1.395 4.905 4.095 5.625 7.125H7.5V4.875zm0 14.25V14.25h5.625c-.72 3.03-2.835 5.73-5.625 7.125zm9-14.25v7.125h-5.625c.72-3.03 2.835-5.73 5.625-7.125zm0 14.25c-2.79-1.395-4.905-4.095-5.625-7.125H16.5v4.875z" />
+      </svg>
     </div>
 
     <!-- Лого по центру -->
     <div class="absolute left-1/2 transform -translate-x-1/2">
-      <router-link to="/home"
-        class="btn btn-ghost normal-case text-xl italic flex items-center gap-2 hover:bg-transparent hover:text-inherit">
-        <span class="text-primary">Панська Втіха</span>
+      <router-link to="/home" class="items-center">
+        <img class="w-72" src="/img/logo/logo-large-transparent.png" alt="">
       </router-link>
     </div>
 
@@ -28,14 +31,11 @@
             <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown">Головна</router-link>
           </li>
           <li role="menuitem">
-            <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown">Номера</router-link>
+            <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown">Кімнати</router-link>
           </li>
           <li role="menuitem">
             <router-link to="/contact" :class="linkClass('/contact')" @click="closeDropdown">Контакти</router-link>
           </li>
-          <!-- <li role="menuitem">
-            <router-link to="/about" :class="linkClass('/about')" @click="closeDropdown">Про нас</router-link>
-          </li> -->
           <li role="menuitem">
             <router-link to="/menu" :class="linkClass('/menu')" @click="
               closeDropdown">Меню</router-link>
@@ -48,10 +48,9 @@
     <div class="hidden lg:flex">
       <ul class="menu menu-horizontal p-0 gap-4">
         <li><router-link to="/home" :class="linkClass('/home')">Головна</router-link></li>
-        <li><router-link to="/rooms" :class="linkClass('/rooms')">Номера</router-link></li>
+        <li><router-link to="/rooms" :class="linkClass('/rooms')">Кімнати</router-link></li>
         <li><router-link to="/menu" :class="linkClass('/menu')">Меню</router-link></li>
         <li><router-link to="/contact" :class="linkClass('/contact')">Контакти</router-link></li>
-        <!-- <li><router-link to="/about" :class="linkClass('/about')">Про нас</router-link></li> -->
       </ul>
     </div>
   </nav>
@@ -68,7 +67,8 @@ const dropdown = ref(null)
 const linkClass = (path) =>
   route.path.startsWith(path)
     ? 'btn btn-ghost border-b-2 border-primary text-primary'
-    : 'btn btn-ghost hover:border-b-2 hover:bg-gray-100'
+    : 'btn btn-ghost hover:border-b-2 hover:bg-base-200'
+
 
 function closeDropdown() {
   if (dropdown.value) {

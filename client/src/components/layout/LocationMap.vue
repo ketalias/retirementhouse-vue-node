@@ -3,7 +3,7 @@ const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2664.54777
 </script>
 <template>
     <div class="shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="card-body">
+        <div class="card-body bg-white rounded-t-lg">
             <h2 class="card-title text-2xl mb-4">Наше місцезнаходження</h2>
         </div>
         <iframe :src="mapSrc" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"

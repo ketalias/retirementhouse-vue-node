@@ -11,7 +11,6 @@ import { sendUserData } from '@/api'
 
 /* --- Components --- */
 import HeroSection from '@/components/sections/HeroSection.vue'
-import InfoCardsGrid from '@/components/grids/InfoCardsGrid.vue'
 import GuestsTestimonials from '@/components/sections/GuestsTestimonials.vue'
 import GalleryMasonry from '@/components/sections/GalleryMasonry.vue'
 import FormSection from '@/components/sections/FormSection.vue'
@@ -20,8 +19,6 @@ import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'
 import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
 import InfoSection from '@/components/sections/InfoSection.vue'
 import CareFeaturesGrid from '@/components/grids/CareFeaturesGrid.vue'
-import DailyScheduleSection from '@/components/sections/DailyScheduleSection.vue'
-import FormComp from '@/components/forms/FormComp.vue'
 
 
 /* --- Data --- */
@@ -58,11 +55,11 @@ function handleCalculatePrice() {
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection id="hero" title="Пансіонат «Панська Втіха»" subtitle="Тепла опіка серед природи"
+    <HeroSection id="hero" title="Пансіонат Rest Hill Villa" subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
       background="/img/hero-background.jpg">
       <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw] text-white" data-aos="fade-up"
         data-aos-delay="300">
-        «Панська Втіха» — це сучасний дім для людей поважного віку, де професійна
+        «Rest Hill Villa» — це сучасний дім для людей поважного віку, де професійна
         цілодобова опіка поєднується з домашнім теплом і мальовничими краєвидами.
         Комфортні кімнати, збалансоване харчування, індивідуальний медичний догляд
         та цікаве дозвілля допоможуть вашим близьким почуватися в безпеці, серед
