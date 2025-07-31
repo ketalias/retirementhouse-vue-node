@@ -7,7 +7,7 @@ import { useContact } from '@/composables/useContact'
 import { useHomeData } from '@/composables/useHomeData'
 
 /* --- API --- */
-import { sendUserData } from '@/api'
+import { sendCalculatorForm } from '@/api'
 
 /* --- Components --- */
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -33,7 +33,7 @@ const isFormOpen = ref(false)
 
 /* --- Methods --- */
 const handleFormSubmit = (formData) => {
-  sendUserData(formData)
+  sendCalculatorForm(formData)
     .then(() => {
       alert('Дані успішно надіслані!')
       isFormOpen.value = false
