@@ -1,12 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import PriceCalcForm from '@/components/forms/PriceCalcForm.vue'
-import { sendUserData } from '@/api'
+import { sendCalculatorForm } from '@/api'
 
 const isFormOpen = ref(true)
 
 const handleFormSubmit = (formData) => {
-    sendUserData(formData)
+    sendCalculatorForm(formData)
         .then(() => {
             alert('Дані успішно надіслані!')
             isFormOpen.value = false

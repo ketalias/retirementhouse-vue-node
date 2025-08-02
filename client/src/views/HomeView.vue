@@ -51,21 +51,19 @@ function handleCalculatePrice() {
 
 <template>
   <main>
-    <FloatingFormButton @open="isFormOpen = true" />
+    <div class="fixed left-6 bottom-40 flex flex-col gap-2 z-30">
+      <FloatingFormButton @open="isFormOpen = true" type="calculator" label="Розрахуйте вартість" />
+      <FloatingFormButton type="call" />
+    </div>
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection id="hero" title="Пансіонат Rest Hill Villa" subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
+    <HeroSection id="hero" title="Rest Hill Villa"
+      subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
       background="/img/hero-background.jpg">
-      <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw] text-white" data-aos="fade-up"
-        data-aos-delay="300">
-        «Rest Hill Villa» — це сучасний дім для людей поважного віку, де професійна
-        цілодобова опіка поєднується з домашнім теплом і мальовничими краєвидами.
-        Комфортні кімнати, збалансоване харчування, індивідуальний медичний догляд
-        та цікаве дозвілля допоможуть вашим близьким почуватися в безпеці, серед
-        друзів і турботи.
-      </p>
-
+      <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <p class="text-lg text-gray-700">Пансіонат для людей похилого віку в мальовничому куточку України</p>
+        <button @click="handleCalculatePrice" class="btn btn-primary">Розрахувати вартість</button>
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
         <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">
           Розрахувати вартість
