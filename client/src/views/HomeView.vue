@@ -61,9 +61,7 @@ function handleCalculatePrice() {
     <HeroSection id="hero" title="Rest Hill Villa"
       subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
       background="/img/hero-background.jpg">
-      <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
-        <p class="text-lg text-gray-700">Пансіонат для людей похилого віку в мальовничому куточку України</p>
-        <button @click="handleCalculatePrice" class="btn btn-primary">Розрахувати вартість</button>
+      
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
         <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">
           Розрахувати вартість
