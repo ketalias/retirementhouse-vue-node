@@ -73,7 +73,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-cover bg-center bg-fixed items-center"
+    <div class="relative w-full min-h-[600px] py-16 flex justify-center bg-base-100 bg-cover bg-center bg-fixed items-center"
         data-aos="fade-up">
         <div class="card w-[90vw] max-w-2xl bg-white/90 backdrop-blur-md rounded-2xl shadow-xl md:p-4 ">
             <div class="card-body">
@@ -125,3 +125,4 @@ onUnmounted(() => {
         </div>
     </div>
 </template>
+
