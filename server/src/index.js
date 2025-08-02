@@ -1,6 +1,6 @@
 const Fastify = require('fastify')
 const dotenv = require('dotenv')
-const formRoutes = require('./routes/form.route')
+const formRoutes = require('./routes/form.routes')
 
 dotenv.config()
 

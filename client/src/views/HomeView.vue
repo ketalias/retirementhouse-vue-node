@@ -7,7 +7,7 @@ import { useContact } from '@/composables/useContact'
 import { useHomeData } from '@/composables/useHomeData'
 
 /* --- API --- */
-import { sendUserData } from '@/api'
+import { sendCalculatorForm } from '@/api'
 
 /* --- Components --- */
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -30,7 +30,7 @@ const isFormOpen = ref(false)
 
 /* --- Methods --- */
 const handleFormSubmit = (formData) => {
-  sendUserData(formData)
+  sendCalculatorForm(formData)
     .then(() => {
       alert('Дані успішно надіслані!')
       isFormOpen.value = false
@@ -51,21 +51,17 @@ function handleCalculatePrice() {
 
 <template>
   <main>
-    <FloatingFormButton @open="isFormOpen = true" />
+    <div class="fixed left-6 bottom-40 flex flex-col gap-2 z-30">
+      <FloatingFormButton @open="isFormOpen = true" type="calculator" label="Розрахуйте вартість" />
+      <FloatingFormButton type="call" />
+    </div>
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection id="hero" title="Пансіонат Rest Hill Villa" subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
+    <HeroSection id="hero" title="Rest Hill Villa"
+      subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
       background="/img/hero-background.jpg">
-      <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw] text-white" data-aos="fade-up"
-        data-aos-delay="300">
-        «Rest Hill Villa» — це сучасний дім для людей поважного віку, де професійна
-        цілодобова опіка поєднується з домашнім теплом і мальовничими краєвидами.
-        Комфортні кімнати, збалансоване харчування, індивідуальний медичний догляд
-        та цікаве дозвілля допоможуть вашим близьким почуватися в безпеці, серед
-        друзів і турботи.
-      </p>
-
+      
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
         <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">
           Розрахувати вартість
