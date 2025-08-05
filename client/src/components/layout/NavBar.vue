@@ -1,3 +1,30 @@
+<script setup>
+import ThemeSwitch from '@/components/layout/ThemeSwitch.vue'
+import { useRoute, useRouter } from 'vue-router'
+import { ref } from 'vue'
+
+const route = useRoute()
+const router = useRouter()
+const dropdown = ref(null)
+
+const linkClass = (path) =>
+  route.path.startsWith(path)
+    ? 'btn btn-ghost border-b-2 border-primary text-primary'
+    : 'btn btn-ghost hover:border-b-2 hover:bg-base-200'
+
+
+function closeDropdown() {
+  if (dropdown.value) {
+    dropdown.value.open = false
+  }
+}
+
+router.afterEach(() => {
+  if (dropdown.value) {
+    dropdown.value.querySelector('summary').setAttribute('aria-expanded', dropdown.value.open)
+  }
+})
+</script>
 <template>
   <nav class="navbar bg-base-100 p-4 sticky top-0 z-50 shadow flex items-center justify-between">
     <!-- Дії зліва -->
@@ -7,6 +34,7 @@
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25zm0 0v19.5m-8.25-9.75h16.5M7.5 4.875c2.79 1.395 4.905 4.095 5.625 7.125H7.5V4.875zm0 14.25V14.25h5.625c-.72 3.03-2.835 5.73-5.625 7.125zm9-14.25v7.125h-5.625c.72-3.03 2.835-5.73 5.625-7.125zm0 14.25c-2.79-1.395-4.905-4.095-5.625-7.125H16.5v4.875z" />
       </svg>
+      <ThemeSwitch />
     </div>
 
     <!-- Лого по центру -->
@@ -55,33 +83,6 @@
     </div>
   </nav>
 </template>
-
-<script setup>
-import { useRoute, useRouter } from 'vue-router'
-import { ref } from 'vue'
-
-const route = useRoute()
-const router = useRouter()
-const dropdown = ref(null)
-
-const linkClass = (path) =>
-  route.path.startsWith(path)
-    ? 'btn btn-ghost border-b-2 border-primary text-primary'
-    : 'btn btn-ghost hover:border-b-2 hover:bg-base-200'
-
-
-function closeDropdown() {
-  if (dropdown.value) {
-    dropdown.value.open = false
-  }
-}
-
-router.afterEach(() => {
-  if (dropdown.value) {
-    dropdown.value.querySelector('summary').setAttribute('aria-expanded', dropdown.value.open)
-  }
-})
-</script>
 
 <style scoped>
 .btn-ghost {

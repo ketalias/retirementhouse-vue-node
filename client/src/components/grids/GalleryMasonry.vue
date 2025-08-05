@@ -4,7 +4,7 @@ import { imagesHomeList } from '@/data/imagesData'
 
 <template>
     <section class="py-10 bg-base-100">
-        <h2 class="text-3xl font-bold text-center text-primary mb-8">
+        <h2 class="text-5xl font-bold text-center text-primary mb-8">
             Завітайте до нас та впевніться у безпеці ваших родичів
         </h2>
         <div class="container mx-auto px-4">

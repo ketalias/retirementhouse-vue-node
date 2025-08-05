@@ -12,7 +12,7 @@ import { sendUserData } from '@/api'
 /* --- Components --- */
 import HeroSection from '@/components/sections/HeroSection.vue'
 import GuestsTestimonials from '@/components/sections/GuestsTestimonials.vue'
-import GalleryMasonry from '@/components/sections/GalleryMasonry.vue'
+import GalleryMasonry from '@/components/grids/GalleryMasonry.vue'
 import FormSection from '@/components/sections/FormSection.vue'
 import FooterComp from '@/components/layout/FooterComp.vue'
 import FloatingFormButton from '@/components/ui/FloatingFormButton.vue'

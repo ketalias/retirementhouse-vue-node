@@ -1,7 +1,7 @@
 <script setup>
 import HeroSection from '@/components/sections/HeroSection.vue';
 import DailyMenuSection from '@/components/sections/DailyMenuSection.vue';
-import DailySchedule from '@/components/grids/DailySchedule.vue';
+import DailySchedule from '@/components/cards/DailySchedule.vue';
 import ImageTextCard from '@/components/cards/ImageTextCard.vue';
 import FormComp from '@/components/forms/FormComp.vue';
 import FooterComp from '@/components/layout/FooterComp.vue';
