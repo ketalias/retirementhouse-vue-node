@@ -56,7 +56,7 @@ function handleCalculatePrice() {
 
     <!-- Hero Section -->
     <HeroSection id="hero" title="Пансіонат Rest Hill Villa" subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
-      background="/img/hero-background.jpg">
+      background="/img/hero-background.jpg" class="h-[60dvh] md:h-[70dvh]">
       <p class="hidden md:block text-base mb-6 md:w-[65vw] lg:w-[50vw] text-white" data-aos="fade-up"
         data-aos-delay="300">
         «Rest Hill Villa» — це сучасний дім для людей поважного віку, де професійна
