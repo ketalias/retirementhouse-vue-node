@@ -1,49 +1,45 @@
 <script setup>
 import { ref, computed } from 'vue'
-import VueEasyLightbox from 'vue-easy-lightbox'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import RoomsGrid from '@/components/grids/RoomsGrid.vue'
+import ImageSlider from '@/components/grids/ImageSlider.vue'
 import FormComp from '@/components/forms/FormComp.vue'
 import FooterComp from '@/components/layout/FooterComp.vue'
 import { roomItems as roomsList } from '@/data/roomsData.js'
 
-const visible = ref(false)
+const sliderOpen = ref(false)
 const activeIndex = ref(0)
-const lightboxImageIndex = ref(0)
+const sliderImages = ref([])
 
 const currentImages = computed(() => roomsList[activeIndex.value]?.images || [])
 
 function handleOpenLightbox(index) {
   activeIndex.value = index
-  lightboxImageIndex.value = 0
-  visible.value = true
-}
-
-function prevImage() {
-  if (lightboxImageIndex.value > 0) {
-    lightboxImageIndex.value--
-  }
-}
-
-function nextImage() {
-  if (lightboxImageIndex.value < (currentImages.value.length - 1)) {
-    lightboxImageIndex.value++
-  }
+  sliderImages.value = roomsList[index].images
+  sliderOpen.value = true
 }
 </script>
 
 <template>
   <div class="flex flex-col min-h-screen">
     <div class="min-h-screen bg-base-100">
-      <HeroSection title="Наші кімнати" subtitle="Комфортні та затишні кімнати для вашого відпочинку"
-        background="/img/rooms-bg.jpg" />
+      <HeroSection
+        title="Наші кімнати"
+        subtitle="Комфортні та затишні кімнати для вашого відпочинку"
+        background="/img/rooms-bg.jpg"
+      />
       <div class="container mx-auto px-4 my-10">
         <RoomsGrid :rooms="roomsList" @open-lightbox="handleOpenLightbox" />
       </div>
     </div>
 
-    <VueEasyLightbox v-model:visible="visible" :imgs="currentImages" :index="lightboxImageIndex" @on-prev="prevImage"
-      @on-next="nextImage" :moveDisabled="false" />
+    <!-- ✅ Використовуємо кастомний слайдер -->
+    <ImageSlider
+      v-if="sliderOpen"
+      :images="sliderImages"
+      :startIndex="0"
+      @close="sliderOpen = false"
+    />
 
     <FormComp />
     <FooterComp />
