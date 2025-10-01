@@ -15,13 +15,6 @@ export const faqsContactItems = [
     answer: 'Так, у всіх зонах пансіонату доступний безкоштовний Wi-Fi.',
     isHtml: false,
   },
-  {
-    question: 'Чи можна забронювати номер онлайн?',
-    answer: 'Так, ви можете забронювати номер через наш сайт. ',
-    isHtml: true,
-    link: '/booking',
-    linkText: 'Забронювати зараз',
-  },
 ]
 
 export const faqsHomeItems = [

@@ -59,7 +59,7 @@ function handleCalculatePrice() {
 
     <!-- Hero Section -->
     <HeroSection id="hero" title="Rest Hill Villa"
-      subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
+      subtitle="Затишок та турбота для людей поважного віку"
       background="/img/hero-background.jpg">
       
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">

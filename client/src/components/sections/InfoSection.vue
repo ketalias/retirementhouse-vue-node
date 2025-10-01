@@ -4,7 +4,7 @@
             <!-- Header -->
             <header>
                 <h2 class="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-base-content mb-3">
-                    Приватний пансіонат «Панська Втіха» в Ужгороді
+                    Приватний пансіонат «Rest Hill Villa» в ужгородському районі
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl text-base-content max-w-3xl mx-auto">
                     Турбота, безпека і гідне життя для людей похилого віку з медичним супроводом.
@@ -27,8 +27,7 @@
                     </li>
                     <li class="flex items-start space-x-2">
                         <span class="text-primary">•</span>
-                        <span><strong>Комфортне проживання:</strong> просторі номери, адаптація під стан
-                            здоров’я.</span>
+                        <span><strong>Комфортне проживання:</strong> номери різного типу, з урахуванням стану здоров'я</span>
                     </li>
                     <li class="flex items-start space-x-2">
                         <span class="text-primary">•</span>
@@ -36,7 +35,7 @@
                     </li>
                     <li class="flex items-start space-x-2">
                         <span class="text-primary">•</span>
-                        <span><strong>Живе спілкування:</strong> дозвілля, творчість, прогулянки, концерти.</span>
+                        <span><strong>Живе спілкування:</strong> дозвілля, творчість, тематичні вечори.</span>
                     </li>
                     <li class="flex items-start space-x-2">
                         <span class="text-primary">•</span>
@@ -73,39 +72,14 @@
                 </ul>
             </section>
 
-            <!-- How to Join -->
-            <section class="space-y-5 max-w-5xl w-full">
-                <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-secondary">Як потрапити до пансіонату
-                </h3>
-                <ol
-                    class="list-decimal list-inside text-base-content text-base sm:text-lg md:text-xl space-y-2 text-left">
-                    <li>Залиште заявку або зателефонуйте нам.</li>
-                    <li>Отримайте консультацію і розрахунок вартості.</li>
-                    <li>Обговоріть умови та документи.</li>
-                    <li>Підпишіть договір, організуємо трансфер.</li>
-                    <li>Проводимо медогляд і допомагаємо адаптуватись.</li>
-                </ol>
-            </section>
-
-            <!-- How to Prepare -->
-            <section class="space-y-5 max-w-5xl w-full">
-                <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-secondary">Як допомогти адаптації</h3>
-                <ul class="list-disc list-inside text-base-content text-base sm:text-lg md:text-xl space-y-2 text-left">
-                    <li>Відверто обговоріть переїзд і його переваги.</li>
-                    <li>Покажіть фото, відео або організуйте екскурсію.</li>
-                    <li>Домовтесь про часті дзвінки чи візити.</li>
-                    <li>Візьміть улюблені речі — книги, фото, рукоділля.</li>
-                </ul>
-            </section>
-
             <!-- CTA -->
             <footer class="text-center space-y-3">
                 <p class="text-base sm:text-lg text-base-content">
                     Маєте питання чи хочете поселити близьку людину?
                 </p>
-                <a href="tel:+380675496995"
+                <a href="tel:+380952435358"
                     class="btn btn-primary text-base sm:text-lg px-6 py-2 rounded-lg transition-transform duration-300 hover:scale-105">
-                    +38 067 549 69 95
+                    +38(095) 243 53 58
                 </a>
             </footer>
         </div>

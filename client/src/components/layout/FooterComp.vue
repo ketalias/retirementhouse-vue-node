@@ -34,14 +34,14 @@
         <!-- Контакти -->
         <div class="md:w-1/3">
           <h3 class="text-xl font-semibold mb-4">Контакти</h3>
-          <p class="mb-2"><strong>Адреса:</strong> вул. Сонячна, 12, Карпати, Україна</p>
+          <p class="mb-2"><strong>Адреса:</strong> с. Холмок, вул. Свободи, 50 Б</p>
           <p class="mb-2">
             <strong>Телефон:</strong>
-            <a href="tel:+380501234567" class="hover:text-primary transition">+38 (050) 123-45-67</a>
+            <a href="tel:+380501234567" class="hover:text-primary transition"> +38(095) 243 53 58</a>
           </p>
           <p class="mb-4">
             <strong>Email:</strong>
-            <a href="mailto:info@panska-vtiha.ua" class="hover:text-primary transition">info@panska-vtiha.ua</a>
+            <a href="mailto:info@panska-vtiha.ua" class="hover:text-primary transition"> info@panska-vtiha.ua</a>
           </p>
           <div class="flex space-x-4 text-gray-400">
             <!-- соцмережі - прості іконки svg -->

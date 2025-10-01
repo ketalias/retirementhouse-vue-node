@@ -3,7 +3,7 @@
     <h2 class="text-4xl font-bold mb-12 text-base-content">
       Будьте спокійні за своїх родичів
     </h2>
-    <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 max-w-8xl mx-auto">
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 max-w-8xl mx-auto">
       <div v-for="(item, index) in items" :key="index"
         class="card bg-white shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[280px]">
         <div class="w-full md:w-1/2 h-48 md:h-auto">
@@ -39,12 +39,7 @@ const items = [
   {
     image: '/img/cards/friends-card.jpg',
     title: 'Живе спілкування',
-    caption: 'нові друзі',
-  },
-  {
-    image: '/img/cards/love-card.jpg',
-    title: 'Нові враження',
-    caption: 'святкування та заходи',
+    caption: 'нові друзі та цікаві заходи',
   },
 ]
 </script>
