@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "title": "Headline here",
+    "subtitle": "Subtitle here"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "contact": "Contacts"
+  }
+}

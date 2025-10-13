@@ -2,11 +2,9 @@
   <nav class="navbar bg-base-100 p-4 sticky top-0 z-50 shadow flex items-center justify-between">
     <!-- Дії зліва -->
     <div class="actions flex items-center gap-4">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        class="h-8 w-8 cursor-pointer text-primary" title="Змінити мову" aria-label="Змінити мову">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25zm0 0v19.5m-8.25-9.75h16.5M7.5 4.875c2.79 1.395 4.905 4.095 5.625 7.125H7.5V4.875zm0 14.25V14.25h5.625c-.72 3.03-2.835 5.73-5.625 7.125zm9-14.25v7.125h-5.625c.72-3.03 2.835-5.73 5.625-7.125zm0 14.25c-2.79-1.395-4.905-4.095-5.625-7.125H16.5v4.875z" />
-      </svg>
+      <button class="btn btn-ghost btn-circle" aria-label="language selection">
+        <img src="/icons/world.png" alt="" />
+      </button>
     </div>
 
     <!-- Лого по центру -->

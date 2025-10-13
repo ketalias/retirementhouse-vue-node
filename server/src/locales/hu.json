@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "title": "Címlapon itt",
+    "subtitle": "Felirat itt"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Rólunk",
+    "contact": "Kapcsolat"
+  }
+}
