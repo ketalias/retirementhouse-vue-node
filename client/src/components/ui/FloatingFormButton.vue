@@ -25,7 +25,7 @@ const { t } = useI18n()
 const props = defineProps({
     type: { type: String, required: true },
     label: { type: String },
-    phoneNumber: { type: String, default: '+380961234567' }
+    phoneNumber: { type: String, default: '+380952435358' }
 })
 
 const emit = defineEmits(['open'])

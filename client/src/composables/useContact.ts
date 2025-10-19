@@ -1,4 +1,4 @@
-export function useContact(phoneNumber = '+380961234567') {
+export function useContact(phoneNumber = '+380952435358') {
   function handleCall() {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent)
     if (isMobile) {
