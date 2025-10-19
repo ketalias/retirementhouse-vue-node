@@ -1,6 +1,6 @@
 <template>
   <div class="faq-container max-w-6xl mx-auto" data-aos="fade-up">
-    <h2 class="text-4xl font-bold mb-6 text-center" data-aos="fade-up">Поширені запитання</h2>
+  <h2 class="text-4xl font-bold mb-6 text-center" data-aos="fade-up">{{ t('faq_section.title') }}</h2>
     <ul class="space-y-4" data-aos="fade-up">
       <li v-for="(faq, index) in faqs" :key="index">
         <div class="collapse collapse-arrow border border-base-300 bg-white rounded-lg">
@@ -27,6 +27,8 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 const props = defineProps({
   faqs: {
     type: Array,

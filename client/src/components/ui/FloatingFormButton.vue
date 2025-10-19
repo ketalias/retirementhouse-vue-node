@@ -10,7 +10,7 @@
         <span v-if="label"
             class="hidden sm:inline-block w-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out text-left"
             :class="{ 'w-34 opacity-100': showText }">
-            <span class="ml-1 whitespace-nowrap font-medium">{{ label }}</span>
+            <span class="ml-1 whitespace-nowrap font-medium">{{ computedLabel }}</span>
         </span>
     </button>
 </template>
@@ -18,6 +18,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useContact } from '@/composables/useContact'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
     type: { type: String, required: true },
@@ -29,6 +32,15 @@ const emit = defineEmits(['open'])
 
 const showText = ref(false)
 const { handleCall: baseCall } = useContact(props.phoneNumber)
+
+const computedLabel = computed(() => {
+    if (props.type === 'calculator') {
+        return t('floating_buttons.calculate_cost_label')
+    } else if (props.type === 'call') {
+        return t('common.call_us')
+    }
+    return props.label
+})
 
 const handleClick = () => {
     if (props.type === 'call') {

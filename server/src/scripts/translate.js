@@ -1,5 +1,8 @@
 import * as deepl from 'deepl-node';
 import fs from 'fs';
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const translator = new deepl.Translator(process.env.DEEPL_API_KEY);
 const uk = JSON.parse(fs.readFileSync('./src/locales/uk.json', 'utf8'));

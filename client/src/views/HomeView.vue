@@ -1,10 +1,10 @@
 <script setup>
 /* --- External --- */
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 /* --- Composables --- */
 import { useContact } from '@/composables/useContact'
-import { useHomeData } from '@/composables/useHomeData'
 
 /* --- API --- */
 import { sendCalculatorForm } from '@/api'
@@ -22,8 +22,8 @@ import CareFeaturesGrid from '@/components/grids/CareFeaturesGrid.vue'
 
 
 /* --- Data --- */
-const { cardsListHome } = useHomeData()
 const { handleCall } = useContact()
+const { t } = useI18n()
 
 /* --- State --- */
 const isFormOpen = ref(false)
@@ -32,12 +32,12 @@ const isFormOpen = ref(false)
 const handleFormSubmit = (formData) => {
   sendCalculatorForm(formData)
     .then(() => {
-      alert('Дані успішно надіслані!')
+      alert(t('common.form_submission_success'))
       isFormOpen.value = false
     })
     .catch((error) => {
       console.error('Помилка при надсиланні даних:', error)
-      alert('Сталася помилка. Спробуйте ще раз.')
+      alert(t('common.form_submission_error'))
     })
 }
 
@@ -58,37 +58,35 @@ function handleCalculatePrice() {
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection id="hero" title="Rest Hill Villa"
-      subtitle="Тепла опіка серед природи і спокою, пансіонат для людей поважного віку"
+    <HeroSection 
+      id="hero" 
+      titleKey="home_page.hero.title"
+      subtitleKey="home_page.hero.subtitle"
       background="/img/hero-background.jpg">
       
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
         <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">
-          Розрахувати вартість
+          {{ t('common.calculate_cost') }}
         </button>
         <button @click="handleCall" class="btn btn-secondary w-full md:w-auto" type="button"
-          title="Натисніть, щоб зателефонувати або скопіювати номер">
-          Зателефонувати
+          
+          :title="t('home_page.hero.call_tooltip')">
+          
+          {{ t('common.call_us') }}
         </button>
       </div>
     </HeroSection>
 
-    <!-- Care Features Grid -->
     <CareFeaturesGrid />
 
-    <!-- Form Section -->
     <FormSection @formSubmitted="handleFormSubmit" />
 
-    <!-- Guests Section -->
     <GuestsTestimonials />
 
-    <!-- Info Section -->
     <InfoSection />
 
-    <!-- Gallery Section -->
     <GalleryMasonry />
 
-    <!-- Footer -->
     <FooterComp />
   </main>
 </template>

@@ -4,10 +4,10 @@
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 text-center px-4 h-full flex flex-col justify-center items-center">
       <h1 class="mb-5 text-5xl md:text-8xl font-bold text-white" data-aos="fade-up">
-        {{ title }}
+        {{ t(titleKey) }}
       </h1>
-      <p v-if="subtitle" class="mb-5 md:text-3xl text-xl text-white" data-aos="fade-up" data-aos-delay="200">
-        {{ subtitle }}
+      <p v-if="subtitleKey" class="mb-5 md:text-3xl text-xl text-white" data-aos="fade-up" data-aos-delay="200">
+        {{ t(subtitleKey) }}
       </p>
 
       <slot />
@@ -16,14 +16,18 @@
 </template>
 
 <script setup>
-defineProps({
-  title: {
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const props = defineProps({
+  titleKey: {
     type: String,
-    required: true
+    default: 'hero.title'
   },
-  subtitle: {
+  subtitleKey: {
     type: String,
-    default: ''
+    default: 'hero.subtitle'
   },
   background: {
     type: String,

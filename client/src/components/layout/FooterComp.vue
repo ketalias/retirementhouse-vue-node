@@ -1,50 +1,46 @@
+<script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+</script>
 <template>
   <footer class="bg-gray-900 text-gray-200 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between gap-8">
-        <!-- Логотип та опис -->
         <div class="md:w-1/3">
-          <h2 class="text-2xl font-bold mb-4">Пансіонат Панська Втіха</h2>
+          <h2 class="text-2xl font-bold mb-4">{{ t('footer.title') }}</h2>
           <p class="text-gray-400">
-            Ідеальне місце для відпочинку в серці природи. Комфорт, гостинність і затишок — наші
-            головні пріоритети.
+            {{ t('footer.description') }}
           </p>
         </div>
 
-        <!-- Навігація -->
         <div class="md:w-1/3">
-          <h3 class="text-xl font-semibold mb-4">Навігація</h3>
+          <h3 class="text-xl font-semibold mb-4">{{ t('footer.navigation_title') }}</h3>
           <ul class="space-y-2">
-            <li><router-link to="/" class="hover:text-primary transition">Головна</router-link></li>
-            <li>
-              <router-link to="/about" class="hover:text-primary transition">Про нас</router-link>
+            <li><router-link to="/" class="hover:text-primary transition">{{ t('footer.nav_links.home') }}</router-link>
             </li>
-            <li>
-              <router-link to="/rooms" class="hover:text-primary transition">Номери</router-link>
-            </li>
-            <li>
-              <router-link to="/contact" class="hover:text-primary transition">Контакти</router-link>
-            </li>
-            <li>
-              <router-link to="/menu" class="hover:text-primary transition">Меню</router-link>
-            </li>
+            <li><router-link to="/about" class="hover:text-primary transition">{{ t('footer.nav_links.about')
+                }}</router-link></li>
+            <li><router-link to="/rooms" class="hover:text-primary transition">{{ t('footer.nav_links.rooms')
+                }}</router-link></li>
+            <li><router-link to="/contact" class="hover:text-primary transition">{{ t('footer.nav_links.contact')
+                }}</router-link></li>
+            <li><router-link to="/menu" class="hover:text-primary transition">{{ t('footer.nav_links.menu')
+                }}</router-link></li>
           </ul>
         </div>
 
-        <!-- Контакти -->
         <div class="md:w-1/3">
-          <h3 class="text-xl font-semibold mb-4">Контакти</h3>
-          <p class="mb-2"><strong>Адреса:</strong> вул. Сонячна, 12, Карпати, Україна</p>
+          <h3 class="text-xl font-semibold mb-4">{{ t('footer.contacts_title') }}</h3>
+          <p class="mb-2"><strong>{{ t('footer.address_label') }}</strong> {{ t('footer.address_value') }}</p>
           <p class="mb-2">
-            <strong>Телефон:</strong>
+            <strong>{{ t('footer.phone_label') }}</strong>
             <a href="tel:+380501234567" class="hover:text-primary transition">+38 (050) 123-45-67</a>
           </p>
           <p class="mb-4">
-            <strong>Email:</strong>
+            <strong>{{ t('footer.email_label') }}</strong>
             <a href="mailto:info@panska-vtiha.ua" class="hover:text-primary transition">info@panska-vtiha.ua</a>
           </p>
           <div class="flex space-x-4 text-gray-400">
-            <!-- соцмережі - прості іконки svg -->
             <a href="#" aria-label="Facebook" class="hover:text-primary transition">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 24 24">
                 <path
@@ -70,7 +66,7 @@
       </div>
 
       <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-        © 2025 Пансіонат Панська Втіха. Всі права захищені.
+        {{ t('footer.copyright') }}
       </div>
     </div>
   </footer>

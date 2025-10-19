@@ -12,19 +12,20 @@ import 'aos/dist/aos.css'
 
 import { createI18n } from 'vue-i18n'
 
-
 const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
+
+const userLocale = localStorage.getItem('user-locale')
 const i18n = createI18n({
   legacy: false,
-  locale: 'ua',
-  fallbackLocale: 'ua',
+  locale: userLocale || 'uk',
+  fallbackLocale: 'uk',
   messages: {
-    ua: require('./locales/ua.json'),
-    en: require('./locales/en.json'),
-    hg: require('./locales/hg.json'),
+    uk: (await import('./locales/uk.json')).default,
+    en: (await import('./locales/en.json')).default,
+    hu: (await import('./locales/hu.json')).default,
   },
 })
 app.use(i18n)

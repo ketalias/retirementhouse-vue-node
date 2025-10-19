@@ -3,8 +3,8 @@
     <InfoCard
       v-for="(card, index) in cards"
       :key="index"
-      :title="card.title"xyй
-      :description="card.description"
+      :title="t(card.title)"
+      :description="t(card.description)"
       :icon="card.icon"
     />
   </div>
@@ -12,6 +12,8 @@
 
 <script setup>
 import InfoCard from '../cards/InfoCard.vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 defineProps({
   cards: {
@@ -19,8 +21,7 @@ defineProps({
     required: true,
     validator: (arr) =>
       arr.every(
-        (item) =>
-          typeof item.title === 'string' && typeof item.description === 'string'
+        (item) => typeof item.title === 'string' && typeof item.description === 'string'
       )
   }
 })

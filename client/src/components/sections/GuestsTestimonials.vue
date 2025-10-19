@@ -1,47 +1,38 @@
 <template>
-    <section aria-label="Відгуки гостей" class="py-15 px-4 bg-base-100" data-aos="fade-up">
+    <section :aria-label="t('home_page.testimonials.aria_label')" class="py-15 px-4 bg-base-100" data-aos="fade-up">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12" data-aos="fade-up" data-aos-delay="100">
-                Що кажуть наші гості
+                {{ t('home_page.testimonials.title') }}
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <blockquote
+                    v-for="(guest, idx) in guestsList"
+                    :key="idx"
                     class="card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <img src="/img/granny1.jpeg" class="rounded-xl h-[200px] w-full object-cover"
-                        alt="Фото користувача Оксана К." />
+                    data-aos="fade-up"
+                    :data-aos-delay="100 * (idx + 1)"
+                >
+                    <img 
+                        :src="`/img/granny${idx + 1}.${idx === 0 ? 'jpeg' : 'jpg'}`" 
+                        class="rounded-xl h-[200px] w-full object-cover"
+                        :alt="guest.author" 
+                    />
                     <p class="text-base-content text-lg leading-relaxed">
-                        “Чудове місце для відпочинку! Комфортні номери та неймовірна природа. Обов’язково повернуся!”
+                        “{{ guest.quote }}”
                     </p>
-                    <footer class="text-sm text-base-content/70 font-semibold">— Оксана К.</footer>
-                </blockquote>
-
-                <blockquote
-                    class="card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <img src="/img/granny2.jpg" class="rounded-xl h-[200px] w-full object-cover"
-                        alt="Фото користувачки Марія П." />
-                    <p class="text-base-content text-lg leading-relaxed">
-                        “Неймовірне місце! Дуже сподобалась атмосфера спокою та затишку. Ідеально для відновлення сил.”
-                    </p>
-                    <footer class="text-sm text-base-content/70 font-semibold">— Марія П.</footer>
-                </blockquote>
-
-                <blockquote
-                    class="card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center space-y-4 max-w-md mx-auto"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <img src="/img/granny3.jpg" class="rounded-xl h-[200px] w-full object-cover"
-                        alt="Фото користувачки Галина С." />
-                    <p class="text-base-content text-lg leading-relaxed">
-                        “Персонал дуже привітний, а навколишня природа — просто казка. Рекомендую всім, хто хоче
-                        відпочити душею.”
-                    </p>
-                    <footer class="text-sm text-base-content/70 font-semibold">— Галина С.</footer>
+                    <footer class="text-sm text-base-content/70 font-semibold">{{ guest.author }}</footer>
                 </blockquote>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+const { t, tm } = useI18n({ useScope: 'global' })
+const guestsList = computed(() => tm('home_page.testimonials.guests'));
+</script>
 
 <style scoped>
 .card {

@@ -1,0 +1,297 @@
+{
+  "common": {
+    "calculate_cost": "Költség kiszámítása",
+    "call_us": "Hívjon minket",
+    "form_submission_success": "Az adatok sikeresen elküldve!",
+    "form_submission_error": "Hiba történt. Kérjük, próbálja újra.",
+    "loading": "Betöltés...",
+    "close": "Bezárás"
+  },
+  "form": {
+    "name_placeholder": "Az Ön neve",
+    "phone_placeholder": "Az Ön telefonszáma",
+    "message_placeholder": "Az Ön üzenete",
+    "submit_button": "Küldés",
+    "sending": "Küldés...",
+    "success_message": "Köszönjük! Az üzenetét elküldtük."
+  },
+  "floating_buttons": {
+    "calculate_cost_label": "Számítsa ki a költségeket"
+  },
+  "footer": {
+    "title": "Panska Vtiha Panzió",
+    "description": "Ideális hely a pihenésre a természet szívében. A kényelem, a vendégszeretet és a meghittség a fő prioritásaink.",
+    "navigation_title": "Navigáció",
+    "nav_links": {
+      "home": "Főoldal",
+      "about": "Rólunk",
+      "rooms": "Szobák",
+      "contact": "Kapcsolat",
+      "menu": "Menü"
+    },
+    "contacts_title": "Kapcsolatok",
+    "address_label": "Cím:",
+    "address_value": "Napos utca 12, Kárpátok, Ukrajna",
+    "phone_label": "Telefon:",
+    "email_label": "Email:",
+    "copyright": "© 2025 Panska Vtiha Panzió. Minden jog fenntartva."
+  },
+  "price_calculator": {
+    "title": "Szállásköltség számítása",
+    "age_label": "Életkor",
+    "gender_label": "Nem",
+    "gender_options": { "female": "Nő", "male": "Férfi" },
+    "mobility_label": "Tud mozogni?",
+    "mobility_options": { "yes": "Igen", "no": "Nem", "with_help": "Segítséggel" },
+    "mental_health_label": "Mentális betegségek mértéke",
+    "mental_health_options": { "low": "Alacsony", "medium": "Közepes", "high": "Magas" },
+    "room_capacity_label": "Helyek a szobában",
+    "phone_placeholder": "+38(0__)___-__-__",
+    "submit_button": "Költség kiszámítása"
+  },
+  "home_page": {
+    "hero": {
+      "title": "Rest Hill Villa",
+      "subtitle": "Meleg gondoskodás a természet és a nyugalom közepette, idősek otthona",
+      "call_tooltip": "Kattintson a híváshoz vagy a szám másolásához"
+    },
+    "care_features": {
+      "title": "Legyen nyugodt a rokonaiért",
+      "features": [
+        { "title": "Orvosi ellátás", "caption": "24/7 támogatás" },
+        { "title": "Kényelem és gondoskodás", "caption": "otthonos légkör" },
+        { "title": "Élő kommunikáció", "caption": "új barátok" },
+        { "title": "Új élmények", "caption": "ünnepek és események" }
+      ]
+    },
+    "form_section": {
+      "title": "Hagyjon üzenetett most",
+      "description": "Kiválasztjuk a legjobb szállásfeltételeket szerettei számára – gondoskodással, kényelemmel és minden részletre való odafigyeléssel.",
+      "thank_you_message": "Köszönjük! A kérelmét elfogadtuk."
+    },
+    "testimonials": {
+      "aria_label": "Vendégvélemények",
+      "title": "Mit mondanak a vendégeink",
+      "guests": [
+        {
+          "quote": "Csodálatos hely a pihenésre! Kényelmes szobák és hihetetlen természet. Biztosan visszatérek!",
+          "author": "— Oksana K."
+        },
+        {
+          "quote": "Hihetetlen hely! Nagyon tetszett a nyugalom és a kényelem légköre. Ideális az erők helyreállítására.",
+          "author": "— Mária P."
+        },
+        {
+          "quote": "A személyzet nagyon barátságos, és a környező természet egyszerűen mesés. Ajánlom mindenkinek, aki lelkileg szeretne pihenni.",
+          "author": "— Halina S."
+        }
+      ]
+    },
+    "info_section": {
+      "main_title": "„Panska Vtiha” Magánpanzió Ungváron",
+      "main_subtitle": "Gondoskodás, biztonság és méltó élet az idősek számára orvosi felügyelettel.",
+      "why_us_title": "Miért minket választanak",
+      "why_us_list": [
+        "<strong>Éjjel-nappali ellátás:</strong> orvosi felügyelet és segítség a mindennapokban.",
+        "<strong>Kényelmes szállás:</strong> tágas szobák, az egészségi állapothoz való alkalmazkodás.",
+        "<strong>Biztonságos környezet:</strong> háztartási sérülések kockázata nélkül.",
+        "<strong>Élő kommunikáció:</strong> szabadidő, kreativitás, séták, koncertek.",
+        "<strong>Átlátható árak:</strong> minden a szerződésben, rejtett költségek nélkül."
+      ],
+      "when_relevant_title": "Mikor különösen aktuális",
+      "when_relevant_list": [
+        "A rokonok messze élnek, vagy nincs lehetőségük gondoskodni.",
+        "A nyugdíjas maga szeretne a panzióba költözni.",
+        "Az otthoni körülmények nem alkalmasak a gondozásra.",
+        "Állandó felügyeletre és segítségre van szükség.",
+        "A sűrű munkarend nem teszi lehetővé, hogy mellette legyenek."
+      ],
+      "how_to_join_title": "Hogyan lehet bekerülni a panzióba",
+      "how_to_join_list": [
+        "Hagyjon üzenetet vagy hívjon minket.",
+        "Kérjen tanácsadást és költségbecslést.",
+        "Beszélje meg a feltételeket és a dokumentumokat.",
+        "Írja alá a szerződést, megszervezzük a transzfert.",
+        "Orvosi vizsgálatot végzünk és segítünk az alkalmazkodásban."
+      ],
+      "adaptation_help_title": "Hogyan segíthetünk az alkalmazkodásban",
+      "adaptation_help_list": [
+        "Beszéljék meg nyíltan a költözést és annak előnyeit.",
+        "Mutasson fotókat, videókat vagy szervezzen egy bemutatót.",
+        "Egyezzenek meg a gyakori hívásokról vagy látogatásokról.",
+        "Vigyenek magukkal kedvenc dolgokat – könyveket, fotókat, kézimunkát."
+      ],
+      "cta_text": "Kérdése van, vagy szeretné elhelyezni egy szerettét?",
+      "cta_phone": "+38 067 549 69 95"
+    },
+    "gallery": {
+      "title": "Látogasson el hozzánk és győződjön meg rokonai biztonságáról"
+    }
+  },
+  "menu_page": {
+    "hero": {
+      "title": "Menü és Napirend",
+      "subtitle": "Gondoskodással lakóink egészségéről és kényelméről"
+    },
+    "nutrition_approach": {
+      "title": "A mi megközelítésünk a táplálkozáshoz",
+      "text": "Panziónkban az étkezés nem csak étel. Ez gondoskodás, egyéni megközelítés és szeretet. A napi menüt dietetikusok állítják össze, figyelembe véve minden lakó életkori szükségleteit, egészségi állapotát és kívánságait. Csak friss, természetes termékeket használunk, felesleges cukor, só vagy káros adalékanyagok nélkül.",
+      "alt": "Idősek táplálkozása"
+    },
+    "daily_menu_example": {
+      "title": "Napi Menü Példa"
+    },
+    "daily_menu": {
+      "breakfast": {
+        "title": "Reggeli",
+        "items": {
+          "0": "Zabkása tejjel és gyümölccsel",
+          "1": "Túrós palacsinta házi joghurttal",
+          "2": "Kamilla tea vagy zöld tea"
+        }
+      },
+      "lunch": {
+        "title": "Ebéd",
+        "items": {
+          "0": "Zöldségleves csirkehúsleves alapon",
+          "1": "Csirkemellfilé hajdinával",
+          "2": "Céklasaláta",
+          "3": "Aszalt gyümölcs kompót"
+        }
+      },
+      "dinner": {
+        "title": "Vacsora",
+        "items": {
+          "0": "Sült hal párolt zöldségekkel",
+          "1": "Rizskása vízen",
+          "2": "Gyógytea mézzel"
+        }
+      }
+    },
+    "daily_schedule": {
+      "title": " Napirend",
+      "0": "Ébredés és reggeli teendők",
+      "1": "Reggeli",
+      "2": "Reggeli torna vagy séta",
+      "3": "Hobbi, olvasás vagy társalgás",
+      "4": "Ebéd",
+      "5": "Csendes óra (pihenés)",
+      "6": "Társasjátékok, fejlesztés",
+      "7": "Vacsora",
+      "8": "Tévénézés vagy séta",
+      "9": "Felkészülés az alvásra"
+    }
+  },
+  "rooms_page": {
+    "hero": {
+      "title": "A mi szobáink",
+      "subtitle": "Kényelmes és meghitt szobák a pihenéshez"
+    },
+    "rooms": {
+      "0": {
+        "title": "1. számú szoba",
+        "description": "Világos szoba kilátással a kertre.",
+        "features": { "0": "2 ágy", "1": "Fürdőszoba a szobában", "2": "TV" }
+      },
+      "1": {
+        "title": "2. számú szoba",
+        "description": "Kényelmes szoba egy személy számára.",
+        "features": { "0": "1 ágy", "1": "Déli fekvésű ablak", "2": "Wi-Fi" }
+      },
+      "2": {
+        "title": "3. számú szoba",
+        "description": "Tágas szoba egyedi kialakítással.",
+        "features": { "0": "3 ágy", "1": "Külön terasz" }
+      },
+      "3": {
+        "title": "4. számú szoba",
+        "description": "Meghitt szoba kilátással a belső udvarra.",
+        "features": { "0": "2 ágy", "1": "Légkondicionáló", "2": "Televízió" }
+      },
+      "4": {
+        "title": "5. számú szoba",
+        "description": "Egyágyas szoba kényelmi felszerelésekkel.",
+        "features": { "0": "1 ágy", "1": "Wi-Fi" }
+      },
+      "5": {
+        "title": "6. számú szoba",
+        "description": "Tágas családi szoba.",
+        "features": { "0": "4 ágy", "1": "Külön terasz" }
+      }
+    }
+  },
+  "navbar": {
+    "language_selection_label": "Nyelvválasztás",
+    "logo_alt": "Rest Hill Villa Logó",
+    "navigation_menu_label": "Navigációs menü",
+    "toggle_menu_label": "Menü megnyitása vagy bezárása",
+    "nav_links": {
+      "home": "Főoldal",
+      "rooms": "Szobák",
+      "contact": "Kapcsolat",
+      "menu": "Menü"
+    }
+  },
+  "faq_section": {
+    "title": "Gyakran Ismételt Kérdések"
+  },
+  "contact_page": {
+    "location_title": "A mi helyünk",
+    "hero": {
+      "title": "Kapcsolat",
+      "subtitle": "Lépjen kapcsolatba velünk további információkért"
+    },
+    "faqs": {
+      "0": {
+        "question": "Látogathatunk bejelentkezés nélkül?",
+        "answer": "Igen, fogadjuk a látogatókat a nyitvatartási időben. Javasoljuk, hogy előzetesen telefonáljon a pontosítás érdekében.",
+        "linkText": ""
+      },
+      "1": {
+        "question": "Milyen a panzió nyitvatartási ideje?",
+        "answer": "H-P: 9:00–18:00, Szo-V: 10:00–16:00",
+        "linkText": ""
+      },
+      "2": {
+        "question": "Van ingyenes Wi-Fi?",
+        "answer": "Igen, a panzió minden területén elérhető ingyenes Wi-Fi.",
+        "linkText": ""
+      },
+      "3": {
+        "question": "Lehet online szobát foglalni?",
+        "answer": "Igen, szobát foglalhat a weboldalunkon keresztül.",
+        "linkText": "Foglaljon most"
+      }
+    },
+    "home_page": {
+      "faqs": [
+        {
+          "question": "Milyen foglalási feltételek vannak?",
+          "answer": "A foglalás előre történik a weboldalunkon vagy telefonon keresztül. 20% előleg fizetése szükséges."
+        },
+        {
+          "question": "Lehet háziállatot hozni?",
+          "answer": "Igen, szívesen látjuk a vendégeket házi kedvenceikkel. Kérjük, jelezze ezt a foglaláskor."
+        },
+        {
+          "question": "Milyen szolgáltatásokat tartalmaz az ár?",
+          "answer": "Az ár tartalmazza a szállást, a reggelit és a medence használatát."
+        }
+      ]
+    },
+    "cards": {
+      "address": {
+        "title": "Cím",
+        "description": "Kholmok falu, Szabadság utca 50 B"
+      },
+      "phone": {
+        "title": "Telefon",
+        "description": "+38(095) 243 53 58"
+      },
+      "email": {
+        "title": "Email",
+        "description": "resthill@pansionat.com"
+      }
+    }
+  }
+}

@@ -1,41 +1,43 @@
-export const faqsContactItems = [
-  {
-    question: 'Чи можна завітати без запису?',
-    answer:
-      'Так, ми приймаємо відвідувачів у робочі години. Рекомендуємо попередньо зателефонувати для уточнення.',
-    isHtml: false,
-  },
-  {
-    question: 'Які години роботи пансіонату?',
-    answer: 'Пн-Пт: 9:00–18:00, Сб-Нд: 10:00–16:00',
-    isHtml: false,
-  },
-  {
-    question: 'Чи є у вас безкоштовний Wi-Fi?',
-    answer: 'Так, у всіх зонах пансіонату доступний безкоштовний Wi-Fi.',
-    isHtml: false,
-  },
-  {
-    question: 'Чи можна забронювати номер онлайн?',
-    answer: 'Так, ви можете забронювати номер через наш сайт. ',
-    isHtml: true,
-    link: '/booking',
-    linkText: 'Забронювати зараз',
-  },
-]
+export function getFaqsContactItems(t) {
+  return [
+    {
+      question: t('contact_page.faqs.0.question'),
+      answer: t('contact_page.faqs.0.answer'),
+      isHtml: false,
+    },
+    {
+      question: t('contact_page.faqs.1.question'),
+      answer: t('contact_page.faqs.1.answer'),
+      isHtml: false,
+    },
+    {
+      question: t('contact_page.faqs.2.question'),
+      answer: t('contact_page.faqs.2.answer'),
+      isHtml: false,
+    },
+    {
+      question: t('contact_page.faqs.3.question'),
+      answer: t('contact_page.faqs.3.answer'),
+      isHtml: true,
+      link: '/booking',
+      linkText: t('contact_page.faqs.3.linkText'),
+    },
+  ];
+}
 
-export const faqsHomeItems = [
-  {
-    question: 'Які умови бронювання?',
-    answer:
-      'Бронювання здійснюється заздалегідь через наш сайт або за телефоном. Потрібна передоплата 20%.',
-  },
-  {
-    question: 'Чи можна приїхати з домашніми тваринами?',
-    answer: 'Так, ми раді гостям з домашніми улюбленцями. Повідомте про це під час бронювання.',
-  },
-  {
-    question: 'Які послуги включені у вартість?',
-    answer: 'Вартість включає проживання, сніданок та користування басейном.',
-  },
-]
+export function getFaqsHomeItems(t) {
+  return [
+    {
+      question: t('home_page.faqs.0.question'),
+      answer: t('home_page.faqs.0.answer'),
+    },
+    {
+      question: t('home_page.faqs.1.question'),
+      answer: t('home_page.faqs.1.answer'),
+    },
+    {
+      question: t('home_page.faqs.2.question'),
+      answer: t('home_page.faqs.2.answer'),
+    },
+  ];
+}

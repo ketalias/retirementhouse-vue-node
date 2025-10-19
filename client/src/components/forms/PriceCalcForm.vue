@@ -3,7 +3,7 @@
         <div :class="formContainerClass" @click.stop>
             <div class="p-6 space-y-4">
                 <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-800">Розрахунок вартості розміщення</h2>
+                    <h2 class="text-2xl font-bold text-gray-800">{{ t('price_calculator.title') }}</h2>
                     <button v-if="mode === 'modal'" @click="close" class="btn btn-ghost btn-circle btn-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -16,7 +16,7 @@
                 <form @submit.prevent="submitForm" class="space-y-4">
                     <!-- Age -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Вік</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.age_label') }}</label>
                         <div class="flex items-center space-x-4">
                             <input v-model="formData.age" type="range" min="50" max="100"
                                 class="range range-primary range-xs flex-1" />
@@ -26,51 +26,50 @@
 
                     <!-- Gender -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Стать</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.gender_label') }}</label>
                         <div class="flex space-x-4">
                             <label class="flex items-center cursor-pointer">
                                 <input v-model="formData.gender" type="radio" value="female"
                                     class="radio radio-primary mr-2" />
-                                <span>Жіночий</span>
+                                <span>{{ t('price_calculator.gender_options.female') }}</span>
                             </label>
                             <label class="flex items-center cursor-pointer">
                                 <input v-model="formData.gender" type="radio" value="male"
                                     class="radio radio-primary mr-2" />
-                                <span>Чоловічий</span>
+                                <span>{{ t('price_calculator.gender_options.male') }}</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Mobility -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Може пересуватися?</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.mobility_label') }}</label>
                         <div class="flex flex-wrap gap-2">
                             <label v-for="option in mobilityOptions" :key="option.value"
                                 class="flex items-center cursor-pointer">
                                 <input v-model="formData.mobility" type="radio" :value="option.value"
                                     class="radio radio-primary mr-2" />
-                                <span>{{ option.label }}</span>
+                                <span>{{ t('price_calculator.mobility_options.' + option.value) }}</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Mental Health -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Ступінь психічних
-                            захворювань</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.mental_health_label') }}</label>
                         <div class="flex flex-wrap gap-2">
                             <label v-for="option in mentalHealthOptions" :key="option.value"
                                 class="flex items-center cursor-pointer">
                                 <input v-model="formData.mentalHealth" type="radio" :value="option.value"
                                     class="radio radio-primary mr-2" />
-                                <span>{{ option.label }}</span>
+                                <span>{{ t('price_calculator.mental_health_options.' + option.value) }}</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Room capacity -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Місць у кімнаті</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.room_capacity_label') }}</label>
                         <div class="flex space-x-2">
                             <label v-for="num in [1, 2, 3, 4]" :key="num" class="flex items-center cursor-pointer">
                                 <input v-model="formData.roomCapacity" type="radio" :value="num"
@@ -81,13 +80,13 @@
                     </div>
 
                     <!-- Telephone -->
-                    <input v-model="formData.phone" type="tel" placeholder="+38(0__)___-__-__"
+                    <input v-model="formData.phone" type="tel" :placeholder="t('price_calculator.phone_placeholder')"
                         class="input input-bordered w-full" required ref="phoneInputRef" />
 
                     <!-- Submit -->
                     <div class="pt-4">
                         <button type="submit" class="btn btn-primary w-full" :disabled="!isFormValid">
-                            Розрахувати вартість
+                            {{ t('price_calculator.submit_button') }}
                         </button>
                     </div>
                 </form>
@@ -99,6 +98,8 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import IMask from 'imask'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const props = defineProps({
     isOpen: Boolean,
@@ -113,15 +114,15 @@ const phoneInputRef = ref(null)
 let phoneMask = null
 
 const mobilityOptions = [
-    { value: 'yes', label: 'Так' },
-    { value: 'no', label: 'Ні' },
-    { value: 'with_help', label: 'З допомогою' }
+    { value: 'yes' },
+    { value: 'no' },
+    { value: 'with_help' }
 ]
 
 const mentalHealthOptions = [
-    { value: 'low', label: 'Низька' },
-    { value: 'medium', label: 'Середня' },
-    { value: 'high', label: 'Висока' }
+    { value: 'low' },
+    { value: 'medium' },
+    { value: 'high' }
 ]
 
 watch(

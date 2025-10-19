@@ -1,0 +1,297 @@
+{
+  "common": {
+    "calculate_cost": "Calculate cost",
+    "call_us": "Call us",
+    "form_submission_success": "Data sent successfully!",
+    "form_submission_error": "An error occurred. Please try again.",
+    "loading": "Loading...",
+    "close": "Close"
+  },
+  "form": {
+    "name_placeholder": "Your name",
+    "phone_placeholder": "Your phone number",
+    "message_placeholder": "Your message",
+    "submit_button": "Submit",
+    "sending": "Sending...",
+    "success_message": "Thank you! Your message has been sent."
+  },
+  "floating_buttons": {
+    "calculate_cost_label": "Calculate the cost"
+  },
+  "footer": {
+    "title": "Panska Vtikha Guesthouse",
+    "description": "An ideal place for a holiday in the heart of nature. Comfort, hospitality, and coziness are our main priorities.",
+    "navigation_title": "Navigation",
+    "nav_links": {
+      "home": "Home",
+      "about": "About Us",
+      "rooms": "Rooms",
+      "contact": "Contacts",
+      "menu": "Menu"
+    },
+    "contacts_title": "Contacts",
+    "address_label": "Address:",
+    "address_value": "12 Sonyachna St, Carpathians, Ukraine",
+    "phone_label": "Phone:",
+    "email_label": "Email:",
+    "copyright": "© 2025 Panska Vtikha Guesthouse. All rights reserved."
+  },
+  "price_calculator": {
+    "title": "Accommodation Cost Calculation",
+    "age_label": "Age",
+    "gender_label": "Gender",
+    "gender_options": { "female": "Female", "male": "Male" },
+    "mobility_label": "Can they move?",
+    "mobility_options": { "yes": "Yes", "no": "No", "with_help": "With help" },
+    "mental_health_label": "Degree of mental illness",
+    "mental_health_options": { "low": "Low", "medium": "Medium", "high": "High" },
+    "room_capacity_label": "Room capacity",
+    "phone_placeholder": "+38(0__)___-__-__",
+    "submit_button": "Calculate cost"
+  },
+  "home_page": {
+    "hero": {
+      "title": "Rest Hill Villa",
+      "subtitle": "Warm care amidst nature and tranquility, a guesthouse for the elderly",
+      "call_tooltip": "Click to call or copy the number"
+    },
+    "care_features": {
+      "title": "Be calm for your relatives",
+      "features": [
+        { "title": "Medical care", "caption": "24/7 support" },
+        { "title": "Coziness and care", "caption": "home-like atmosphere" },
+        { "title": "Live communication", "caption": "new friends" },
+        { "title": "New experiences", "caption": "celebrations and events" }
+      ]
+    },
+    "form_section": {
+      "title": "Leave a request right now",
+      "description": "We will select the best accommodation conditions for your loved ones — with care, comfort, and attention to every detail.",
+      "thank_you_message": "Thank you! Your application has been accepted."
+    },
+    "testimonials": {
+      "aria_label": "Guest reviews",
+      "title": "What our guests say",
+      "guests": [
+        {
+          "quote": "A wonderful place to relax! Comfortable rooms and incredible nature. I will definitely be back!",
+          "author": "— Oksana K."
+        },
+        {
+          "quote": "An incredible place! I really liked the atmosphere of peace and coziness. Ideal for recuperating.",
+          "author": "— Maria P."
+        },
+        {
+          "quote": "The staff is very friendly, and the surrounding nature is just a fairy tale. I recommend it to everyone who wants to relax their soul.",
+          "author": "— Halyna S."
+        }
+      ]
+    },
+    "info_section": {
+      "main_title": "Private Guesthouse «Panska Vtikha» in Uzhhorod",
+      "main_subtitle": "Care, safety, and a dignified life for the elderly with medical support.",
+      "why_us_title": "Why choose us",
+      "why_us_list": [
+        "<strong>24/7 care:</strong> medical support and household help.",
+        "<strong>Comfortable living:</strong> spacious rooms, adaptation to health conditions.",
+        "<strong>Safe environment:</strong> no risk of household injuries.",
+        "<strong>Live communication:</strong> leisure, creativity, walks, concerts.",
+        "<strong>Transparent prices:</strong> everything is in the contract, no hidden costs."
+      ],
+      "when_relevant_title": "When it is especially relevant",
+      "when_relevant_list": [
+        "Relatives live far away or are unable to provide care.",
+        "The pensioner wishes to move to the guesthouse themselves.",
+        "Home conditions are not suitable for care.",
+        "Constant supervision and assistance are needed.",
+        "A difficult work schedule does not allow being nearby."
+      ],
+      "how_to_join_title": "How to get into the guesthouse",
+      "how_to_join_list": [
+        "Leave a request or call us.",
+        "Get a consultation and cost estimate.",
+        "Discuss the terms and documents.",
+        "Sign the contract, we will arrange the transfer.",
+        "We conduct a medical examination and help with adaptation."
+      ],
+      "adaptation_help_title": "How to help with adaptation",
+      "adaptation_help_list": [
+        "Frankly discuss the move and its benefits.",
+        "Show photos, videos, or arrange a tour.",
+        "Agree on frequent calls or visits.",
+        "Take favorite things — books, photos, needlework."
+      ],
+      "cta_text": "Do you have questions or want to accommodate a loved one?",
+      "cta_phone": "+38 067 549 69 95"
+    },
+    "gallery": {
+      "title": "Visit us and ensure the safety of your relatives"
+    }
+  },
+  "menu_page": {
+    "hero": {
+      "title": "Menu and Daily Schedule",
+      "subtitle": "With care for the health and comfort of our residents"
+    },
+    "nutrition_approach": {
+      "title": "Our approach to nutrition",
+      "text": "In our guesthouse, nutrition is not just food. It is care, an individual approach, and love. The daily menu is formed by dietitians taking into account the age needs, health status, and wishes of each resident. We use only fresh, natural products, without excess sugar, salt, or harmful additives.",
+      "alt": "Nutrition for the elderly"
+    },
+    "daily_menu_example": {
+      "title": "Example of a Daily Menu"
+    },
+    "daily_menu": {
+      "breakfast": {
+        "title": "Breakfast",
+        "items": {
+          "0": "Oatmeal with milk and fruit",
+          "1": "Syrnyky (cheese pancakes) with homemade yogurt",
+          "2": "Chamomile tea or green tea"
+        }
+      },
+      "lunch": {
+        "title": "Lunch",
+        "items": {
+          "0": "Vegetable soup with chicken broth",
+          "1": "Chicken fillet with buckwheat",
+          "2": "Beetroot salad",
+          "3": "Dried fruit compote"
+        }
+      },
+      "dinner": {
+        "title": "Dinner",
+        "items": {
+          "0": "Baked fish with stewed vegetables",
+          "1": "Rice porridge on water",
+          "2": "Herbal tea with honey"
+        }
+      }
+    },
+    "daily_schedule": {
+      "title": "Daily Schedule",
+      "0": "Wake up and morning procedures",
+      "1": "Breakfast",
+      "2": "Morning exercises or a walk",
+      "3": "Hobbies, reading, or socializing",
+      "4": "Lunch",
+      "5": "Quiet hour (rest)",
+      "6": "Board games, development",
+      "7": "Dinner",
+      "8": "Watching TV or a walk",
+      "9": "Preparing for sleep"
+    }
+  },
+  "rooms_page": {
+    "hero": {
+      "title": "Our rooms",
+      "subtitle": "Comfortable and cozy rooms for your rest"
+    },
+    "rooms": {
+      "0": {
+        "title": "Room №1",
+        "description": "A bright room with a garden view.",
+        "features": { "0": "2 beds", "1": "En-suite bathroom", "2": "TV" }
+      },
+      "1": {
+        "title": "Room №2",
+        "description": "A comfortable room for one person.",
+        "features": { "0": "1 bed", "1": "South-facing window", "2": "Wi-Fi" }
+      },
+      "2": {
+        "title": "Room №3",
+        "description": "A spacious room with an individual design.",
+        "features": { "0": "3 beds", "1": "Private terrace" }
+      },
+      "3": {
+        "title": "Room №4",
+        "description": "A cozy room with a view of the courtyard.",
+        "features": { "0": "2 beds", "1": "Air conditioning", "2": "TV" }
+      },
+      "4": {
+        "title": "Room №5",
+        "description": "A single room with amenities.",
+        "features": { "0": "1 bed", "1": "Wi-Fi" }
+      },
+      "5": {
+        "title": "Room №6",
+        "description": "A spacious family room.",
+        "features": { "0": "4 beds", "1": "Private terrace" }
+      }
+    }
+  },
+  "navbar": {
+    "language_selection_label": "Language selection",
+    "logo_alt": "Rest Hill Villa Logo",
+    "navigation_menu_label": "Navigation menu",
+    "toggle_menu_label": "Open or close menu",
+    "nav_links": {
+      "home": "Home",
+      "rooms": "Rooms",
+      "contact": "Contacts",
+      "menu": "Menu"
+    }
+  },
+  "faq_section": {
+    "title": "Frequently Asked Questions"
+  },
+  "contact_page": {
+    "location_title": "Our location",
+    "hero": {
+      "title": "Contacts",
+      "subtitle": "Contact us for more information"
+    },
+    "faqs": {
+      "0": {
+        "question": "Can I visit without an appointment?",
+        "answer": "Yes, we welcome visitors during business hours. We recommend calling in advance to confirm.",
+        "linkText": ""
+      },
+      "1": {
+        "question": "What are the guesthouse's opening hours?",
+        "answer": "Mon-Fri: 9:00–18:00, Sat-Sun: 10:00–16:00",
+        "linkText": ""
+      },
+      "2": {
+        "question": "Do you have free Wi-Fi?",
+        "answer": "Yes, free Wi-Fi is available in all areas of the guesthouse.",
+        "linkText": ""
+      },
+      "3": {
+        "question": "Can I book a room online?",
+        "answer": "Yes, you can book a room through our website.",
+        "linkText": "Book now"
+      }
+    },
+    "home_page": {
+      "faqs": [
+        {
+          "question": "What are the booking conditions?",
+          "answer": "Booking is done in advance through our website or by phone. A prepayment of 20% is required."
+        },
+        {
+          "question": "Can I come with pets?",
+          "answer": "Yes, we are happy to welcome guests with pets. Please inform us about this when booking."
+        },
+        {
+          "question": "What services are included in the price?",
+          "answer": "The price includes accommodation, breakfast, and use of the pool."
+        }
+      ]
+    },
+    "cards": {
+      "address": {
+        "title": "Address",
+        "description": "Kholmok village, 50 B Svobody St"
+      },
+      "phone": {
+        "title": "Phone",
+        "description": "+38(095) 243 53 58"
+      },
+      "email": {
+        "title": "Email",
+        "description": "resthill@pansionat.com"
+      }
+    }
+  }
+}
