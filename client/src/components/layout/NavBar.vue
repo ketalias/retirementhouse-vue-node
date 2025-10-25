@@ -1,12 +1,12 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale, availableLocales, t } = useI18n();
+const { locale, availableLocales, t } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const dropdown = ref(null)
+const langDropdown = ref(null)
 
 const linkClass = (path) =>
   route.path.startsWith(path)
@@ -14,38 +14,48 @@ const linkClass = (path) =>
     : 'btn btn-ghost hover:border-b-2 hover:bg-base-200'
 
 function changeLanguage(newLocale) {
-  locale.value = newLocale;
-  localStorage.setItem('user-locale', newLocale);
+  locale.value = newLocale
+  localStorage.setItem('user-locale', newLocale)
+  closeDropdown()
 }
 
 function closeDropdown() {
-  if (dropdown.value) {
-    dropdown.value.open = false
+  if (langDropdown.value) {
+    langDropdown.value.removeAttribute('open')
   }
 }
 
-router.afterEach(() => {
-  if (dropdown.value) {
-    dropdown.value.querySelector('summary').setAttribute('aria-expanded', dropdown.value.open)
+function handleClickOutside(event) {
+  if (langDropdown.value && !langDropdown.value.contains(event.target)) {
+    closeDropdown()
   }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside)
 })
 </script>
+
+
 <template>
   <nav class="navbar bg-base-100 p-4 sticky top-0 z-50 shadow flex items-center justify-between">
-    <div class="dropdown dropdown-start">
-      <button tabindex="0" role="button" class="btn btn-ghost btn-circle"
-        :aria-label="t('navbar.language_selection_label')">
+    <details class="dropdown dropdown-start" ref="langDropdown">
+      <summary class="btn btn-ghost btn-circle" :aria-label="t('navbar.language_selection_label')">
         <img src="/icons/world.png" alt="Language selection" />
-      </button>
-
-      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-24 mt-4 z-[1] m-l-40">
+      </summary>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-24 mt-4 z-[1]">
         <li v-for="lang in availableLocales" :key="lang">
           <a @click="changeLanguage(lang)" :class="{ 'active': locale === lang }">
             {{ lang.toUpperCase() }}
           </a>
         </li>
       </ul>
-    </div>
+    </details>
+
 
     <div class="absolute left-1/2 transform -translate-x-1/2">
       <router-link to="/home" class="items-center">
@@ -65,11 +75,11 @@ router.afterEach(() => {
           role="menu">
           <li role="menuitem">
             <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown">{{ t('navbar.nav_links.home')
-              }}</router-link>
+            }}</router-link>
           </li>
           <li role="menuitem">
             <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown">{{ t('navbar.nav_links.rooms')
-              }}</router-link>
+            }}</router-link>
           </li>
           <li role="menuitem">
             <router-link to="/contact" :class="linkClass('/contact')" @click="closeDropdown">{{
@@ -77,7 +87,7 @@ router.afterEach(() => {
           </li>
           <li role="menuitem">
             <router-link to="/menu" :class="linkClass('/menu')" @click="closeDropdown">{{ t('navbar.nav_links.menu')
-              }}</router-link>
+            }}</router-link>
           </li>
         </ul>
       </details>
