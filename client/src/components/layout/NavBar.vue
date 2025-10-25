@@ -17,18 +17,27 @@ const linkClass = (path) =>
 function changeLanguage(newLocale) {
   locale.value = newLocale
   localStorage.setItem('user-locale', newLocale)
-  closeDropdown()
+  closeDropdowns()
 }
 
-function closeDropdown() {
+function closeDropdowns() {
   if (langDropdown.value) {
     langDropdown.value.removeAttribute('open')
+  }
+  if (dropdown.value) {
+    dropdown.value.removeAttribute('open')
   }
 }
 
 function handleClickOutside(event) {
-  if (langDropdown.value && !langDropdown.value.contains(event.target)) {
-    closeDropdown()
+  const langOpen = langDropdown.value?.hasAttribute('open')
+  const menuOpen = dropdown.value?.hasAttribute('open')
+
+  if (
+    (langOpen && !langDropdown.value.contains(event.target)) ||
+    (menuOpen && !dropdown.value.contains(event.target))
+  ) {
+    closeDropdowns()
   }
 }
 
@@ -36,9 +45,7 @@ onMounted(() => {
   document.addEventListener('click', handleClickOutside)
 
   router.afterEach(() => {
-    if (dropdown.value) {
-      dropdown.value.removeAttribute('open')
-    }
+    closeDropdowns()
   })
 })
 
@@ -46,7 +53,6 @@ onBeforeUnmount(() => {
   document.removeEventListener('click', handleClickOutside)
 })
 </script>
-
 
 <template>
   <nav class="navbar bg-base-100 p-4 sticky top-0 z-50 shadow flex items-center justify-between">
@@ -82,11 +88,11 @@ onBeforeUnmount(() => {
           role="menu">
           <li role="menuitem">
             <router-link to="/home" :class="linkClass('/home')" @click="closeDropdown">{{ t('navbar.nav_links.home')
-            }}</router-link>
+              }}</router-link>
           </li>
           <li role="menuitem">
             <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdown">{{ t('navbar.nav_links.rooms')
-            }}</router-link>
+              }}</router-link>
           </li>
           <li role="menuitem">
             <router-link to="/contact" :class="linkClass('/contact')" @click="closeDropdown">{{
@@ -94,13 +100,13 @@ onBeforeUnmount(() => {
           </li>
           <li role="menuitem">
             <router-link to="/menu" :class="linkClass('/menu')" @click="closeDropdown">{{ t('navbar.nav_links.menu')
-            }}</router-link>
+              }}</router-link>
           </li>
         </ul>
       </details>
     </div>
 
-    <div class="hidden lg:flex">
+    <div class="hidden lg:flex" @click.stop="closeDropdown">
       <ul class="menu menu-horizontal p-0 gap-4">
         <li><router-link to="/home" :class="linkClass('/home')">{{ t('navbar.nav_links.home') }}</router-link></li>
         <li><router-link to="/rooms" :class="linkClass('/rooms')">{{ t('navbar.nav_links.rooms') }}</router-link></li>

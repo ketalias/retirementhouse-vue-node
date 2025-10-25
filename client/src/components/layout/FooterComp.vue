@@ -34,7 +34,7 @@ const { t } = useI18n()
           <p class="mb-2"><strong>{{ t('footer.address_label') }}</strong> {{ t('footer.address_value') }}</p>
           <p class="mb-2">
             <strong>{{ t('footer.phone_label') }}</strong>
-            <a href="tel:+380501234567" class="hover:text-primary transition"> +38 (050) 123-45-67</a>
+            <a href="tel:+380501234567" class="hover:text-primary transition"> +38(095) 243 53 58</a>
           </p>
           <p class="mb-4">
             <strong>{{ t('footer.email_label') }}</strong>
