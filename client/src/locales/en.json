@@ -19,8 +19,8 @@
     "calculate_cost_label": "Calculate the cost"
   },
   "footer": {
-    "title": "Panska Vtikha Guesthouse",
-    "description": "An ideal place for a holiday in the heart of nature. Comfort, hospitality, and coziness are our main priorities.",
+    "title": "Rest Hill Villa",
+    "description": "An ideal place for a rest in the heart of nature. Comfort, hospitality, and coziness are our main priorities.",
     "navigation_title": "Navigation",
     "nav_links": {
       "home": "Home",
@@ -31,10 +31,10 @@
     },
     "contacts_title": "Contacts",
     "address_label": "Address:",
-    "address_value": "12 Sonyachna St, Carpathians, Ukraine",
+    "address_value": "Kholmok village, 50 B Svobody St",
     "phone_label": "Phone:",
     "email_label": "Email:",
-    "copyright": "© 2025 Panska Vtikha Guesthouse. All rights reserved."
+    "copyright": "© 2025 Rest Hill Villa. All rights reserved."
   },
   "price_calculator": {
     "title": "Accommodation Cost Calculation",
@@ -60,8 +60,7 @@
       "features": [
         { "title": "Medical care", "caption": "24/7 support" },
         { "title": "Coziness and care", "caption": "home-like atmosphere" },
-        { "title": "Live communication", "caption": "new friends" },
-        { "title": "New experiences", "caption": "celebrations and events" }
+        { "title": "Live communication", "caption": "new friends and interesting activities" }
       ]
     },
     "form_section": {
@@ -135,7 +134,7 @@
     },
     "nutrition_approach": {
       "title": "Our approach to nutrition",
-      "text": "In our guesthouse, nutrition is not just food. It is care, an individual approach, and love. The daily menu is formed by dietitians taking into account the age needs, health status, and wishes of each resident. We use only fresh, natural products, without excess sugar, salt, or harmful additives.",
+      "text": "In our guesthouse, nutrition is not just food. It is gastronomic pleasure, an individual approach, and love. The daily menu is formed by dietitians taking into account the age needs, health status, and wishes of each resident. We use only fresh, natural products, without excess sugar, salt, or harmful additives.",
       "alt": "Nutrition for the elderly"
     },
     "daily_menu_example": {

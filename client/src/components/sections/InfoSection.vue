@@ -38,25 +38,6 @@
                 </ul>
             </section>
 
-            <section class="space-y-5 max-w-5xl w-full">
-                <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-secondary">
-                    {{ t('home_page.info_section.how_to_join_title') }}
-                </h3>
-                <ol
-                    class="list-decimal list-inside text-base-content text-base sm:text-lg md:text-xl space-y-2 text-left">
-                    <li v-for="(item, index) in howToJoinList" :key="index">{{ item }}</li>
-                </ol>
-            </section>
-
-            <section class="space-y-5 max-w-5xl w-full">
-                <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-secondary">
-                    {{ t('home_page.info_section.adaptation_help_title') }}
-                </h3>
-                <ul class="list-disc list-inside text-base-content text-base sm:text-lg md:text-xl space-y-2 text-left">
-                    <li v-for="(item, index) in adaptationHelpList" :key="index">{{ item }}</li>
-                </ul>
-            </section>
-
             <footer class="text-center space-y-3">
                 <p class="text-base sm:text-lg text-base-content">
                     {{ t('home_page.info_section.cta_text') }}
@@ -76,6 +57,4 @@ const { t, tm } = useI18n({ useScope: 'global' })
 
 const whyUsList = tm('home_page.info_section.why_us_list')
 const whenRelevantList = tm('home_page.info_section.when_relevant_list')
-const howToJoinList = tm('home_page.info_section.how_to_join_list')
-const adaptationHelpList = tm('home_page.info_section.adaptation_help_list')
 </script>
