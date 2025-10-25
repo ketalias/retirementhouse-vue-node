@@ -14,14 +14,7 @@ export function getFaqsContactItems(t) {
       question: t('contact_page.faqs.2.question'),
       answer: t('contact_page.faqs.2.answer'),
       isHtml: false,
-    },
-    {
-      question: t('contact_page.faqs.3.question'),
-      answer: t('contact_page.faqs.3.answer'),
-      isHtml: true,
-      link: '/booking',
-      linkText: t('contact_page.faqs.3.linkText'),
-    },
+    }
   ];
 }
 

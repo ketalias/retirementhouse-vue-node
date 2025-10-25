@@ -20,6 +20,8 @@ app.register(require('@fastify/cors'), {
     maxAge: 86400
 })
 
+app.register(formRoutes, { prefix: '/api' })
+
 app.register(formRoutes)
 
 const start = async () => {
