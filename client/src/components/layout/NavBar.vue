@@ -7,6 +7,7 @@ const { locale, availableLocales, t } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const langDropdown = ref(null)
+const dropdown = ref(null)
 
 const linkClass = (path) =>
   route.path.startsWith(path)
@@ -33,6 +34,12 @@ function handleClickOutside(event) {
 
 onMounted(() => {
   document.addEventListener('click', handleClickOutside)
+
+  router.afterEach(() => {
+    if (dropdown.value) {
+      dropdown.value.removeAttribute('open')
+    }
+  })
 })
 
 onBeforeUnmount(() => {
