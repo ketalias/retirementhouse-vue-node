@@ -71,7 +71,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">{{ t('price_calculator.room_capacity_label') }}</label>
                         <div class="flex space-x-2">
-                            <label v-for="num in [1, 2, 3, 4]" :key="num" class="flex items-center cursor-pointer">
+                            <label v-for="num in [1, 2, 3]" :key="num" class="flex items-center cursor-pointer">
                                 <input v-model="formData.roomCapacity" type="radio" :value="num"
                                     class="radio radio-primary mr-2" />
                                 <span>{{ num }}</span>

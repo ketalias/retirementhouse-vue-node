@@ -28,9 +28,9 @@ const faqsContactItems = computed(() => getFaqsContactItems(t))
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
-        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
-        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
-        <img src="/img/hero-background.jpg" class="rounded-xl shadow" />
+        <img src="/img/home-gallery/item2.JPG" class="rounded-xl shadow" />
+        <img src="/img/home-gallery/item1.JPG" class="rounded-xl shadow" />
+        <img src="/img/home-gallery/item7.JPG" class="rounded-xl shadow" />
       </div>
   <FaqAccordion :faqs="faqsContactItems" />
       <FormComp />
