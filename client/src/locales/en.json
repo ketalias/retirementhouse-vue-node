@@ -4,6 +4,7 @@
     "call_us": "Call us",
     "form_submission_success": "Data sent successfully!",
     "form_submission_error": "An error occurred. Please try again.",
+    "too_many_requests": "Too many requests! Please try again later.",
     "loading": "Loading...",
     "close": "Close"
   },

@@ -4,6 +4,7 @@
     "call_us": "Hívjon minket",
     "form_submission_success": "Az adatok sikeresen elküldve!",
     "form_submission_error": "Hiba történt. Kérjük, próbálja újra.",
+    "too_many_requests": "Túl sok kérés! Kérjük, próbálja meg később.",
     "loading": "Betöltés...",
     "close": "Bezárás"
   },

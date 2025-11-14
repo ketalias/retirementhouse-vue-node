@@ -1,6 +1,10 @@
 const Fastify = require('fastify')
 const dotenv = require('dotenv')
 const formRoutes = require('./routes/form.routes')
+const { startCleanup } = require('./utils/ipRateLimiter');
+
+startCleanup();
+console.log('Rate Limiter Cleanup started.');
 
 dotenv.config()
 

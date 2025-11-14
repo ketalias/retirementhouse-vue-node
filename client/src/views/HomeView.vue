@@ -35,9 +35,15 @@ const handleFormSubmit = (formData) => {
       alert(t('common.form_submission_success'))
       isFormOpen.value = false
     })
-    .catch((error) => {
-      console.error('Помилка при надсиланні даних:', error)
-      alert(t('common.form_submission_error'))
+    .catch((e) => {
+      const statusCode = e.status;
+
+      if (statusCode === 429) {
+        alert(t('common.too_many_requests'))
+        return
+      } else {
+        alert(t('common.form_submission_error'))
+      }
     })
 }
 
@@ -58,20 +64,16 @@ function handleCalculatePrice() {
     <PriceCalcForm mode="modal" :isOpen="isFormOpen" @close="isFormOpen = false" @submitted="handleFormSubmit" />
 
     <!-- Hero Section -->
-    <HeroSection 
-      id="hero" 
-      titleKey="home_page.hero.title"
-      subtitleKey="home_page.hero.subtitle"
+    <HeroSection id="hero" titleKey="home_page.hero.title" subtitleKey="home_page.hero.subtitle"
       background="/img/hero-background.jpg">
-      
+
       <div class="buttons flex flex-col md:flex-row gap-2 w-full md:w-auto" data-aos="fade-up" data-aos-delay="400">
         <button @click="handleCalculatePrice" class="btn btn-primary w-full md:w-auto">
           {{ t('common.calculate_cost') }}
         </button>
         <button @click="handleCall" class="btn btn-secondary w-full md:w-auto" type="button"
-          
           :title="t('home_page.hero.call_tooltip')">
-          
+
           {{ t('common.call_us') }}
         </button>
       </div>
