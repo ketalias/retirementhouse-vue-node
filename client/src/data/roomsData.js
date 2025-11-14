@@ -31,6 +31,6 @@ export function getRoomItems(t) {
         t('rooms_page.rooms.2.features.1', 'Окрема тераса'),
         t('rooms_page.rooms.2.features.2', 'Функціональні ліжка')
       ],
-      images: ['/img/rooms/room-three/image1.jpg', '/img/rooms/room-three/image2.jpg', '/img/rooms/room-three/image3.jpg']
+      images: ['/img/rooms/room-three/image1.jpeg', '/img/rooms/room-three/image2.jpg', '/img/rooms/room-three/image3.jpeg']
     },]
 }
