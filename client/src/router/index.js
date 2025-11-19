@@ -5,16 +5,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'root',
-      redirect: '/home',
+      name: 'home',
+      component: () => import('../views/HomeView.vue'),
       meta: {
         title: 'Home',
       },
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/rooms',
@@ -30,6 +25,10 @@ const router = createRouter({
       path: '/menu',
       name: 'menu',
       component: () => import('../views/MenuView.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
     },
   ],
   scrollBehavior(to, from, savedPosition) {
