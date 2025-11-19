@@ -11,9 +11,11 @@
             </header>
 
             <div class="w-full">
-                <img src="/img/hero-background.jpg" :alt="t('home_page.info_section.main_title')"
-                    class="w-full max-w-5xl h-48 sm:h-64 md:h-80 mx-auto rounded-xl shadow-xl object-cover transition-transform duration-300 hover:scale-[1.02]" />
+                <video src="/videos/hero-video.mp4" controls loop
+                    class="w-full max-w-7xl h-48 sm:h-72 md:h-150 mx-auto rounded-xl shadow-xl object-cover transition-transform duration-300 hover:scale-[1.02]"></video>
             </div>
+
+
 
             <section class="space-y-5 max-w-5xl w-full">
                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-secondary">
