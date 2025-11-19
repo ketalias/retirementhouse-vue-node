@@ -73,9 +73,11 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 const { t, tm } = useI18n({ useScope: 'global' })
+import { computed } from 'vue'
 
-const whyUsList = tm('home_page.info_section.why_us_list')
-const whenRelevantList = tm('home_page.info_section.when_relevant_list')
-const howToJoinList = tm('home_page.info_section.how_to_join_list')
-const adaptationHelpList = tm('home_page.info_section.adaptation_help_list')
+const whyUsList = computed(() => tm('home_page.info_section.why_us_list'))
+const whenRelevantList = computed(() => tm('home_page.info_section.when_relevant_list'))
+const howToJoinList = computed(() => tm('home_page.info_section.how_to_join_list'))
+const adaptationHelpList = computed(() => tm('home_page.info_section.adaptation_help_list'))
+
 </script>
