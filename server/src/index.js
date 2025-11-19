@@ -1,33 +1,32 @@
 const Fastify = require('fastify')
 const dotenv = require('dotenv')
 const formRoutes = require('./routes/form.routes')
+const { startCleanup } = require('./utils/ipRateLimiter');
+
+startCleanup();
+console.log('Rate Limiter Cleanup started.');
 
 dotenv.config()
 
 const app = Fastify({ logger: true })
 
-// Register CORS plugin
 app.register(require('@fastify/cors'), {
-    // Allow all origins in development
     origin: process.env.NODE_ENV === 'production'
-        ? ['https://yourdomain.com', 'https://www.yourdomain.com'] // Replace with your production URLs
-        : true, // Allow all origins in development
+        ? ['https://yourdomain.com', 'https://www.yourdomain.com']
+        : true,
 
-    // Allow specific HTTP methods
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 
-    // Allow specific headers
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 
-    // Allow credentials (cookies, authorization headers)
     credentials: true,
 
-    // Preflight request cache time (in seconds)
-    maxAge: 86400 // 24 hours
+    maxAge: 86400
 })
 
-// Register your routes
 app.register(formRoutes, { prefix: '/api' })
+
+app.register(formRoutes)
 
 const start = async () => {
     try {

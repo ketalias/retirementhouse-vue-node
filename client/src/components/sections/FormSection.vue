@@ -5,17 +5,20 @@ import { sendCalculatorForm } from '@/api'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
-const isFormOpen = ref(true)
-
 const handleFormSubmit = (formData) => {
     sendCalculatorForm(formData)
         .then(() => {
-            alert(t('home_page.form_section.thank_you_message'))
-            isFormOpen.value = false
+            alert(t('common.form_submission_success'))
         })
-        .catch((error) => {
-            console.error('Помилка при надсиланні даних:', error)
-            alert(t('common.form_submission_error'))
+        .catch((e) => {
+            const statusCode = e.status;
+
+            if (statusCode === 429) {
+                alert(t('common.too_many_requests'))
+                return
+            } else {
+                alert(t('common.form_submission_error'))
+            }
         })
 }
 </script>
@@ -33,10 +36,7 @@ const handleFormSubmit = (formData) => {
                 </p>
             </div>
             <div class="p-0 rounded-xl w-full md:w-[auto] max-w-full" data-aos="fade-up">
-                <PriceCalcForm v-if="isFormOpen" mode="inline" @submitted="handleFormSubmit" />
-                <p v-else class="text-white text-center text-xl font-semibold">
-                    {{ t('home_page.form_section.thank_you_message') }}
-                </p>
+                <PriceCalcForm mode="inline" @submitted="handleFormSubmit" />
             </div>
         </div>
     </section>

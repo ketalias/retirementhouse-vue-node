@@ -16,7 +16,7 @@ const dailySchedule = computed(()=>getDailySchedule(t))
 </script>
 <template>
     <div class="min-h-screen bg-base-100 text-base-content">
-        <HeroSection titleKey="menu_page.hero.title" subtitleKey="menu_page.hero.subtitle" background="/img/oldmen-eat-bg.jpg" />
+        <HeroSection titleKey="menu_page.hero.title" subtitleKey="menu_page.hero.subtitle" background="/no.png" />
         <div class="container mx-auto px-4 py-12 space-y-20">
             <ImageTextCard :title="t('menu_page.nutrition_approach.title')" :text="t('menu_page.nutrition_approach.text')"
                 image="/img/dinner.JPG"

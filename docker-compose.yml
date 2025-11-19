@@ -1,0 +1,25 @@
+services:
+  nginx:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs
+    depends_on:
+      - server
+    networks:
+      - webnet
+
+  server:
+    build: ./server
+    restart: always
+    expose:
+      - "3000"
+    networks:
+      - webnet
+
+networks:
+  webnet:

@@ -3,7 +3,7 @@
     <h2 class="text-4xl font-bold mb-12 text-base-content">
       {{ t('home_page.care_features.title') }}
     </h2>
-    <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 max-w-8xl mx-auto">
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 max-w-8xl mx-auto">
       <div v-for="(item, index) in features" :key="index"
         class="card bg-white shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[280px]">
         <div class="w-full md:w-1/2 h-48 md:h-auto">
@@ -28,9 +28,7 @@ import { computed } from 'vue'
 const { t, tm } = useI18n()
 const features = computed(() => tm('home_page.care_features.features'));
 const images = [
-  '/img/cards/blood-card.jpg',
-  '/img/cards/wheel-card.png',
-  '/img/cards/friends-card.jpg',
-  '/img/cards/love-card.jpg',
-]
+  '/no.png',
+  '/img/granny1.jpg',
+  '/no.png',]
 </script>

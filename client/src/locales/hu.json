@@ -4,6 +4,7 @@
     "call_us": "Hívjon minket",
     "form_submission_success": "Az adatok sikeresen elküldve!",
     "form_submission_error": "Hiba történt. Kérjük, próbálja újra.",
+    "too_many_requests": "Túl sok kérés! Kérjük, próbálja meg később.",
     "loading": "Betöltés...",
     "close": "Bezárás"
   },
@@ -19,7 +20,7 @@
     "calculate_cost_label": "Számítsa ki a költségeket"
   },
   "footer": {
-    "title": "Panska Vtiha Panzió",
+    "title": "Rest Hill Villa",
     "description": "Ideális hely a pihenésre a természet szívében. A kényelem, a vendégszeretet és a meghittség a fő prioritásaink.",
     "navigation_title": "Navigáció",
     "nav_links": {
@@ -31,10 +32,10 @@
     },
     "contacts_title": "Kapcsolatok",
     "address_label": "Cím:",
-    "address_value": "Napos utca 12, Kárpátok, Ukrajna",
+    "address_value": "Kholmok falu, Szabadság utca 50 B",
     "phone_label": "Telefon:",
     "email_label": "Email:",
-    "copyright": "© 2025 Panska Vtiha Panzió. Minden jog fenntartva."
+    "copyright": "© 2025 Rest Hill Villa. Minden jog fenntartva."
   },
   "price_calculator": {
     "title": "Szállásköltség számítása",
@@ -60,8 +61,7 @@
       "features": [
         { "title": "Orvosi ellátás", "caption": "24/7 támogatás" },
         { "title": "Kényelem és gondoskodás", "caption": "otthonos légkör" },
-        { "title": "Élő kommunikáció", "caption": "új barátok" },
-        { "title": "Új élmények", "caption": "ünnepek és események" }
+        { "title": "Élő kommunikáció", "caption": "új barátok és érdekes tevékenységek" }
       ]
     },
     "form_section": {
@@ -122,7 +122,7 @@
         "Vigyenek magukkal kedvenc dolgokat – könyveket, fotókat, kézimunkát."
       ],
       "cta_text": "Kérdése van, vagy szeretné elhelyezni egy szerettét?",
-      "cta_phone": "+38 067 549 69 95"
+      "cta_phone": "+38(095) 243 53 58"
     },
     "gallery": {
       "title": "Látogasson el hozzánk és győződjön meg rokonai biztonságáról"
@@ -135,7 +135,7 @@
     },
     "nutrition_approach": {
       "title": "A mi megközelítésünk a táplálkozáshoz",
-      "text": "Panziónkban az étkezés nem csak étel. Ez gondoskodás, egyéni megközelítés és szeretet. A napi menüt dietetikusok állítják össze, figyelembe véve minden lakó életkori szükségleteit, egészségi állapotát és kívánságait. Csak friss, természetes termékeket használunk, felesleges cukor, só vagy káros adalékanyagok nélkül.",
+      "text": "Panziónkban az étkezés nem csak étel. Ez gasztronómiai élvezet, egyéni megközelítés és szeretet. A napi menüt dietetikusok állítják össze, figyelembe véve minden lakó életkori szükségleteit, egészségi állapotát és kívánságait. Csak friss, természetes termékeket használunk, felesleges cukor, só vagy káros adalékanyagok nélkül.",
       "alt": "Idősek táplálkozása"
     },
     "daily_menu_example": {

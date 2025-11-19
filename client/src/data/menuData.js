@@ -7,7 +7,7 @@ export function getDailyMenuItems(t) {
         t('menu_page.daily_menu.breakfast.items.1', 'Сирники з домашнім йогуртом'),
         t('menu_page.daily_menu.breakfast.items.2', 'Чай з ромашки або зелений чай')
       ],
-      image: 'https://eco-buffet.com/wp-content/uploads/2024/09/samye-poleznye-kashy.jpg'
+      image: 'no.png'
     },
     {
       title: t('menu_page.daily_menu.lunch.title', 'Обід'),
@@ -17,7 +17,7 @@ export function getDailyMenuItems(t) {
         t('menu_page.daily_menu.lunch.items.2', 'Салат з буряка'),
         t('menu_page.daily_menu.lunch.items.3', 'Компот із сухофруктів')
       ],
-      image: 'https://e2go.com.ua/load/120/food/boul-15-grechka_256pic_26480__85547.jpg'
+      image: 'no.png'
     },
     {
       title: t('menu_page.daily_menu.dinner.title', 'Вечеря'),
@@ -26,7 +26,7 @@ export function getDailyMenuItems(t) {
         t('menu_page.daily_menu.dinner.items.1', 'Рисова каша на воді'),
         t('menu_page.daily_menu.dinner.items.2', "Трав'яний чай з медом")
       ],
-      image: 'https://znaj.ua/images/2019/03/01/t9FpoKKncZRl2aPKEoQi6UrUi7Waf7sXS6Vr5lOl.jpeg'
+      image: 'no.png'
     }
   ]
 }

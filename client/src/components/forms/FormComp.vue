@@ -16,7 +16,7 @@ const error = ref(null)
 const success = ref(false)
 
 const isFormValid = computed(() => {
-    return phone.value.trim().length >= 17 && name.value.trim() !== ''
+    return phone.value.trim().length >= 17 && name.value.trim() !== '' && message.value.trim() !== ''
 })
 
 async function onSubmit() {
@@ -41,7 +41,13 @@ async function onSubmit() {
         phone.value = ''
         message.value = ''
     } catch (e) {
-        error.value = t('common.form_submission_error')
+        const statusCode = e.status;
+
+        if (statusCode == 429) {
+            error.value = t('common.too_many_requests');
+        } else {
+            error.value = t('common.form_submission_error');
+        }
     } finally {
         isLoading.value = false
     }
@@ -120,8 +126,7 @@ onUnmounted(() => {
                         {{ isLoading ? t('form.sending') : t('form.submit_button') }}
                     </button>
                     <p v-if="error" class="text-red-600 mt-2 text-center">{{ error }}</p>
-                    <p v-if="success" class="text-green-600 mt-2">Дякуємо! Ваше повідомлення надіслано.</p>
-                    <p v-if="success" class="text-green-600 mt-2">{{ t('form.success_message') }}</p>
+                    <p v-if="success" class="text-green-600 mt-2 text-center">{{ t('form.success_message') }}</p>
                 </form>
             </div>
         </div>

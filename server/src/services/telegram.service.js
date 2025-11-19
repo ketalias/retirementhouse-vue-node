@@ -65,46 +65,58 @@ function buildCalculatorMessage(data) {
 
 
 async function sendToTelegram(data, type = 'contact') {
-    const token = process.env.TELEGRAM_BOT_TOKEN
-    const chatId = process.env.TELEGRAM_CHAT_ID
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatIdsString = process.env.TELEGRAM_CHAT_IDS;
 
-    let message = ''
+    if (!chatIdsString) {
+        console.error("TELEGRAM_CHAT_IDS is not set in environment variables.");
+        throw new Error("TELEGRAM_CHAT_IDS is required.");
+    }
 
+    const chatIds = chatIdsString.split(',').map(id => id.trim()).filter(id => id.length > 0);
+
+    let message = '';
     if (type === 'calculator') {
-        message = buildCalculatorMessage(data)
+        message = buildCalculatorMessage(data);
     } else if (type === 'contact') {
-        message = buildContactMessage(data)
+        message = buildContactMessage(data);
     } else {
-        throw new Error(`Unknown form type: ${type}`)
+        throw new Error(`Unknown form type: ${type}`);
     }
 
-    const url = `https://api.telegram.org/bot${token}/sendMessage`
-    console.log('Sending message to Telegram:', message)
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const results = [];
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-                parse_mode: 'HTML'
-            })
-        })
+    for (const chatId of chatIds) {
+        console.log(`Sending message to Telegram chatId: ${chatId}`);
 
-        if (!response.ok) {
-            const errText = await response.text()
-            console.error('Telegram API error response:', errText)
-            throw new Error(`Telegram API error: ${errText}`)
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            });
+
+            if (!response.ok) {
+                const errText = await response.text();
+                console.error(`Telegram API error for chat ${chatId}:`, errText);
+                results.push({ chatId, success: false, error: errText });
+            } else {
+                const result = await response.json();
+                console.log(`Message sent successfully to ${chatId}`);
+                results.push({ chatId, success: true, result });
+            }
+        } catch (error) {
+            console.error(`Error sending to Telegram chat ${chatId}:`, error);
+            results.push({ chatId, success: false, error: error.message });
         }
-
-        const result = await response.json()
-        console.log('Message sent successfully:', result)
-        return result
-    } catch (error) {
-        console.error('Error sending to Telegram:', error)
-        throw error
     }
+
+    return results;
 }
 
 module.exports = { sendToTelegram }
