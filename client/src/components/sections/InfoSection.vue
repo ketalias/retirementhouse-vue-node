@@ -11,7 +11,7 @@
             </header>
 
             <div class="w-full">
-                <video src="/videos/hero-video.mp4" controls loop
+                <video src="/videos/hero-video.mp4" controls loop muted autoplay playsinline
                     class="w-full max-w-7xl h-48 sm:h-72 md:h-150 mx-auto rounded-xl shadow-xl object-cover transition-transform duration-300 hover:scale-[1.02]"></video>
             </div>
 
