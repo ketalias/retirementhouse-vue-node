@@ -4,7 +4,7 @@
             <h2 class="text-4xl font-bold mb-12" data-aos="fade-up" data-aos-delay="100">
                 {{ t('home_page.testimonials.title') }}
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <blockquote
                     v-for="(guest, idx) in guestsList"
                     :key="idx"
@@ -14,7 +14,7 @@
                 >
                     <img 
                         :src="`/img/granny${idx + 1}.jpg`" 
-                        class="rounded-xl h-[200px] w-full object-cover"
+                        class="rounded-xl h-[250px] w-full object-cover"
                         :alt="guest.author" 
                     />
                     <p class="text-base-content text-lg leading-relaxed">
