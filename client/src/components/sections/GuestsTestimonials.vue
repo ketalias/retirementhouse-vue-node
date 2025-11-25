@@ -13,7 +13,7 @@
                     :data-aos-delay="100 * (idx + 1)"
                 >
                     <img 
-                        :src="`/img/granny${idx + 1}.${idx === 0 ? 'jpeg' : 'jpg'}`" 
+                        :src="`/img/granny${idx + 1}.jpg`" 
                         class="rounded-xl h-[200px] w-full object-cover"
                         :alt="guest.author" 
                     />

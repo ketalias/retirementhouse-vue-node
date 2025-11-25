@@ -28,7 +28,7 @@ import { computed } from 'vue'
 const { t, tm } = useI18n()
 const features = computed(() => tm('home_page.care_features.features'));
 const images = [
-  '/no.png',
+  '/img/granny2.jpg',
   '/img/granny1.jpg',
   '/no.png',]
 </script>

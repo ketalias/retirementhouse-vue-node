@@ -53,7 +53,7 @@
   "home_page": {
     "hero": {
       "title": "Rest Hill Villa",
-      "subtitle": "Warm care amidst nature and tranquility, a guesthouse for the elderly",
+      "subtitle": "Warm care amidst and tranquility, a guesthouse for the elderly",
       "call_tooltip": "Click to call or copy the number"
     },
     "care_features": {
@@ -78,7 +78,7 @@
           "author": "— Oksana K."
         },
         {
-          "quote": "An incredible place! I really liked the atmosphere of peace and coziness. Ideal for recuperating.",
+          "quote": "An incredible pleasant atmosphere for recuperating.",
           "author": "— Maria P."
         },
         {
@@ -88,7 +88,7 @@
       ]
     },
     "info_section": {
-      "main_title": "Private Guesthouse «Panska Vtikha» in Uzhhorod",
+      "main_title": "Private Guesthouse «Rest Hill Villa» in Uzhhorod",
       "main_subtitle": "Care, safety, and a dignified life for the elderly with medical support.",
       "why_us_title": "Why choose us",
       "why_us_list": [
@@ -96,7 +96,8 @@
         "<strong>Comfortable living:</strong> spacious rooms, adaptation to health conditions.",
         "<strong>Safe environment:</strong> no risk of household injuries.",
         "<strong>Live communication:</strong> leisure, creativity, walks, concerts.",
-        "<strong>Transparent prices:</strong> everything is in the contract, no hidden costs."
+        "<strong>Transparent prices:</strong> everything is in the contract, no hidden costs.",
+        "<strong>Constant electricity:</strong> battery backup in case of power outages."
       ],
       "when_relevant_title": "When it is especially relevant",
       "when_relevant_list": [
