@@ -6,8 +6,8 @@
     <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 max-w-8xl mx-auto">
       <div v-for="(item, index) in features" :key="index"
         class="card bg-white shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[280px]">
-        <div class="w-full md:w-1/2 h-48 md:h-auto">
-          <img :src="images[index]" :alt="item.title" class="w-full h-full object-cover object-center" />
+        <div class="w-full md:w-1/2 h-48 md:h-auto sm:h-50">
+          <img :src="images[index]" :alt="item.title" class="w-full h-full object-cover" style="object-position: center 30%" />
         </div>
         <div class="flex-1 flex flex-col justify-center p-6 text-center md:text-left">
           <h3 class="text-2xl font-semibold text-primary mb-2">
