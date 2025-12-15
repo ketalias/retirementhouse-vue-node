@@ -142,26 +142,26 @@
       "breakfast": {
         "title": "Reggeli",
         "items": {
-          "0": "Zabkása tejjel és gyümölccsel",
-          "1": "Túrós palacsinta házi joghurttal",
+          "1": "Túrópuding bogyós gyümölcsökkel",
           "2": "Kamilla tea vagy zöld tea"
         }
       },
       "lunch": {
         "title": "Ebéd",
         "items": {
-          "0": "Zöldségleves csirkehúsleves alapon",
-          "1": "Csirkemellfilé hajdinával",
-          "2": "Céklasaláta",
+          "0": "Húsgombócleves zöldfűszerekkel",
+          "1": "Tészta húsos szósszal",
+          "2": "Káposzta és sárgarépa saláta",
           "3": "Aszalt gyümölcs kompót"
         }
       },
       "dinner": {
         "title": "Vacsora",
         "items": {
-          "0": "Sült hal párolt zöldségekkel",
-          "1": "Rizskása vízen",
-          "2": "Gyógytea mézzel"
+          "0": "Zöldségleves",
+          "1": "Húsos burgonyapüré",
+          "2": "Káposzta és sárgarépa saláta",
+          "3": "Gyógytea mézzel"
         }
       }
     },

@@ -2,7 +2,7 @@
 import HeroSection from '@/components/sections/HeroSection.vue'
 import FormComp from '../components/forms/FormComp.vue'
 import FooterComp from '../components/layout/FooterComp.vue'
-const mapSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5433.541424373785!2d22.26879347623141!3d48.582473796251676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4739193a81cfd231%3A0x47dbc078d8a27779!2z0LLRg9C7LiDQodCy0L7QsdC-0LTQuCwgNTAsINCg0L7Qt9GW0LLQutCwLCDQl9Cw0LrQsNGA0L_QsNGC0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDg5NDI0!5e0!3m2!1suk!2sua!4v1761415028864!5m2!1suk!2sua`
+const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16532.83428476139!2d22.26337300209888!3d48.562344675908264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84960cd28aadeae1%3A0x38aa0e663a64f9e!2zUmVzdCBIaWxsIFZpbGxhL9CR0LDRgtGM0LrRltCy0YHRjNC60LjQuSDQlNGW0Lw!5e0!3m2!1suk!2sua!4v1765827764018!5m2!1suk!2sua"
 import InfoCardsGrid from '@/components/grids/InfoCardsGrid.vue';
 import { getCardsListInfo } from '@/data/cardsData.js'
 import FaqAccordion from '@/components/sections/FaqAccordion.vue';

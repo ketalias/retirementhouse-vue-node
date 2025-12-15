@@ -1,5 +1,5 @@
 <template>
-  <section class="p-6 md:p-10" data-aos="fade-up">
+  <section class="p-3" data-aos="fade-up">
     <h2 class="text-5xl font-bold text-center text-primary mb-10" data-aos="fade-up" data-aos-delay="100">
       {{ title }}
     </h2>

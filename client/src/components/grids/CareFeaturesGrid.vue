@@ -30,5 +30,5 @@ const features = computed(() => tm('home_page.care_features.features'));
 const images = [
   '/img/granny2.jpg',
   '/img/granny1.jpg',
-  '/no.png',]
+  '/img/cards/care-card.jpg',]
 </script>

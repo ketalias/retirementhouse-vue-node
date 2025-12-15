@@ -3,30 +3,31 @@ export function getDailyMenuItems(t) {
     {
       title: t('menu_page.daily_menu.breakfast.title', 'Сніданок'),
       items: [
-        t('menu_page.daily_menu.breakfast.items.0', 'Вівсяна каша на молоці з фруктами'),
         t('menu_page.daily_menu.breakfast.items.1', 'Сирники з домашнім йогуртом'),
         t('menu_page.daily_menu.breakfast.items.2', 'Чай з ромашки або зелений чай')
       ],
-      image: '/img/menu/breakfast.jpg'
+      image: '/img/menu/item1.jpg'
     },
     {
       title: t('menu_page.daily_menu.lunch.title', 'Обід'),
       items: [
-        t('menu_page.daily_menu.lunch.items.0', 'Овочевий суп на курячому бульйоні'),
-        t('menu_page.daily_menu.lunch.items.1', 'Куряче філе з гречкою'),
-        t('menu_page.daily_menu.lunch.items.2', 'Салат з буряка'),
+        t('menu_page.daily_menu.lunch.items.0', 'Фрикадльковий суп із зеленню'),
+        t('menu_page.daily_menu.lunch.items.1', 'Макарони з мясним соусом'),
+        t('menu_page.daily_menu.lunch.items.2', 'Салат з капусти та моркви'),
         t('menu_page.daily_menu.lunch.items.3', 'Компот із сухофруктів')
       ],
-      image: '/img/menu/lunch.jpg'
+      image: '/img/menu/item2.jpg'
     },
     {
       title: t('menu_page.daily_menu.dinner.title', 'Вечеря'),
       items: [
-        t('menu_page.daily_menu.dinner.items.0', 'Запечена риба з тушкованими овочами'),
-        t('menu_page.daily_menu.dinner.items.1', 'Рисова каша на воді'),
-        t('menu_page.daily_menu.dinner.items.2', "Трав'яний чай з медом")
+        t('menu_page.daily_menu.dinner.items.0', 'Овочевий суп'),
+        t('menu_page.daily_menu.dinner.items.1', 'Картопляне пюре з м\'ясом'),
+        t('menu_page.daily_menu.dinner.items.2', "Салат з капусти та моркви"),
+        t('menu_page.daily_menu.dinner.items.3', "Трав'яний чай з медом")
+
       ],
-      image: '/img/menu/dinner.jpg'
+      image: '/img/menu/item3.jpg'
     }
   ]
 }

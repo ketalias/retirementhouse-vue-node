@@ -142,26 +142,26 @@
       "breakfast": {
         "title": "Breakfast",
         "items": {
-          "0": "Oatmeal with milk and fruit",
-          "1": "Syrnyky (cheese pancakes) with homemade yogurt",
+          "1": "Cottage cheese casserole with berries",
           "2": "Chamomile tea or green tea"
         }
       },
       "lunch": {
         "title": "Lunch",
         "items": {
-          "0": "Vegetable soup with chicken broth",
-          "1": "Chicken fillet with buckwheat",
-          "2": "Beetroot salad",
+          "0": "Meatball soup with herbs",
+          "1": "Pasta with meat sauce",
+          "2": "Cabbage and carrot salad",
           "3": "Dried fruit compote"
         }
       },
       "dinner": {
         "title": "Dinner",
         "items": {
-          "0": "Baked fish with stewed vegetables",
-          "1": "Rice porridge on water",
-          "2": "Herbal tea with honey"
+          "0": "Vegetable soup",
+          "1": "Meat and potato puree",
+          "2": "Cabbage and carrot salad",
+          "3": "Herbal tea with honey"
         }
       }
     },
