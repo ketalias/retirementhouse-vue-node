@@ -22,6 +22,8 @@ const { t } = useI18n()
             }}</router-link></li>
             <li><router-link to="/rooms" class="hover:text-primary transition">{{ t('footer.nav_links.rooms')
             }}</router-link></li>
+            <li><router-link to="/leisure" class="hover:text-primary transition">{{ t('footer.nav_links.leisure')
+            }}</router-link></li>
             <li><router-link to="/contact" class="hover:text-primary transition">{{ t('footer.nav_links.contact')
             }}</router-link></li>
             <li><router-link to="/menu" class="hover:text-primary transition">{{ t('footer.nav_links.menu')

@@ -27,6 +27,14 @@ const router = createRouter({
       component: () => import('../views/MenuView.vue'),
     },
     {
+      path: '/leisure',
+      name: 'leisure',
+      component: () => import('../views/LeisureView.vue'),
+      meta: {
+        title: 'Leisure',
+      },
+    },
+    {
       path: '/:pathMatch(.*)*',
       redirect: '/',
     },

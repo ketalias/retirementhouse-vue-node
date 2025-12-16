@@ -98,6 +98,10 @@ onBeforeUnmount(() => {
             <router-link to="/rooms" :class="linkClass('/rooms')" @click="closeDropdowns">{{ t('navbar.nav_links.rooms')
               }}</router-link>
           </li>
+        <li role="menuitem">
+          <router-link to="/leisure" :class="linkClass('/leisure')" @click="closeDropdowns">{{
+            t('navbar.nav_links.leisure') }}</router-link>
+        </li>
           <li role="menuitem">
             <router-link to="/contact" :class="linkClass('/contact')" @click="closeDropdowns">{{
               t('navbar.nav_links.contact') }}</router-link>
@@ -114,6 +118,7 @@ onBeforeUnmount(() => {
       <ul class="menu menu-horizontal p-0 gap-4">
         <li><router-link to="/" :class="linkClass('/')">{{ t('navbar.nav_links.home') }}</router-link></li>
         <li><router-link to="/rooms" :class="linkClass('/rooms')">{{ t('navbar.nav_links.rooms') }}</router-link></li>
+        <li><router-link to="/leisure" :class="linkClass('/leisure')">{{ t('navbar.nav_links.leisure') }}</router-link></li>
         <li><router-link to="/menu" :class="linkClass('/menu')">{{ t('navbar.nav_links.menu') }}</router-link></li>
         <li><router-link to="/contact" :class="linkClass('/contact')">{{ t('navbar.nav_links.contact') }}</router-link>
         </li>

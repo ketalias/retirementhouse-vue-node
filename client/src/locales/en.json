@@ -28,7 +28,8 @@
       "about": "About Us",
       "rooms": "Rooms",
       "contact": "Contacts",
-      "menu": "Menu"
+      "menu": "Menu",
+      "leisure": "Leisure"
     },
     "contacts_title": "Contacts",
     "address_label": "Address:",
@@ -226,7 +227,8 @@
       "home": "Home",
       "rooms": "Rooms",
       "contact": "Contacts",
-      "menu": "Menu"
+      "menu": "Menu",
+      "leisure": "Leisure"
     }
   },
   "faq_section": {
@@ -289,6 +291,47 @@
         "title": "Email",
         "description": "rest.hill.villa@icloud.com"
       }
+    }
+  },
+  "leisure_page": {
+    "hero": {
+      "title": "Leisure",
+      "subtitle": "Life among friends, creativity, and warm memories"
+    },
+    "intro": {
+      "title": "Heartwarming moments every day",
+      "paragraphs": [
+        "At Rest Hill Villa we create an atmosphere where every day is filled with communication, mutual support, and sincere care.",
+        "Our residents join creative workshops, memory evenings, and themed events that help discover new interests.",
+        "We make sure everyone finds something to enjoy — from board games and reading to walks and music nights."
+      ]
+    },
+    "highlights": {
+      "title": "What awaits our guests",
+      "items": [
+        {
+          "title": "Events and celebrations",
+          "text": "Themed evenings, birthdays, intimate concerts, and visits from volunteers."
+        },
+        {
+          "title": "Movement and walks",
+          "text": "Morning exercise, Nordic walking, garden strolls, and light physical activities."
+        },
+        {
+          "title": "Creativity and connection",
+          "text": "Handcraft workshops, cooking together, book club meetings, and board games."
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Leisure moments",
+      "caption": "Live shots from our evenings, celebrations, and creative meetups.",
+      "prev_label": "Previous photo",
+      "next_label": "Next photo"
+    },
+    "cta": {
+      "title": "Ready to see it in person?",
+      "text": "Leave your contacts — we'll arrange a tour, show the atmosphere, and answer every question."
     }
   }
 }

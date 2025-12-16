@@ -28,7 +28,8 @@
       "about": "Rólunk",
       "rooms": "Szobák",
       "contact": "Kapcsolat",
-      "menu": "Menü"
+      "menu": "Menü",
+      "leisure": "Szabadidő"
     },
     "contacts_title": "Kapcsolatok",
     "address_label": "Cím:",
@@ -226,7 +227,8 @@
       "home": "Főoldal",
       "rooms": "Szobák",
       "contact": "Kapcsolat",
-      "menu": "Menü"
+      "menu": "Menü",
+      "leisure": "Szabadidő"
     }
   },
   "faq_section": {
@@ -289,6 +291,47 @@
         "title": "Email",
         "description": "rest.hill.villa@icloud.com"
       }
+    }
+  },
+  "leisure_page": {
+    "hero": {
+      "title": "Szabadidő",
+      "subtitle": "Élet barátok, kreativitás és meleg emlékek között"
+    },
+    "intro": {
+      "title": "Meghitt pillanatok nap mint nap",
+      "paragraphs": [
+        "A Rest Hill Villában olyan légkört teremtünk, ahol minden napot beszélgetés, kölcsönös támogatás és őszinte törődés tölt meg.",
+        "Lakóink kreatív foglalkozásokon, emlékesteken és tematikus programokon vesznek részt, hogy új érdeklődési köröket fedezzenek fel.",
+        "Arra figyelünk, hogy mindenki találjon kedvére valót – társasjátékokat, olvasást, sétákat vagy épp zenei esteket."
+      ]
+    },
+    "highlights": {
+      "title": "Mi vár a vendégeinkre",
+      "items": [
+        {
+          "title": "Események és ünnepek",
+          "text": "Tematikus esték, születésnapok, bensőséges koncertek és önkéntes találkozók."
+        },
+        {
+          "title": "Mozgás és séták",
+          "text": "Reggeli torna, nordic walking, kerti séták és könnyed mozgásos programok."
+        },
+        {
+          "title": "Kreativitás és kapcsolódás",
+          "text": "Kézműves foglalkozások, közös főzés, olvasókörök és társasjátékok."
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Szabadidős pillanatok",
+      "caption": "Élő felvételek estjeinkről, ünnepeinkről és kreatív találkozóinkról.",
+      "prev_label": "Előző fotó",
+      "next_label": "Következő fotó"
+    },
+    "cta": {
+      "title": "Szeretné élőben látni?",
+      "text": "Hagyja meg elérhetőségét – szervezünk egy bejárást, megmutatjuk a hangulatot és minden kérdésre válaszolunk."
     }
   }
 }
