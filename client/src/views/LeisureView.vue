@@ -119,11 +119,17 @@ function onTouchEnd(e) {
           </div>
         </div>
 
-        <div class="relative overflow-hidden rounded-2xl shadow-2xl border border-base-200 touch-pan-y select-none"
-          @touchstart="onTouchStart" @touchend="onTouchEnd">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-2xl border border-base-200 touch-pan-y select-none"
+          @touchstart="onTouchStart"
+          @touchend="onTouchEnd"
+        >
           <transition :name="`slide-${direction}`" mode="out-in">
-            <img :key="leisureImages[currentIndex]" :src="leisureImages[currentIndex]"
-              class="w-full h-[22rem] md:h-[28rem] object-cover" />
+            <img
+              :key="leisureImages[currentIndex]"
+              :src="leisureImages[currentIndex]"
+              class="w-full h-[22rem] md:h-[44rem] object-cover leisure-image"
+            />
           </transition>
 
         </div>
@@ -147,7 +153,7 @@ function onTouchEnd(e) {
 </template>
 
 <style scoped>
-/* NEXT → */
+/* Зсуви для анімацій */
 .slide-next-enter-active,
 .slide-next-leave-active,
 .slide-prev-enter-active,
@@ -176,5 +182,10 @@ function onTouchEnd(e) {
 .slide-prev-leave-to {
   transform: translateX(40px);
   opacity: 0;
+}
+
+/* Показувати правий край фото в каруселі */
+.leisure-image {
+  object-position: left center;
 }
 </style>
