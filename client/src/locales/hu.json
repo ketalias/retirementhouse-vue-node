@@ -291,6 +291,32 @@
         "title": "Email",
         "description": "rest.hill.villa@icloud.com"
       }
+    },
+    "vacancies": {
+      "title": "Állások",
+      "subtitle": "Állást kínálunk",
+      "position": "Orvosi tapasztalattal rendelkező ápolónők",
+      "description": "Ápolónőket hívunk az idősek munkájára.",
+      "requirements_title": "Követelmények:",
+      "requirements": [
+        "orvosi tapasztalat",
+        "felelősségtudás, figyelmesség, barátságosság",
+        "képesség az idősekkel való munkához"
+      ],
+      "responsibilities_title": "Kötelezettségek:",
+      "responsibilities": [
+        "lakók gondozása",
+        "egészségi állapot felügyelete",
+        "segítség a mindennapi szükségletekben"
+      ],
+      "offer_title": "Amit kínálunk:",
+      "offer": [
+        "stabil munka",
+        "tisztességes fizetés",
+        "kényelmes munkakörülmények",
+        "barátságos csapat",
+        "lehetséges szállással járó munka"
+      ]
     }
   },
   "leisure_page": {

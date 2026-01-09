@@ -8,11 +8,14 @@ import { getCardsListInfo } from '@/data/cardsData.js'
 import FaqAccordion from '@/components/sections/FaqAccordion.vue';
 import { getFaqsContactItems } from '@/data/faqsData';
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+const { t, tm } = useI18n()
 import { computed } from 'vue'
 
 const cardsListInfo = computed(() => getCardsListInfo(t))
 const faqsContactItems = computed(() => getFaqsContactItems(t))
+const requirements = computed(() => tm('contact_page.vacancies.requirements'))
+const responsibilities = computed(() => tm('contact_page.vacancies.responsibilities'))
+const offer = computed(() => tm('contact_page.vacancies.offer'))
 </script>
 <template>
   <div class="min-h-screen bg-base-100">
@@ -29,10 +32,63 @@ const faqsContactItems = computed(() => getFaqsContactItems(t))
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up">
         <img src="/img/home-gallery/item2.JPG" class="rounded-xl shadow" />
-        <img src="/img/home-gallery/item1.JPG" class="rounded-xl shadow" />
-        <img src="/img/home-gallery/item7.JPG" class="rounded-xl shadow" />
+        <img src="/img/home-gallery/item1.JPG" class="hidden sm:block rounded-xl shadow" />
+        <img src="/img/home-gallery/item7.JPG" class="hidden md:block rounded-xl shadow" />
       </div>
-  <FaqAccordion :faqs="faqsContactItems" />
+      <FaqAccordion :faqs="faqsContactItems" />
+
+      <!-- Vacancies Section -->
+      <div class="max-w-6xl mx-auto" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-6 text-center" data-aos="fade-up">{{ t('contact_page.vacancies.title') }}</h2>
+        <div class="shadow-xl bg-white rounded-lg overflow-hidden">
+          <div class="card-body p-6 md:p-8 lg:p-10">
+            <h3 class="text-xl md:text-2xl font-bold mb-6 text-primary text-center border-b border-base-300 pb-4">{{
+              t('contact_page.vacancies.position') }}</h3>
+
+            <div class="space-y-6">
+              <!-- Requirements -->
+              <div>
+                <h5 class="text-lg md:text-xl font-semibold mb-3 text-primary">{{
+                  t('contact_page.vacancies.requirements_title') }}</h5>
+                <ul class="space-y-2">
+                  <li v-for="(req, index) in requirements" :key="index"
+                    class="flex items-start space-x-2 text-base md:text-lg text-base-content">
+                    <span class="text-primary mt-1">•</span>
+                    <span>{{ req }}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Responsibilities -->
+              <div>
+                <h5 class="text-lg md:text-xl font-semibold mb-3 text-primary">{{
+                  t('contact_page.vacancies.responsibilities_title') }}</h5>
+                <ul class="space-y-2">
+                  <li v-for="(resp, index) in responsibilities" :key="index"
+                    class="flex items-start space-x-2 text-base md:text-lg text-base-content">
+                    <span class="text-primary mt-1">•</span>
+                    <span>{{ resp }}</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Offer -->
+              <div>
+                <h5 class="text-lg md:text-xl font-semibold mb-3 text-primary">{{
+                  t('contact_page.vacancies.offer_title') }}</h5>
+                <ul class="space-y-2">
+                  <li v-for="(item, index) in offer" :key="index"
+                    class="flex items-start space-x-2 text-base md:text-lg text-base-content">
+                    <span class="text-primary mt-1">•</span>
+                    <span>{{ item }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <FormComp />
     </div>
     <FooterComp />

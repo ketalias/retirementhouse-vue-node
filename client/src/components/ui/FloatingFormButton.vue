@@ -72,7 +72,7 @@ export const PhoneIcon = {
             class: 'h-7 w-7',
             fill: 'none',
             viewBox: '0 0 24 24',
-            stroke: 'currentColor'
+            stroke: 'currentColor' 
         }, [
             h('path', {
                 'stroke-linecap': 'round',

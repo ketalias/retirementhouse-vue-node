@@ -291,6 +291,32 @@
         "title": "Email",
         "description": "rest.hill.villa@icloud.com"
       }
+    },
+    "vacancies": {
+      "title": "Vacancies",
+      "subtitle": "We offer employment",
+      "position": "Caregivers with medical experience",
+      "description": "We invite caregivers to work with elderly people.",
+      "requirements_title": "Requirements:",
+      "requirements": [
+        "medical experience",
+        "responsibility, attentiveness, friendliness",
+        "ability to work with elderly people"
+      ],
+      "responsibilities_title": "Responsibilities:",
+      "responsibilities": [
+        "care for residents",
+        "monitoring health status",
+        "assistance with daily needs"
+      ],
+      "offer_title": "We offer:",
+      "offer": [
+        "stable work",
+        "decent salary",
+        "comfortable working conditions",
+        "friendly team",
+        "possible work with accommodation"
+      ]
     }
   },
   "leisure_page": {
