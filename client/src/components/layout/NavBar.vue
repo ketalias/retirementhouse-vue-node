@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
       </router-link>
     </div>
 
-    <div class="lg:hidden">
+    <div class="xl:hidden">
       <details class="dropdown relative" role="menu" :aria-label="t('navbar.navigation_menu_label')" ref="dropdown">
         <summary class="btn btn-ghost" :aria-label="t('navbar.toggle_menu_label')" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
       </details>
     </div>
 
-    <div class="hidden lg:flex" @click.stop="closeDropdowns">
+    <div class="hidden xl:flex" @click.stop="closeDropdowns">
       <ul class="menu menu-horizontal p-0 gap-4">
         <li><router-link to="/" :class="linkClass('/')">{{ t('navbar.nav_links.home') }}</router-link></li>
         <li><router-link to="/rooms" :class="linkClass('/rooms')">{{ t('navbar.nav_links.rooms') }}</router-link></li>

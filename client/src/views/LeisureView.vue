@@ -1,4 +1,4 @@
-<script setup>
+``<script setup>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -11,6 +11,12 @@ const leisureImages = [
   '/img/leisure/5323571359231184903.jpg',
   '/img/leisure/5323571359231184904.jpg',
   '/img/leisure/5323571359231184906.jpg'
+]
+
+const leisureVideos = [
+  '/videos/leisure-1.MP4',
+  '/videos/leisure-2.MP4',
+  '/videos/leisure-3.MP4'
 ]
 
 const isAnimating = ref(false)
@@ -135,6 +141,21 @@ function onTouchEnd(e) {
         </div>
       </section>
 
+      <section>
+        <div class="videos-grid grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div v-for="(video, idx) in leisureVideos" :key="idx" class="overflow-hidden rounded-xl shadow-lg border border-base-200">
+            <div class="aspect-[9/16] bg-black">
+              <video
+                :src="video"
+                class="w-full h-full object-cover"
+                controls
+                muted
+              ></video>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="grid gap-6 md:grid-cols-[1.1fr_1fr] items-center">
         <div class="space-y-4" data-aos="fade-up">
           <h3 class="text-2xl md:text-5xl font-bold">
@@ -187,5 +208,12 @@ function onTouchEnd(e) {
 /* Показувати правий край фото в каруселі */
 .leisure-image {
   object-position: left center;
+}
+
+/* На мобільці показувати лише перше відео */
+@media (max-width: 768px) {
+  .videos-grid > :nth-child(n+2) {
+    display: none;
+  }
 }
 </style>
