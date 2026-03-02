@@ -120,7 +120,8 @@
         "Vigyenek magukkal kedvenc dolgokat – könyveket, fotókat, kézimunkát."
       ],
       "cta_text": "Kérdése van, vagy szeretné elhelyezni egy szerettét?",
-      "cta_phone": "+38(095) 243 53 58"
+      "cta_phone_1": "+38(095) 243 53 58",
+      "cta_phone_2": "+38(098) 743 10 41"
     },
     "gallery": {
       "title": "Látogasson el hozzánk és győződjön meg rokonai biztonságáról"

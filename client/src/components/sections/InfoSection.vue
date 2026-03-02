@@ -44,10 +44,16 @@
                 <p class="text-base sm:text-lg text-base-content">
                     {{ t('home_page.info_section.cta_text') }}
                 </p>
-                <a :href="`tel:${t('home_page.info_section.cta_phone')}`"
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a :href="`tel:${t('home_page.info_section.cta_phone_1')}`"
                     class="btn btn-primary text-base sm:text-lg px-6 py-2 rounded-lg transition-transform duration-300 hover:scale-105">
-                    {{ t('home_page.info_section.cta_phone') }}
+                    {{ t('home_page.info_section.cta_phone_1') }}
                 </a>
+                <a :href="`tel:${t('home_page.info_section.cta_phone_2')}`"
+                    class="btn btn-primary text-base sm:text-lg px-6 py-2 rounded-lg transition-transform duration-300 hover:scale-105">
+                    {{ t('home_page.info_section.cta_phone_2') }}
+                </a>
+                </div>
             </footer>
         </div>
     </section>
