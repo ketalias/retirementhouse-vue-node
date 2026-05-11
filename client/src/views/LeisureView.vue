@@ -8,6 +8,8 @@ import FooterComp from '@/components/layout/FooterComp.vue'
 const { t, tm } = useI18n()
 
 const leisureImages = [
+  '/img/leisure/1.png',
+  '/img/leisure/2.png',
   '/img/leisure/5323571359231184903.jpg',
   '/img/leisure/5323571359231184904.jpg',
   '/img/leisure/5323571359231184906.jpg'
