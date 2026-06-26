@@ -86,9 +86,13 @@ async function sendToTelegram(data, type = 'contact') {
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
     const results = [];
+    const TELEGRAM_TIMEOUT_MS = 10 * 1000;
 
     for (const chatId of chatIds) {
         console.log(`Sending message to Telegram chatId: ${chatId}`);
+
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), TELEGRAM_TIMEOUT_MS);
 
         try {
             const response = await fetch(url, {
@@ -98,7 +102,8 @@ async function sendToTelegram(data, type = 'contact') {
                     chat_id: chatId,
                     text: message,
                     parse_mode: 'HTML'
-                })
+                }),
+                signal: controller.signal
             });
 
             if (!response.ok) {
@@ -111,8 +116,11 @@ async function sendToTelegram(data, type = 'contact') {
                 results.push({ chatId, success: true, result });
             }
         } catch (error) {
-            console.error(`Error sending to Telegram chat ${chatId}:`, error);
-            results.push({ chatId, success: false, error: error.message });
+            const errMessage = error.name === 'AbortError' ? 'Telegram request timed out' : error.message;
+            console.error(`Error sending to Telegram chat ${chatId}:`, errMessage);
+            results.push({ chatId, success: false, error: errMessage });
+        } finally {
+            clearTimeout(timeout);
         }
     }
 

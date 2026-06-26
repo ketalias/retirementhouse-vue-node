@@ -3,6 +3,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
+    restart: always
     ports:
       - "80:80"
     volumes:
@@ -12,6 +13,8 @@ services:
       - server
     networks:
       - webnet
+    mem_limit: 64m
+    cpus: 0.5
 
   server:
     build: ./server
@@ -20,6 +23,8 @@ services:
       - "3000"
     networks:
       - webnet
+    mem_limit: 300m
+    cpus: 1.0
 
 networks:
   webnet:

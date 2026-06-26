@@ -23,9 +23,13 @@ function canSubmit(ip) {
 
 function startCleanup() {
     setInterval(() => {
+        const now = Date.now();
         rateLimitMap.forEach((timestamps, ip) => {
-            if (timestamps.length === 0) {
+            const active = timestamps.filter(timestamp => timestamp > now - RATE_LIMIT_WINDOW_MS);
+            if (active.length === 0) {
                 rateLimitMap.delete(ip);
+            } else {
+                rateLimitMap.set(ip, active);
             }
         });
     }, CLEANUP_INTERVAL_MS);

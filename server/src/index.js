@@ -8,11 +8,11 @@ console.log('Rate Limiter Cleanup started.');
 
 dotenv.config()
 
-const app = Fastify({ logger: true })
+const app = Fastify({ logger: true, trustProxy: true })
 
 app.register(require('@fastify/cors'), {
     origin: process.env.NODE_ENV === 'production'
-        ? ['https://yourdomain.com', 'https://www.yourdomain.com']
+        ? ['https://resthillvilla.com', 'https://www.resthillvilla.com']
         : true,
 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -25,8 +25,6 @@ app.register(require('@fastify/cors'), {
 })
 
 app.register(formRoutes, { prefix: '/api' })
-
-app.register(formRoutes)
 
 const start = async () => {
     try {
